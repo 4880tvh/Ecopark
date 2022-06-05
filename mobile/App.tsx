@@ -1,10 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  Alert,
+  Button,
+  Image,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+import React from 'react';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Image
+        source={require('./assets/logo-ecopark.jpg')}
+        style={styles.logo}
+        
+      />
+      
+      <Button
+        onPress={() => Alert.alert(' Button pressed')}
+        title="Get Started"
+        color="#2196F3"
+        accessibilityLabel="Learn more about this purple button"
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +32,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logo: {
+    width: 150,
+    height: 100,
+    margin: 20,
   },
 });

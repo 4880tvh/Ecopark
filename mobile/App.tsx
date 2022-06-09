@@ -15,30 +15,29 @@ export default function App() {
       <Image
         source={require('./assets/logo-ecopark.jpg')}
         style={styles.logo}
-        
       />
-      
       <Button
-        onPress={() => Alert.alert(' Button pressed')}
+        onPress={() => Alert.alert('Button pressed')}
         title="Get Started"
         color="#2196F3"
         accessibilityLabel="Learn more about this purple button"
       />
       <StatusBar style="auto" />
+      
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 100,
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
   logo: {
-    width: 150,
-    height: 100,
+    width: 225,
+    height: 150,
     margin: 20,
   },
 });

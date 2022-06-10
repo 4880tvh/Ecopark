@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.people  {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 5px;
+}
+
+.person-info  {
+ display: inline-block;
+ border: 1px solid blue;
+ margin: 5px;
+ padding: 5px;
+ width: 250px;
+}

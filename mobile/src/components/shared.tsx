@@ -5,7 +5,7 @@ import { colors } from "./colors";
 
 export const Container = styled.View`
     flex: 1;
-    background-color: ${colors.primary};
+    background-color: ${colors.green};
     align-items: center;
 `;
 

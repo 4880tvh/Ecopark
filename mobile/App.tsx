@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import LoadingScreen from './src/views/Loading/LoadingScreen';
-import WelcomeScreen from './src/views/WelcomeScreen';
+import Loading from './src/views/Loading/Loading';
+import Welcome from './src/views/Welcome/Welcome';
 import { useFonts } from 'expo-font';
+import RootStack from './src/navigators/RootStack';
 
 
 export default function App() {
@@ -12,13 +13,13 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return <LoadingScreen />;
+    return <Loading />;
   }
 
   return (
     <View style={styles.container}>
-      <WelcomeScreen />
-      {/* <LoadingScreen /> */}
+      {/* <Welcome /> */}
+      <RootStack />
     </View>
   );
 }

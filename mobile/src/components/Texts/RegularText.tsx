@@ -4,8 +4,8 @@ import styled from 'styled-components/native';
 import { colors } from '../colors';
 
 const StyledText = styled.Text`
-    color: ${colors.gray};
-    font-size: 15px;
+    color: ${colors.white};
+    font-size: 16px;
     text-align: left;
     font-family: 'Lato-Bold';
 `;
@@ -13,7 +13,7 @@ const StyledText = styled.Text`
 import { TextProps } from './types';
 
 
-const regularText: FunctionComponent<TextProps> = (props) => {
+const RegularText: FunctionComponent<TextProps> = (props) => {
     return (
         <StyledText style={props.textStyles}>{props.children}
         
@@ -21,4 +21,4 @@ const regularText: FunctionComponent<TextProps> = (props) => {
     );
 }
 
-export default regularText;
+export default RegularText;

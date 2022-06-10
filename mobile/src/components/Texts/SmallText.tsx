@@ -4,8 +4,8 @@ import styled from 'styled-components/native';
 import { colors } from '../colors';
 
 const StyledText = styled.Text`
-    color: ${colors.gray};
-    font-size: 13px;
+    color: ${colors.white};
+    font-size: 14px;
     text-align: left;
     font-family: 'Lato-Regular';
 `;

@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, StyleSheet, Image, ActivityIndicator } from 'react-native';
-const LoadingScreen = () => {
+const Loading = () => {
     return (
         <View style={LoadingScreenStyles.backgroundCenter}>
             <Image
                 style={LoadingScreenStyles.ecoIcon}
-                source={require('../../../assets/ecopark-icon.png')} />
+                source={require('../../../assets/logo-ecopark.png')} />
                 <View style={{flex:0.05}}></View>
-            <ActivityIndicator size="large" color="#00ff00" />
+            <ActivityIndicator size="large" color="#71bf45" />
         </View>
     );
 }
@@ -20,7 +20,7 @@ const LoadingScreenStyles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "fff",
     },
     ecoIcon: {
         width: 200,
@@ -30,4 +30,4 @@ const LoadingScreenStyles = StyleSheet.create({
     }
 });
 
-export default LoadingScreen;
+export default Loading;

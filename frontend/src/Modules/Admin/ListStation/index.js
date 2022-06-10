@@ -47,8 +47,8 @@ export default function ListStationComponent() {
                 }}
                 spacing={2}>
                 {(searchInput.length >= 1 && dataFiltered !== [])
-                    ? (dataFiltered !== []) ?  <ListStationScreen stations={dataFiltered} setEditing={setEditing} chosenStation={chosenStation} setChosenStation={setChosenStation} needLoading={needLoading} setNeedLoading={setNeedLoading} /> : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#6160DC" /></div>)
-                    : (data ? <ListStationScreen stations={data} setEditing={setEditing} chosenStation={chosenStation} setChosenStation={setChosenStation} needLoading={needLoading} setNeedLoading={setNeedLoading} /> : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#6160DC" /></div>))
+                    ? (dataFiltered !== []) ?  <ListStationScreen stations={dataFiltered} setEditing={setEditing} chosenStation={chosenStation} setChosenStation={setChosenStation} needLoading={needLoading} setNeedLoading={setNeedLoading} /> : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#7ac70c" /></div>)
+                    : (data ? <ListStationScreen stations={data} setEditing={setEditing} chosenStation={chosenStation} setChosenStation={setChosenStation} needLoading={needLoading} setNeedLoading={setNeedLoading} /> : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#7ac70c" /></div>))
                 }
 
             </Grid>

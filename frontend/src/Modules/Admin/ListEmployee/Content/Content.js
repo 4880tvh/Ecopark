@@ -193,7 +193,7 @@ function Content({ loading, updateList, updateRole, search }) {
         </div>
 
         {
-          (isLoading) ? <div style={{ paddingLeft: 745 }}><PropagateLoader color="#6160DC" /></div> :
+          (isLoading) ? <div style={{ paddingLeft: 745 }}><PropagateLoader color="#7ac70c" /></div> :
             <table className="contenttable">
               <thead>
                 <tr>
@@ -308,7 +308,7 @@ function Content({ loading, updateList, updateRole, search }) {
                 if (page == currentPage)
                   return (
                     <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}
-                      style={{ color: 'white', background: '#6160DC', textDecoration: 'none' }}
+                      style={{ color: 'white', background: '#7ac70c', textDecoration: 'none' }}
                     >{page}</Button></li>
                   ); else return (
                     <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}>{page}</Button></li>

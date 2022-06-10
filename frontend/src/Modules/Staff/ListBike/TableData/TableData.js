@@ -214,7 +214,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                             if (page == currentPage)
                                 return (
                                     <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}
-                                        style={{ color: 'white', background: '#6160DC', textDecoration: 'none' }}
+                                        style={{ color: 'white', background: '#7ac70c', textDecoration: 'none' }}
                                     >{page}</Button></li>
                                 ); else return (
                                     <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}>{page}</Button></li>

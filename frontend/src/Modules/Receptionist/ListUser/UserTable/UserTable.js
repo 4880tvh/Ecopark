@@ -201,7 +201,7 @@ export default function UserTable({ loading, updateList, search }) {
                       width: 90,
                       marginRight: 10,
                       borderRadius: 5,
-                      backgroundColor: "#6160DC",
+                      backgroundColor: "#7ac70c",
                       color: "white",
                     }} onClick={() => { deleteUser(post._id) }}>
                       Delete
@@ -212,7 +212,7 @@ export default function UserTable({ loading, updateList, search }) {
                       width: 90,
                       marginRight: 10,
                       borderRadius: 5,
-                      backgroundColor: "#6160DC",
+                      backgroundColor: "#7ac70c",
                       color: "white",
                     }}
                       onClick={() => {
@@ -253,7 +253,7 @@ export default function UserTable({ loading, updateList, search }) {
               if (page == currentPage)
                 return (
                   <li key = {index} ><Button id="contentnumber" onClick={() => setCurrentPage(page)}
-                    style={{ color: 'white', background: '#6160DC', textDecoration: 'none' }}
+                    style={{ color: 'white', background: '#7ac70c', textDecoration: 'none' }}
                   >{page}</Button></li>
                 ); else return (
                   <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}>{page}</Button></li>

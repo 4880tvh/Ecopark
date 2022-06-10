@@ -28,7 +28,7 @@ const useStyles = makeStyles({
         },
     },
     icon: {
-        backgroundColor: "#6160DC",
+        backgroundColor: "#7ac70c",
         color: "white",
         borderRadius: "20px",
         height: "40px",

@@ -10,6 +10,7 @@ import RegularText from '../../components/Texts/RegularText';
 import SmallText from '../../components/Texts/SmallText';
 import RegularButton from '../../components/Buttons/RegularButton';
 
+
 const WelcomeContainer = styled(Container)`
     background-color: ${colors.green};
     justify-content: center;
@@ -22,17 +23,6 @@ const TopSection = styled.View`
     width: 100%;
     max-height: 55%;
 `;
-
-// export const SvgComponent = (props: any) => {
-//     return (
-//       <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" {...props}>
-//         <Path
-//           fill="#71bf45"
-//           d="M0 192l80 10.7c80 10.3 240 32.3 400 16C640 203 800 149 960 144s320 37 400 58.7l80 21.3V0H0z"
-//         />
-//       </Svg>
-//     )
-//   }
 
 const TopImage = styled.Image`
     margin-top: 80px;
@@ -64,7 +54,7 @@ const Welcome: FunctionComponent = () => {
                     <RegularText textStyles={{ marginBottom: 25 }}>
                         It never gets easier, you just go faster
                     </RegularText>
-                    <RegularButton textStyles={{ width: "70%" }} >Get Started</RegularButton>
+                    <RegularButton textStyles={{ width: "70%" }}>Get Started</RegularButton>
                 </BottomSection>
             </WelcomeContainer>
         </>

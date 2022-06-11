@@ -4,6 +4,8 @@ import Loading from './src/views/Loading/Loading';
 import Welcome from './src/views/Welcome/Welcome';
 import { useFonts } from 'expo-font';
 import RootStack from './src/navigators/RootStack';
+import Home from './src/views/Home/Home';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default function App() {
@@ -17,10 +19,13 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaProvider>
+    <SafeAreaView style={styles.container}>
       {/* <Welcome /> */}
       <RootStack />
-    </View>
+      {/* <Home /> */}
+    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

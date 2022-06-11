@@ -19,5 +19,8 @@
   "homepage": "https://github.com/nvhoangICT/SE.20212.Group504#readme",
   "devDependencies": {
     "concurrently": "^7.2.1"
+  },
+  "dependencies": {
+    "@react-navigation/native-stack": "^6.6.2"
   }
 }

@@ -58,13 +58,13 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                 <button
                     style={{
                         width: "100px",
-                        backgroundColor: "#7ac70c",
+                        backgroundColor: "#6160DC",
                         fontFamily: "'Roboto', sans-serif",
                         fontWeight: "600",
                         fontsize: "16px",
                         boxShadow:"0px 4px 4px #EFEFEF",
                         borderRadius:"10px",
-                        border:"1px solid #7ac70c",
+                        border:"1px solid #6160DC",
                         color:"white",
                         cursor:"pointer",
                         

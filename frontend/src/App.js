@@ -42,30 +42,27 @@ export default function App() {
         <Router>
             <Box className="app" sx={{height: "1080px" ,width:"100%"}}>
                 <Grid container item direction="row" >
-                    {<Grid item sx={{width:"18%", height:"1080px"}} >
+                    {token && <Grid item sx={{width:"18%", height:"1080px"}} >
                         <SideBar items={sidebarItems[role]} />
                     </Grid>}
                     <Grid  item xs sx={{height:"1080px",}}>
                         <Routes>
                             <Route exact path="/login" element={<Login token={token} setToken={setToken} setRole={setRole} />} />
-                            {(<Route exact path="/" element={<Navigate to={`/${role}`} />} />)}
-
-                            {/*Admin routes*/}
-                            {<Route exact path="/admin" element={<AdminDashboard setToken={setToken} />} />}
-                            {<Route exact path="/admin/employee" element={<ListReceptionist />} />}
-                            {<Route exact path="/admin/station" element={<ListStationComponent />} />}
-                            {<Route exact path="/admin/bike" element={<ListBike />} />}
-                            {<Route exact path="/admin/bike-category" element={<BikeCategories />} />}
+                            {user.admin && token && <Route exact path="/admin" element={<AdminDashboard setToken={setToken} />} />}
+                            {user.admin && token && <Route exact path="/admin/employee" element={<ListReceptionist />} />}
+                            {user.admin && token && <Route exact path="/admin/station" element={<ListStationComponent />} />}
+                            {user.admin && token && <Route exact path="/admin/bike" element={<ListBike />} />}
+                            {user.admin && token && <Route exact path="/admin/bike-category" element={<BikeCategories />} />}
                             {/*Receptionist routes */}
-                            {<Route exact path="/receptionist" element={<DashboardOfReceptionist setToken={setToken} />} />}
-                            {<Route exact path="/receptionist/pending" element={<PendingHistory />} />}
-                            {<Route exact path="/receptionist/user" element={<ListUser />} />}
-                            {<Route exact path="/receptionist/statistical" element={<Statistical />} />}
+                            {user.receptionist && token && <Route exact path="/receptionist" element={<DashboardOfReceptionist setToken={setToken} />} />}
+                            {user.receptionist && token && <Route exact path="/receptionist/pending" element={<PendingHistory />} />}
+                            {user.receptionist && token && <Route exact path="/receptionist/user" element={<ListUser />} />}
+                            {user.receptionist && token && <Route exact path="/receptionist/statistical" element={<Statistical />} />}
                             {/*Staff routes */}
-                            {<Route exact path="/staff" element={<DashboardOfStaff setToken={setToken} />} />}
-                            {<Route exact path="/staff/bike-confirm" element={<BikeConfirm />} />}
-                            {<Route exact path="/staff/bike" element={<ListBikeOfStaff />} />}
-                            {<Route exact path="/staff/bike-category" element={<BikeCategoriesOfStaff />} />}
+                            {user.staff && token && <Route exact path="/staff" element={<DashboardOfStaff setToken={setToken} />} />}
+                            {user.staff && token && <Route exact path="/staff/bike-confirm" element={<BikeConfirm />} />}
+                            {user.staff && token && <Route exact path="/staff/bike" element={<ListBikeOfStaff />} />}
+                            {user.staff && token && <Route exact path="/staff/bike-category" element={<BikeCategoriesOfStaff />} />}
                             <Route path="*" element={<Navigate to="/login" />} />
                         </Routes>
                     </Grid>

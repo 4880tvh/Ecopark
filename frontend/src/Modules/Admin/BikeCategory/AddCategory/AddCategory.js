@@ -149,10 +149,10 @@ function AddCategory({ setAdding, setNeedLoading, needLoading }) {
             </div>
             <div style={{ display: "grid", justifyContent: "center", gap: "5px" }}>
                 <button id='Dung_NA_AddCateButton' style={{
-                    backgroundColor: "#7ac70c",
+                    backgroundColor: "#6160DC",
                     fontFamily: "'Roboto', sans-serif",
                     boxShadow: "0px 4px 4px #EFEFEF",
-                    border: "1px solid #7ac70c",
+                    border: "1px solid #6160DC",
                     color: "white",
                     width: "100px",
                     height: "40px",

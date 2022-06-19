@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const bikeSchema= new mongoose.Schema({
     category:{
         type:mongoose.Schema.Types.ObjectId,

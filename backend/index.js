@@ -10,84 +10,74 @@ const bikeRoute = require('./routes/bikeRoute')
 const hiringBikeRoute = require('./routes/hiringBikeRoute');
 const notification = require('./controllers/notification');
 const paymentRoute = require('./routes/accountBillRoute');
-const dotenv = require("dotenv");
-
-const port = 5000
 
 // socket.io notification
 const app = express();
 const server = http.createServer(app)
 const io = socketio(server, {
-  transports: ['polling'],
-  cors: {
+    transports: ['polling'],
     cors: {
-      origin: ""
+        cors: {
+            origin: ""
+        }
     }
-  }
 })
 require('./controllers/notification')(io);
 // end config socket 
 
-let cors = require('cors');
-const path = require('path');
 dotenv.config();
+var cors = require('cors');
 connectDB();
-
-const __dirname1 = path.resolve();
-
-app.use(express.static(path.join(__dirname1, "/public")))
+app.use("/images", express.static("./images"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
 const corsOpts = {
-  origin: '*',
-  methods: [
-    'GET',
-    'POST',
-    'PUT',
-    'DELETE'
-  ],
+    origin: '*',
+    methods: [
+        'GET',
+        'POST',
+        'PUT',
+        'DELETE'
+    ],
 
-  allowedHeaders: [
-    'Content-Type',
-    'Authorization'
-  ],
+    allowedHeaders: [
+        'Content-Type',
+        'Authorization'
+    ],
 };
 
 app.use(cors(corsOpts));
-
 app.use(userRoute, function (req, res, next) {
-  next()
+    next()
 });
 
 app.use(categoryRoute, function (req, res, next) {
-  next()
+    next()
 })
 
 app.use(locationRoute, function (req, res, next) {
-  next();
+    next();
 })
 app.use(paymentRoute, function (req, res, next) {
-  next();
+    next();
 })
 
 app.use(stationRoute, function (req, res, next) {
-  next();
+    next();
 })
 
 app.use(bikeRoute, function (req, res, next) {
-  next();
+    next();
 })
 
 app.use(hiringBikeRoute, function (req, res, next) {
-  next();
+    next();
 })
-
 app.all('*', (req, res) => {
-  res.json({ status: 'fail', msg: 'Check route api' })
+    res.json({ status: 'fail', msg: '-.-Kiểm tra kĩ lại route api' })
 })
 
 app.listen(process.env.PORT || 5000, (req, res) => {
-  console.log(`Example app listening on port ${port}`)
+    console.log("server chay o port 5000")
 })
-

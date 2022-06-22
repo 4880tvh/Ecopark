@@ -109,7 +109,7 @@ export default function BikeCategories(){
                     <Grid container item xs sx={{
                             marginLeft: "-45px"
                         }}>
-                    {chosenCategory?(<CategoryDetails data={chosenCategory} setNeedLoading={setNeedLoading} needLoading={needLoading} setEdit={setEdit}/>  ):(<div style={{ paddingLeft: 100 }}><PropagateLoader color="#7ac70c" /></div>)}
+                    {chosenCategory?(<CategoryDetails data={chosenCategory} setNeedLoading={setNeedLoading} needLoading={needLoading} setEdit={setEdit}/>  ):(<div style={{ paddingLeft: 100 }}><PropagateLoader color="#6160DC" /></div>)}
                     </Grid>
                 </Grid>
             </Grid>

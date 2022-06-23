@@ -1,36 +1,27 @@
-import React from 'react';
-import styled from 'styled-components/native';
+import React from "react";
+import styled from "styled-components/native";
 
-import { colors } from '../colors';
-import RegularText from '../../components/Texts/RegularText';
+//colors
+import { colors } from "../colors";
+import RegularText from "./../Texts/RegularText";
 
-import {
-  GestureResponderEvent,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-} from 'react-native';  
-
-export const ButtonView = styled.TouchableOpacity`
+const ButtonView = styled.TouchableOpacity`
   align-items: center;
-  background-color: ${colors.kiwi};
+  background-color: ${colors.primary};
   width: 100%;
   padding: 20px;
-  justify-content: center;
   border-radius: 20px;
 `;
 
-interface ButtonProps {
-  btnStyle?: StyleProp<ViewStyle>;
-  onPress: (event: GestureResponderEvent) => void | undefined;
-  textStyle?: StyleProp<TextStyle>;
+const RegularButton = (props: {
+  btnStyles?: any;
+  textStyles?: any;
   children: React.ReactNode;
-}
-
-const RegularButton = (props: any) => {
+  onPress: any;
+}) => {
   return (
-    <ButtonView onPress={props.onPress} {...props}>
-      <RegularText textStyles={[{ color: colors.white, fontSize: 18 }, { ...props?.textStyle }]}>
+    <ButtonView onPress={props.onPress} style={{ ...props.btnStyles }}>
+      <RegularText textStyles={{ ...props.btnStyles }}>
         {props.children}
       </RegularText>
     </ButtonView>

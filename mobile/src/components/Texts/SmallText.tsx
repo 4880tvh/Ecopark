@@ -1,24 +1,20 @@
-import React, { FunctionComponent } from 'react';
-import styled from 'styled-components/native';
+import React from "react";
+import styled from "styled-components/native";
 
-import { colors } from '../colors';
+//colors
+import { colors } from "../colors";
 
 const StyledText = styled.Text`
-    color: ${colors.white};
-    font-size: 14px;
-    text-align: left;
-    font-family: 'Lato-Regular';
+  font-size: 13px;
+  color: ${colors.gray};
+  text-align: left;
+  font-family: Lato-Regular;
 `;
 
-import { TextProps } from './types';
-
-
-const SmallText: FunctionComponent<TextProps> = (props) => {
-    return (
-        <StyledText style={props.textStyles}>{props.children}
-        
-        </StyledText>
-    );
-}
+const SmallText = (props: { textStyles?: any; children: React.ReactNode }) => {
+  return (
+    <StyledText style={{ ...props.textStyles }}>{props.children}</StyledText>
+  );
+};
 
 export default SmallText;

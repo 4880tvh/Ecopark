@@ -1,24 +1,21 @@
-import React, { FunctionComponent } from 'react';
-import styled from 'styled-components/native';
+import React from "react";
+import { Text } from "react-native";
+import styled from "styled-components/native";
 
-import { colors } from '../colors';
+//colors
+import { colors } from "../colors";
 
 const StyledText = styled.Text`
-    color: ${colors.white};
-    font-size: 37px;
-    text-align: left;
-    font-family: 'Lato-Bold';
+  font-size: 37px;
+  color: ${colors.white};
+  text-align: left;
+  font-family: Lato-Bold;
 `;
 
-import { TextProps } from './types';
-
-
-const BigText: FunctionComponent<TextProps> = (props) => {
-    return (
-        <StyledText style={props.textStyles}>{props.children}
-        
-        </StyledText>
-    );
-}
+const BigText = (props: { textStyles?: any; children: React.ReactNode }) => {
+  return (
+    <StyledText style={{ ...props.textStyles }}>{props.children}</StyledText>
+  );
+};
 
 export default BigText;

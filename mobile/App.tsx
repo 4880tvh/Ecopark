@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Loading from './src/views/Loading/Loading';
-import Welcome from './src/views/Welcome/Welcome';
+import Welcome from './src/views/Welcome';
 import { useFonts } from 'expo-font';
 import RootStack from './src/navigators/RootStack';
-import Home from './src/views/Home/Home';
+import Home from './src/views/Main/Home';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -20,11 +20,12 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-    <SafeAreaView style={styles.container}>
-      {/* <Welcome /> */}
-      <RootStack />
-      {/* <Home /> */}
-    </SafeAreaView>
+      <SafeAreaView style={styles.container}>
+        {/* <Loading /> */}
+        {/* <Welcome /> */}
+        <RootStack /> 
+        {/* <Home /> */}
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 }
@@ -32,8 +33,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

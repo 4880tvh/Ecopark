@@ -23,7 +23,7 @@ const LoadingScreenStyles = StyleSheet.create({
         backgroundColor: "fff",
     },
     ecoIcon: {
-        width: 200,
+        width: 160,
         height: "auto",
         aspectRatio: 1.5,
         resizeMode: "contain",

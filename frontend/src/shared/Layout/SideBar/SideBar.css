@@ -53,7 +53,7 @@
 
     filter: drop-shadow(0px 20px 50px rgba(191, 21, 108, 0.05));
     border-radius: 20px;
-    background-color: #7ac70c;
+    background-color: #6160DC;
     /* Inside Auto Layout */
 
     flex: none;
@@ -167,7 +167,7 @@
     border-radius: 20px;
     width: 200px;
     height: 48px;
-    background-color: #7ac70c;
+    background-color: #6160DC;
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 18px;

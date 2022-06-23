@@ -29,7 +29,7 @@ export default function Station({ data, setChosenData }) {
           <Grid container direction="column" >
             <Grid container item xs={6} direction="row" spacing={2} >
               <Grid item xs={3}>
-                <Avatar sx={{ bgcolor: "#1976D2", width: "70px", height: "70px", marginTop: "5px", background: "#7ac70c" }} src=""></Avatar>
+                <Avatar sx={{ bgcolor: "#1976D2", width: "70px", height: "70px", marginTop: "5px", background: "#6160DC" }} src=""></Avatar>
               </Grid>
               <Grid container item xs={6} direction="column" sx={{ marginTop: "13px" }}>
                 <Typography variant="h5">{data.name}</Typography>
@@ -41,7 +41,7 @@ export default function Station({ data, setChosenData }) {
             <Grid container item xs={6} direction="row" style={{ marginTop: "8.5%" }}>
 
               <Grid container item xs={6}>
-                <Grid item xs={3}><Icon sx={{ backgroundColor: "#7ac70c", color: "white", borderRadius: "20px", height: "40px", width: "40px", padding: "7px 0px 0px 7px", marginTop: "4px" }}>directions_bike_circle</Icon></Grid>
+                <Grid item xs={3}><Icon sx={{ backgroundColor: "#6160DC", color: "white", borderRadius: "20px", height: "40px", width: "40px", padding: "7px 0px 0px 7px", marginTop: "4px" }}>directions_bike_circle</Icon></Grid>
                 <Grid container direction="column" item xs={9}>
                   <Typography variant="h7">Hotline</Typography>
                   <Typography variant="h7">{data.phoneNumber}</Typography>
@@ -49,7 +49,7 @@ export default function Station({ data, setChosenData }) {
               </Grid>
 
               <Grid container item xs={6}>
-                <Grid item xs={3}><Icon sx={{ backgroundColor: "#7ac70c", color: "white", borderRadius: "20px", height: "40px", width: "40px", padding: "7px 0px 0px 7px", marginTop: "4px" }}>directions_bike_circle</Icon></Grid>
+                <Grid item xs={3}><Icon sx={{ backgroundColor: "#6160DC", color: "white", borderRadius: "20px", height: "40px", width: "40px", padding: "7px 0px 0px 7px", marginTop: "4px" }}>directions_bike_circle</Icon></Grid>
                 <Grid container direction="column" item xs={9}>
                   <Typography variant="h7">Staff</Typography>
                   {data.staff&&<Typography variant="h7">{data.staff.name}</Typography>}

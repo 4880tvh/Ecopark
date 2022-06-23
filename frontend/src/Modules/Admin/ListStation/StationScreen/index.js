@@ -45,10 +45,10 @@ export default function ListStationScreen({ stations, setEditing, setChosenStati
                     <Box>
                         <Grid container direction="column" spacing={2} style={{ backgroundColor: "#ffff", borderRadius: "40px", marginTop: "4%" }}>
                             <Grid container item >
-                                {chosenStation ? (<Detail details={chosenStation} />) : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#7ac70c" /></div>)}
+                                {chosenStation ? (<Detail details={chosenStation} />) : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#6160DC" /></div>)}
                             </Grid>
                             <Grid container item sx={{ height: "55.5vh" }}>
-                                {chosenStation ? (<ListBikeCategory bikeCategories={chosenStation.listBikeCategory} />) : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#7ac70c" /></div>)}
+                                {chosenStation ? (<ListBikeCategory bikeCategories={chosenStation.listBikeCategory} />) : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#6160DC" /></div>)}
                             </Grid>
                             <Grid container direction="row" item style={{ marginBottom: "1%", marginTop: "-70px", marginLeft: "110px" }}>
                                 <Grid item sx={{ paddingLeft: "160px", paddingRight: "40px" }}>

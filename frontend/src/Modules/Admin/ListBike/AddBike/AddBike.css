@@ -53,8 +53,8 @@
 }
 
 .table-add-bike input:focus {
-    border-color: #7ac70c;
-    box-shadow: 0 0 8px 0 #7ac70c;
+    border-color: #6160DC;
+    box-shadow: 0 0 8px 0 #6160DC;
 }
 
 .bottom-button {
@@ -100,7 +100,7 @@ td select {
     top: -5px;
     right: 0px;
     padding: 0px 10px;
-    background:#7ac70c;
+    background:#6160DC;
     cursor:pointer;
     pointer-events:none;
     transition:.25s all ease;

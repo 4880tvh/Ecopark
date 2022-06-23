@@ -174,7 +174,7 @@ function Content({search}) {
                                             width: 80,
                                             marginRight: 10,
                                             borderRadius: 5,
-                                            backgroundColor: "#7ac70c",
+                                            backgroundColor: "#6160DC",
                                             color: "white",
                                         }} onClick={() => { console.log("Delete") }}>
                                             Delete
@@ -185,7 +185,7 @@ function Content({search}) {
                                             height: 30,
                                             width: 80,
                                             borderRadius: 5,
-                                            backgroundColor: "#7ac70c",
+                                            backgroundColor: "#6160DC",
                                             color: "white",
 
                                         }} onClick={() => {
@@ -226,7 +226,7 @@ function Content({search}) {
                             if (page == currentPage)
                                 return (
                                     <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}
-                                        style={{ color: 'white', background: '#7ac70c', textDecoration: 'none' }}
+                                        style={{ color: 'white', background: '#6160DC', textDecoration: 'none' }}
                                     >{page}</Button></li>
                                 ); else return (
                                     <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}>{page}</Button></li>

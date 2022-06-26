@@ -21,7 +21,7 @@ export default function UserTable({ loading, updateList, search }) {
 
   async function deleteUser(id) {
     const token = localStorage.getItem("token")
-    await axios.delete(`http://localhost:8080/api/v2/user/delete/` + id, { headers: { "Authorization": `Bearer ${token}` } })
+    await axios.delete(`https://nmcnpm.herokuapp.com/api/v2/user/delete/` + id, { headers: { "Authorization": `Bearer ${token}` } })
       .then(res => {
       })
     setChecked([]);
@@ -32,7 +32,7 @@ export default function UserTable({ loading, updateList, search }) {
   async function activateUser(post) {
     const userActivated = { ...post, activate: true };
     const token = localStorage.getItem("token")
-    await axios.put(`http://localhost:8080/api/v2/user/edit/` + post._id, userActivated, { headers: { "Authorization": `Bearer ${token}` } })
+    await axios.put(`https://nmcnpm.herokuapp.com/api/v2/user/edit/` + post._id, userActivated, { headers: { "Authorization": `Bearer ${token}` } })
       .then(res => {
       })
     setRefresh(!refresh);
@@ -44,7 +44,7 @@ export default function UserTable({ loading, updateList, search }) {
 
   async function getData() {
     const token = localStorage.getItem("token");
-    await axios.get(`http://localhost:8080/api/v1/activated/users`, { headers: { "Authorization": `Bearer ${token}` } })
+    await axios.get(`https://nmcnpm.herokuapp.com/api/v1/activated/users`, { headers: { "Authorization": `Bearer ${token}` } })
       .then(res => {
         setPosts(res.data.data);
         setupPages(res.data.data.length);

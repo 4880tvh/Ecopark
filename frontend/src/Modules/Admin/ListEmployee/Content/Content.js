@@ -76,7 +76,7 @@ function Content({ loading, updateList, updateRole, search }) {
 
   async function deleteMember(index) {
     const id = posts[index]._id
-    const url = `http://localhost:8080/api/v1/accounts/delete?type=${option[0] == true ? "receptionist" : "staff"}/` + id
+    const url = `https://nmcnpm.herokuapp.com/api/v1/accounts/delete?type=${option[0] == true ? "receptionist" : "staff"}/` + id
     console.log(url)
     const token = localStorage.getItem("token")
     await axios.delete(url, { headers: { "Authorization": `Bearer ${token}` } })
@@ -90,7 +90,7 @@ function Content({ loading, updateList, updateRole, search }) {
   }
 
   async function getEmployee(type) {
-    const url = 'http://localhost:8080/api/v1/account/search?type=' + type + '&q=' + search;
+    const url = 'https://nmcnpm.herokuapp.com/api/v1/account/search?type=' + type + '&q=' + search;
     console.log(url);
     const token = localStorage.getItem("token")
     await axios.get(url, { headers: { "Authorization": `Bearer ${token}` } })

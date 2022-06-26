@@ -22,7 +22,7 @@ export default function Forgotpassword({callBack}) {
 
     async function postData(email){
         let tooken = localStorage.getItem("token")
-        const url = 'http://localhost:8080/api/v2/receptionist/forgetpass'
+        const url = 'https://nmcnpm.herokuapp.com/api/v2/receptionist/forgetpass'
 
         const data = {
             email: email

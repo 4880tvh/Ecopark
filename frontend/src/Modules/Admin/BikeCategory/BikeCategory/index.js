@@ -18,7 +18,7 @@ export default function BikeCategories(){
     const [isAdding, setAdding] = useState(false)
     const [needLoading, setNeedLoading]= useState(1)
     const [edit, setEdit] = useState(false)
-    const [url,setUrl]= useState('http://localhost:8080/api/v2/category')
+    const [url,setUrl]= useState('https://nmcnpm.herokuapp.com/api/v2/category')
     async function getCategory(){
         let token = localStorage.getItem("token");
         axios.get(url,{headers:{"Authorization":`Bearer ${token}`}})
@@ -92,8 +92,8 @@ export default function BikeCategories(){
                                     <span>Sắp xếp theo</span>
                                 </div>
                                 <div className="dropdown-list">
-                                    <div className="dropdown-list-item" onClick={(e)=>setUrl('http://localhost:8080/api/v2/category?sortBy=priceLowToHigh')}>Giá thấp - cao</div>
-                                    <div className="dropdown-list-item" onClick={(e)=>setUrl('http://localhost:8080/api/v2/category?sortBy=priceHighToLow')}>Giá cao - thấp</div>
+                                    <div className="dropdown-list-item" onClick={(e)=>setUrl('https://nmcnpm.herokuapp.com/api/v2/category?sortBy=priceLowToHigh')}>Giá thấp - cao</div>
+                                    <div className="dropdown-list-item" onClick={(e)=>setUrl('https://nmcnpm.herokuapp.com/api/v2/category?sortBy=priceHighToLow')}>Giá cao - thấp</div>
                                 </div>
                             </div>
                         

@@ -15,7 +15,7 @@ function SearchBar({ list, callBack, updateSearch }) {
   async function deleteUser(id) {
     const token = localStorage.getItem("token")
     console.log(token);
-    await axios.delete(`http://localhost:8080/api/v2/user/delete/` + id, { headers: { "Authorization": `Bearer ${token}` } })
+    await axios.delete(`https://nmcnpm.herokuapp.com/api/v2/user/delete/` + id, { headers: { "Authorization": `Bearer ${token}` } })
       .then(res => {
         var status = true;
       })

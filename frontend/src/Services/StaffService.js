@@ -1,5 +1,5 @@
 import axios from "axios"
-const url = "http://localhost:8080/api/";
+const url = "https://nmcnpm.herokuapp.com/api/";
 
 export const getAllStation = async () => {
     const token = localStorage.getItem("token");
@@ -95,7 +95,7 @@ export const addNewStation = async (data) => {
 
 export const getStaffs = async () => {
     const token = localStorage.getItem("token");
-    const url1 = "http://localhost:8080/api/v1/accounts?type=staff"
+    const url1 = "https://nmcnpm.herokuapp.com/api/v1/accounts?type=staff"
     const result = await axios.get(url1, {
         headers: { "Authorization": `Bearer ${token}` }
     })

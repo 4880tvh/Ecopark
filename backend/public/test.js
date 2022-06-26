@@ -1,4 +1,4 @@
-// axios.post('http://localhost:8080/api/v1/admin/login', {
+// axios.post('https://nmcnpm.herokuapp.com/api/v1/admin/login', {
 //     email: 'admin@gmail.com',
 //     password: 'admin'
 //   })
@@ -10,7 +10,7 @@
 //   });
 
 // const xhr = new XMLHttpRequest();
-// xhr.open('POST', 'http://localhost:8080/api/v1/admin/login');
+// xhr.open('POST', 'https://nmcnpm.herokuapp.com/api/v1/admin/login');
 // xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
 // xhr.setRequestHeader('Content-Type', 'application/xml');
 // xhr.onreadystatechange = handler;
@@ -37,7 +37,7 @@
 //         return response.json(); 
 // }
 
-const api = `http://localhost:8080/api/v1/user/login`;
+const api = `https://nmcnpm.herokuapp.com/api/v1/user/login`;
 axios.post(api,{startDate:"",endDate:""},
     { 
         headers: 
@@ -46,7 +46,7 @@ axios.post(api,{startDate:"",endDate:""},
 
 console.log(Math.floor(new Date("")))
 
-// axios.post('http://localhost:8080/api/v1/user/login', {
+// axios.post('https://nmcnpm.herokuapp.com/api/v1/user/login', {
 //     password: "kiendao",
 //     email:"kiend9814@gmail.com",
 // }).then((response) => {

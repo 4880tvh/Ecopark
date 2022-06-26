@@ -11,7 +11,7 @@ function SearchBar({ list, callBack, role, updateSearch}) {
   const [loading, setLoading] = useState(false)
   const [textData, setTextData] = useState('')
   async function deleteMember(id) {
-    const url = `http://localhost:8080/api/v1/accounts/delete?type=${(role[0]) ? "receptionist" : "staff"}/` + id
+    const url = `https://nmcnpm.herokuapp.com/api/v1/accounts/delete?type=${(role[0]) ? "receptionist" : "staff"}/` + id
     var status = true
     const token = localStorage.getItem("token")
     await axios.delete(url, { headers: { "Authorization": `Bearer ${token}` } })

@@ -142,7 +142,7 @@ function Verify_info({ infor, callBack }) {
                                     if (isApprove) {
                                         setLoading(true)
                                         const token = localStorage.getItem("token")
-                                        const url = "http://localhost:8080/api/v1/user/activate/" + infor._id
+                                        const url = "https://nmcnpm.herokuapp.com/api/v1/user/activate/" + infor._id
                                         console.log(url)
                                         axios.post(url, {}, { headers: { "Authorization": `Bearer ${token}` } })
                                             .then(res => {

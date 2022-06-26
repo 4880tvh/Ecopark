@@ -17,16 +17,16 @@ import {
 const RenderBarChart = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  const [url, setUrl] = useState('http://localhost:8080/api/v3/statistic/payment')
+  const [url, setUrl] = useState('https://nmcnpm.herokuapp.com/api/v3/statistic/payment')
   const [statistic, setStatistic] = useState([]);
 
   function tiennap() {
-      setUrl('http://localhost:8080/api/v3/statistic/payment')
+      setUrl('https://nmcnpm.herokuapp.com/api/v3/statistic/payment')
 
   }
 
   function tienthuexe() {
-    setUrl('http://localhost:8080/api/v3/receptionist/hiring/statistic')
+    setUrl('https://nmcnpm.herokuapp.com/api/v3/receptionist/hiring/statistic')
 }
 
   function processDataHiring(payment, days, startDate) {
@@ -100,8 +100,8 @@ const RenderBarChart = () => {
         var delta = Math.abs(startDate - endDate) / 1000;
         var days = Math.floor(delta / 86400);
         delta -= days * 86400;
-        if (url === 'http://localhost:8080/api/v3/statistic/payment') processData(res.data.data, days+1, startDate);
-        if (url === 'http://localhost:8080/api/v3/receptionist/hiring/statistic') processDataHiring(res.data.data, days+1, startDate);
+        if (url === 'https://nmcnpm.herokuapp.com/api/v3/statistic/payment') processData(res.data.data, days+1, startDate);
+        if (url === 'https://nmcnpm.herokuapp.com/api/v3/receptionist/hiring/statistic') processDataHiring(res.data.data, days+1, startDate);
       })
 
   }

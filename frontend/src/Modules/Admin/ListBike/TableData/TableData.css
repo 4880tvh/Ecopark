@@ -25,12 +25,12 @@
     justify-content: space-between;
     font-size: 1.4rem;
     cursor: pointer;
-    border: solid #6160DC;
+    border: solid #7ac70c;
 }
 .dropdown-list {
     z-index: 2;
     border-radius: 20px;
-    background-color:#6160DC; 
+    background-color:#7ac70c; 
     position: absolute ;  
     top: 110%;
     left: 0;

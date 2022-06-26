@@ -45,7 +45,7 @@ export default function App() {
                     {token && <Grid item sx={{width:"18%", height:"1080px"}} >
                         <SideBar items={sidebarItems[role]} />
                     </Grid>}
-                    <Grid  item xs sx={{height:"1080px",}}>
+                    <Grid  item xs sx={{height:"1080px"}}>
                         <Routes>
                             <Route exact path="/login" element={<Login token={token} setToken={setToken} setRole={setRole} />} />
                             {user.admin && token && <Route exact path="/admin" element={<AdminDashboard setToken={setToken} />} />}

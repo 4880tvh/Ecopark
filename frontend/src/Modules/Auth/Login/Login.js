@@ -117,12 +117,6 @@ function Login({ token, setToken, setRole }) {
 
     return (
         <div className="login-screen">
-            <div className="login-left-layout">
-                <img src={LoginLogo} style={{
-                    width: "60%",
-                    height: "auto",
-                }} alt="login logo" />
-            </div>
 
             <div className="login-right-layout">
                 {
@@ -132,7 +126,12 @@ function Login({ token, setToken, setRole }) {
                     (!isChange) && <LoginItem validate={validate} user={user} handleChange={handleChange} isLoading={isLoading} handleValidate={handleValidate} postData={postData} setIsChange={setIsChange} />
                 }
             </div>
-            
+            <div className="login-left-layout">
+                <img src={LoginLogo} style={{
+                    width: "60%",
+                    height: "auto",
+                }} alt="login logo" />
+            </div>
         </div>
 
     );

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 .login-screen  {
     height: 100%;
-    width: 100%;
+    width: 200vh;
     display: flex;
     flex-direction: row;
 }
@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     flex: 4;
-    background-color: #6160DC;
+    background-color: #7ac70c;
     flex-direction: column;
     height: 100%;
 }
@@ -22,6 +22,7 @@
     height: 100%;
     display: flex;
     background-color: #FFFFFF;
+    background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?w=2000);
 }
 .login-input {
     margin: 0;
@@ -33,12 +34,12 @@
     width: 100%;
     padding-left: 20px;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 
 }
 .login-form{
-    padding: 10px 30px;
-    height: 380px;
+    padding: 30px 30px;
+    height: 360px;
     width: 470px;
     z-index: 1;
     background-color: #FFFFFF;
@@ -59,8 +60,8 @@ h5 {
 
 .login-button{
     margin-top: 30px;
-    background: #6160DC;
-    border: 1px solid #6160DC;
+    background: #7ac70c;
+    border: 1px solid #7ac70c;
     border-radius: 20px;
     color: white;
     height: 100%;
@@ -97,14 +98,8 @@ li {
 
 
 
-.Tan-div-login {
+.div-login {
     width: 450px;
     height: 10px;
 }
 
-.Tan-but-login-css-forget {
-    margin-left: 321px ;
-    margin-top: 43px;
-    background-color: #FFFFFF;
-    cursor: pointer;
-}

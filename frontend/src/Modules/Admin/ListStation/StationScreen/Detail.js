@@ -28,7 +28,7 @@ export default function Detail({details}) {
 
                         <Grid item container style={{marginTop:"4%", marginBottom:"4%"}}>
                         <Grid container item xs={6}>
-                            <Grid item xs={3} ><Icon sx={{backgroundColor:"#6160DC", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"7px 0px 0px 7px", marginTop:"4px"}}>directions_bike_circle</Icon> </Grid>
+                            <Grid item xs={3} ><Icon sx={{backgroundColor:"#7ac70c", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"7px 0px 0px 7px", marginTop:"4px"}}>directions_bike_circle</Icon> </Grid>
                             <Grid container direction="column" item xs={9}>
                                 <Typography variant="h7">Num of type</Typography>
                                <Typography variant="h7">{details.listBikeCategory.length} types</Typography>
@@ -36,7 +36,7 @@ export default function Detail({details}) {
                         </Grid>
 
                         <Grid container item xs={6}>
-                            <Grid item xs={3}><Icon sx={{backgroundColor:"#6160DC", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"7px 0px 0px 7px", marginTop:"4px"}}>directions_bike_circle</Icon></Grid>
+                            <Grid item xs={3}><Icon sx={{backgroundColor:"#7ac70c", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"7px 0px 0px 7px", marginTop:"4px"}}>directions_bike_circle</Icon></Grid>
                             <Grid container direction="column" item xs={9}>
                                 <Typography variant="h7">Bike amount</Typography>
                                 <Typography variant="h7">{details.numOfBike} bikes</Typography>
@@ -57,7 +57,7 @@ export default function Detail({details}) {
 
                     <Grid item container style={{marginTop:"4%", marginBottom:"4%"}} >
                         <Grid container item xs={6}>
-                            <Grid item xs={3} ><Icon sx={{backgroundColor:"#6160DC", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"8px 0px 0px 0px", marginTop:"4px"}} >check_circle</Icon> </Grid>
+                            <Grid item xs={3} ><Icon sx={{backgroundColor:"#7ac70c", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"8px 0px 0px 0px", marginTop:"4px"}} >check_circle</Icon> </Grid>
                             <Grid container direction="column" item xs={9}>
                                 <Typography variant="h7">ID</Typography>
                                 <Typography variant="h7">{details.staffID}</Typography>
@@ -65,7 +65,7 @@ export default function Detail({details}) {
                         </Grid>
 
                         <Grid container item xs={6}>
-                            <Grid item xs={3}><Icon sx={{backgroundColor:"#6160DC", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"8px 0px 0px 0px", marginTop:"4px", marginLeft:"-25px"}}>mail_outline</Icon></Grid>
+                            <Grid item xs={3}><Icon sx={{backgroundColor:"#7ac70c", color:"white", borderRadius:"20px", height:"40px", width:"40px", padding:"8px 0px 0px 0px", marginTop:"4px", marginLeft:"-25px"}}>mail_outline</Icon></Grid>
                             <Grid container direction="column" item xs={9} sx={{marginLeft:"-28px"}} >
                                 <Typography variant="h7">Email</Typography>
                                 <Typography variant="h7">{details.staffEmail}</Typography>

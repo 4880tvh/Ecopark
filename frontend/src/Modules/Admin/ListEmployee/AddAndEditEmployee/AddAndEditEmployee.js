@@ -105,7 +105,7 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
         <div id="left-addemm-long" >
           <h2 class = "h2-addemm-long" style={{ position: "relative", }}>Department</h2>
           <div style={{
-            backgroundColor: (role === 1) ? "#6160DC" : "grey",
+            backgroundColor: (role === 1) ? "#7ac70c" : "grey",
             height: 54,
             borderRadius: 20,
             display: "flex",
@@ -125,7 +125,7 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
           <div
             style={{
               marginTop: 10,
-              backgroundColor: (role === 2) ? "#6160DC" : "grey",
+              backgroundColor: (role === 2) ? "#7ac70c" : "grey",
               height: 54,
               borderRadius: 20,
               display: "flex",

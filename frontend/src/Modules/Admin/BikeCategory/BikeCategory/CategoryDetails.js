@@ -23,7 +23,7 @@ export default function CategoryDetails({data, needLoading, setNeedLoading, setE
                 justifyContent: "space-evenly",
                 height: "700px",
                 width: "950px",
-                border: "3px solid #6160DC",
+                border: "3px solid #7ac70c",
                 marginLeft: "5%",
                 marginTop: "5%",
                 borderRadius: "30px"
@@ -33,7 +33,7 @@ export default function CategoryDetails({data, needLoading, setNeedLoading, setE
                             position: "relative",
                             height: "40%",
                             }} item>
-                    <img style={{ width: "auto", height: "100%",border: "3px solid #6160DC", borderRadius:"20px" }} src={data.data.image} alt='Hello' />
+                    <img style={{ width: "auto", height: "100%",border: "3px solid #7ac70c", borderRadius:"20px" }} src={data.data.image} alt='Hello' />
                 </Grid>
                 <Grid container item direction="column">
                     <Grid container item direction="row">

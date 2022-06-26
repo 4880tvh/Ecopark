@@ -5,7 +5,7 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
     return (
         <div className="login-form">
             <div>
-                <h1 style={{ marginLeft: "10px", fontFamily:"Poppins" }}>
+                <h1 style={{ fontFamily:"Roboto", textAlign: "center" }}>
                     Login
                 </h1>
             </div>
@@ -25,7 +25,7 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                     helperText={validate.email.msg}
                 />
             </div>
-            <div style={{ marginTop: "20px" }}>
+            <div style={{ marginTop: "10px" }}>
                 <TextField
                     error={validate.password.error}
                     label="Password"
@@ -40,10 +40,9 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                     helperText={validate.password.msg}
                 />
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", marginTop: "30px" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px" }}>
                 <label >Please select your role</label>
-                <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px", cursor:"pointer" }} onChange={handleChange}>
-                    <option value="receptionist">Receptionist</option>
+                <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px", width: '100px', borderRadius: '5px', cursor:"pointer" }} onChange={handleChange}>
                     <option value="admin">Admin</option>
                     <option value="staff">Staff</option>
                 </select>
@@ -53,18 +52,18 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                 height: 40,
                 justifyContent: "space-between",
                 marginTop: "10px",
-
-            }} className='Tan-div-login'>
+                
+            }} className='div-login'>
                 <button
                     style={{
                         width: "100px",
-                        backgroundColor: "#6160DC",
+                        backgroundColor: "#7ac70c",
                         fontFamily: "'Roboto', sans-serif",
                         fontWeight: "600",
                         fontsize: "16px",
                         boxShadow:"0px 4px 4px #EFEFEF",
                         borderRadius:"10px",
-                        border:"1px solid #6160DC",
+                        border:"1px solid #7ac70c",
                         color:"white",
                         cursor:"pointer",
                         

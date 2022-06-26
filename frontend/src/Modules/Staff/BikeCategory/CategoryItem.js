@@ -17,10 +17,10 @@ export default function CategoryItem({ data, setChosenData }) {
   return (
     <Box>
       <Card id="DungNA_listdata" onClick={handleClick} >
-        <Box sx ={{ boder:"solid 3px #6160DC", alignSelf:"center", marginLeft:"20px" }}>
+        <Box sx ={{ boder:"solid 3px #7ac70c", alignSelf:"center", marginLeft:"20px" }}>
           <CardMedia
             component="img"
-            sx={{ width: "71px" , border: "1px solid #6160DC", borderRadius: "6px" }}
+            sx={{ width: "71px" , border: "1px solid #7ac70c", borderRadius: "6px" }}
             image={data.image}
             alt="Bike category"
           />

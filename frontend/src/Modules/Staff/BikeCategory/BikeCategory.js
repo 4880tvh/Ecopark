@@ -23,7 +23,7 @@ export default function Category({loading}){
     const [isLoading, setLoading] = useState(true)
     const [pages, setPages] = useState([]);
     async function getCategory(){
-        let url = `https://nmcnpm.herokuapp.com/api/v2/category`;
+        let url = `http://localhost:8080/api/v2/category`;
         let token = localStorage.getItem("token");
         axios.get(url,{headers:{"Authorization":`Bearer ${token}`}}).then(doc=> {setCategories(doc.data.data);console.log(doc.data.data);})
     }
@@ -102,7 +102,7 @@ function OneOfCategories(props){
     )
 }
 async function getDetailData(id){
-    let url = `https://nmcnpm.herokuapp.com/api/v3/staff/category/detail/${id}`;
+    let url = `http://localhost:8080/api/v3/staff/category/detail/${id}`;
     let token = localStorage.getItem("token");
     axios.get(url,{headers:{"Authorization":`Bearer ${token}`}}).then(doc=> {
         setDetailCategory(doc.data.data);

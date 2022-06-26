@@ -240,7 +240,7 @@ export default function BillingHistory() {
      })
  }
  React.useEffect(()=>{ 
-    getData('https://nmcnpm.herokuapp.com/api/v3/payment');
+    getData('http://localhost:8080/api/v3/payment');
  },[])
 const rows=[];
  data.forEach(i=>{

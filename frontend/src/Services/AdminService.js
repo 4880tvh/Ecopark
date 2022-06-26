@@ -1,5 +1,5 @@
 import axios from "axios"
-const url = "https://nmcnpm.herokuapp.com/api/v2/";
+const url = "http://localhost:8080/api/v2/";
 
 export const postCategory = async (data) => {
   const token = localStorage.getItem("token");

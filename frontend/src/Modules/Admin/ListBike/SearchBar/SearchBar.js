@@ -11,7 +11,7 @@ function SearchBar({ list, callBack, callBackOpen, updateSearch }) {
 
   async function deleteListUser(listDelete) {
     const token = localStorage.getItem("token")
-    const result = await axios.post(`https://nmcnpm.herokuapp.com/api/v2/bike/delete`, listDelete, { headers: { "Authorization": `Bearer ${token}` } })
+    const result = await axios.post(`http://localhost:8080/api/v2/bike/delete`, listDelete, { headers: { "Authorization": `Bearer ${token}` } })
   }
 
   useEffect(() => {

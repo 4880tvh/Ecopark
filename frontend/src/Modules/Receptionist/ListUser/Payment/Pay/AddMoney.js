@@ -37,7 +37,7 @@ function AddMoney({ chosen, cancelAddMoney, fetch }) {
 
   async function addMoneyUser(id, values) { 
     const token = localStorage.getItem("token")
-    const url = 'https://nmcnpm.herokuapp.com/api/v2/user/balance/add/' + id;
+    const url = 'http://localhost:8080/api/v2/user/balance/add/' + id;
     console.log(values)
     await axios.post(url, { balance: values }, {
       headers: { "Authorization": `Bearer ${token}` },

@@ -15,7 +15,7 @@ import {
   } from "recharts";
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042','#FF69B4','#7B68EE','#FF0000','#0000FF'];
   const RenderBarChart = () => {
-    const [url, setUrl] = useState('https://nmcnpm.herokuapp.com/api/v3/category/statistic')
+    const [url, setUrl] = useState('http://localhost:8080/api/v3/category/statistic')
     const [data, setData] = useState([])
     const [statistic,setStatistic]= useState([]);
     const tmp=[]

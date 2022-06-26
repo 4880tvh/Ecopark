@@ -14,7 +14,7 @@ export default function ChangePassword({callBack}){
     async function postData(password, newpass, confirmpassword) {
             let tooken = localStorage.getItem("token")
 
-            const url = 'https://nmcnpm.herokuapp.com/api/v1/admin/changepass'
+            const url = 'http://localhost:8080/api/v1/admin/changepass'
             const data = {
                 password: password,
                 newpass: newpass

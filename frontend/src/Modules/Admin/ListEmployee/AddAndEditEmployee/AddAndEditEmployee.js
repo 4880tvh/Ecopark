@@ -31,7 +31,7 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
     setLoading(true)
     console.log(infor._id)
     console.log("Begin============")
-    const url = 'https://nmcnpm.herokuapp.com/api/v1/accounts/edit?type=' + ((role === 1) ? "receptionist/" : "staff/") + infor._id
+    const url = 'http://localhost:8080/api/v1/accounts/edit?type=' + ((role === 1) ? "receptionist/" : "staff/") + infor._id
     console.log(url)
     const token = localStorage.getItem("token")
     const data = {
@@ -63,7 +63,7 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
   async function addNewMember() {
     setLoading(true)
     console.log("Begin============")
-    const url = 'https://nmcnpm.herokuapp.com/api/v1/accounts/add?type=' + ((role === 1) ? "receptionist" : "staff")
+    const url = 'http://localhost:8080/api/v1/accounts/add?type=' + ((role === 1) ? "receptionist" : "staff")
     console.log(url)
     const token = localStorage.getItem("token")
     const data = {

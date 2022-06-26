@@ -15,12 +15,12 @@ export default function TableData({ loading, updateList, refresh, search }) {
     const [checkedAll, setCheckedAll] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [pages, setPages] = useState([]);
-    const [url, setUrl] = useState('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=free')
+    const [url, setUrl] = useState('http://localhost:8080/api/v2/bikes?sortBy=free')
 
     async function deleteBike(id) {
         const listDelete = [id];
         const token = localStorage.getItem("token")
-        const result = await axios.post(`https://nmcnpm.herokuapp.com/api/v2/bike/delete`, listDelete, { headers: { "Authorization": `Bearer ${token}` } })
+        const result = await axios.post(`http://localhost:8080/api/v2/bike/delete`, listDelete, { headers: { "Authorization": `Bearer ${token}` } })
             .then(() => {
                 getData();
             })
@@ -123,12 +123,12 @@ export default function TableData({ loading, updateList, refresh, search }) {
                         <span>Sắp xếp theo</span>
                     </div>
                     <div className="dropdown-list">
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=free')}>Trạng thái: rảnh</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=waiting')}>Trạng thái: bận</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=breakdown')}>Trạng thái: sửa</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=hiring')}>Trạng thái: đã đặt</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceHighToLow')}>Từ giá thuê cao đến thấp</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceLowToHigh')}>Từ giá thuê thấp đến cao</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('http://localhost:8080/api/v2/bikes?sortBy=free')}>Trạng thái: rảnh</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('http://localhost:8080/api/v2/bikes?sortBy=waiting')}>Trạng thái: bận</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('http://localhost:8080/api/v2/bikes?sortBy=breakdown')}>Trạng thái: sửa</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('http://localhost:8080/api/v2/bikes?sortBy=hiring')}>Trạng thái: đã đặt</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('http://localhost:8080/api/v2/bikes?sortBy=priceHighToLow')}>Từ giá thuê cao đến thấp</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('http://localhost:8080/api/v2/bikes?sortBy=priceLowToHigh')}>Từ giá thuê thấp đến cao</div>
                     </div>
                 </div>
             </div>

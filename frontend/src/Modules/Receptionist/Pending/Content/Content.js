@@ -21,7 +21,7 @@ function Content({search}) {
     // Call API
     useEffect(() => {
         const token = localStorage.getItem("token")
-        const url = "https://nmcnpm.herokuapp.com/api/v1/unactivated/users"
+        const url = "http://localhost:8080/api/v1/unactivated/users"
         axios.get(url, { headers: { "Authorization": `Bearer ${token}` } })
             .then(res => {
                 setPosts(res.data.data)

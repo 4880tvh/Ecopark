@@ -47,8 +47,8 @@ function AddBike({ callBackCancel, refresh, setRefresh }) {
     }
     
     useEffect(() => {
-        getDataStation("https://nmcnpm.herokuapp.com/api/v2/station")
-        getDataModel("https://nmcnpm.herokuapp.com/api/v2/category")
+        getDataStation("http://localhost:8080/api/v2/station")
+        getDataModel("http://localhost:8080/api/v2/category")
     }, [])
 
     const morerow = () => {

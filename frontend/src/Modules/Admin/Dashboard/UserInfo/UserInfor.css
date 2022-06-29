@@ -1,13 +1,11 @@
 .userInfor{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     position: absolute;
     width: 79%;
     height: 26%;
-    background: #FFFFFF;
-    border-radius: 40px;
+    border-radius: 30px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-left: 20%;
     margin-top: 1%;
@@ -19,7 +17,6 @@
         height: 80%;
         left: 1%;
         top: 1%;
-        background: #F5F5F5;
         box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
         border-radius: 50%;
     }
@@ -83,16 +80,15 @@
     .logOut{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
         align-items: center;
         position: relative;
         width: 10%;
         height: 80%;
-        background: #7ac70c;
         box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-        border-radius: 40px;
-        cursor: pointer;
-        margin-top: -7%;
+        background: linear-gradient(195deg, #7ac70c, #8ee000);
+        align-items: center;
+        border-radius: 30px;
+        cursor: pointer; 
     }
     .LogOutimg{
         display: flex;
@@ -193,7 +189,7 @@
         width: 20%;
         height: 80%;
         background: #7ac70c;
-        border-radius: 40px;
+        border-radius: 30px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         cursor: pointer;
     }

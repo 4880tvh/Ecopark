@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   container: {
     width: "79%",
     marginLeft: "2%",
-    marginTop: "320px",
+    marginTop: "115px",
     borderRadius: "40px",
     backgroundColor: 'white',
     position: "absolute",
@@ -30,6 +30,7 @@ const useStyles = makeStyles({
     justifyContent: "space-evenly",
     alignItems: "center",
     filter: "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
+    height: "85vh"
   },
   header: {
     height: "6%",

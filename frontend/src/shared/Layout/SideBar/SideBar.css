@@ -162,13 +162,10 @@
 
 #NewmemberSideBar {
     justify-content: center;
-    align-items: center;
     border-style: solid;
-    border-radius: 20px;
     width: 200px;
     height: 48px;
-    background-color: #7ac70c;
-    font-family: Poppins;
+    font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     font-size: 18px;
     font-style: normal;
@@ -176,6 +173,11 @@
     line-height: 27px;
     letter-spacing: 0em;
     text-decoration: none;
-    margin-left: 70px;
     margin-bottom: 10px;
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
+    margin-left: 70px;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
 }

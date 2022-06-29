@@ -58,7 +58,7 @@
 .contentbigTag1 {
     width: 1500px;
     position: absolute;
-    border-radius: 40px;
+    border-radius: 30px;
     background-color: #FFFFFF;
     left: 360px;
     top: 135px;
@@ -77,7 +77,7 @@
     justify-content: center;
     border-style: solid;
     text-decoration: none;
-    border-radius: 40px;
+    border-radius: 30px;
     width: 168px;
     height: 48px;
     margin-left: 43px;
@@ -101,7 +101,7 @@
     height: 48px;
     background-color: #7ac70c;
     border-style: solid;
-    border-radius: 40px;
+    border-radius: 30px;
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 18px;
@@ -145,7 +145,7 @@ h2 {
 
 .contentbigTag {
     position: relative;
-    border-radius: 40px;
+    border-radius: 30px;
     background-color: #FFFFFF;
     height: 825px;
     width: 75%;
@@ -221,7 +221,7 @@ h2 {
     margin-right: 20px;
     height: 48px;
     width: 48px;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 .contentemail {
@@ -355,7 +355,7 @@ tr:hover .hover-content{
 .status11 {
     background-color:#00A389;
     padding: 20px 0px;
-    border-radius: 40px;
+    border-radius: 30px;
     font-family: Inter;
     font-style: normal;
     font-weight: bold;

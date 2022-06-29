@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Addresspng from '../../../../shared/icons/address.png'
 import Emailpng from '../../../../shared/icons/email.png'
 import Phonepng from '../../../../shared/icons/phone.png'
@@ -7,7 +7,7 @@ import logout from '../../../../shared/icons/logout.png'
 import changepasspng from '../../../../shared/icons/sync-alt.png'
 import ChangePassword from '../ChangePassword/ChangePassword';
 import './UserInfor.css'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 function UserInfor(props) {
     const tag = props.tag
     let info = JSON.parse(localStorage.getItem("info"))
@@ -37,29 +37,30 @@ function UserInfor(props) {
 }
 
 function ProFile(user) {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     return (
-        <div className="userInfor" style={{marginLeft:"2%" }}>
+        <div className="userInfor" style={{ marginLeft: "2%" }}>
             <div id="Avartar">
                 <img id="InsideAvt" src={user.avatar} alt="" />
             </div>
-            <div className="line">
+            <div className="line" style={{ marginLeft: "10px" }}>
                 <div className="line1">
                     <div className="name">
                         <span className="fullName">{user.name}</span>
                         <span className="tag">{user.tag}</span>
                     </div>
-                    <button className="logOut" onClick={() => {
+                    <button className="changePass" style={{ left: "400px" }} onClick={() => { user.setIsChange(true) }}>
+                        <span className="insideChangePass" style={{ marginLeft: "70px" }}>Change password</span>
+                    </button>
+                    <button className="logOut" style={{ left: "190px" }} onClick={() => {
                         user.setToken(null)
                         navigate("/login")
-                        }}>
+                    }}>
                         <span className="insideLogOut">Logout</span>
-                        <span className="LogOutimg">
-                            <img src={logout} alt="" />
-                        </span>
                     </button>
+
                 </div>
-                <div className="line2">
+                {/* <div className="line2">
                     <div className="idDivision">
                         <div className="image">
                             <img src={Addresspng} alt="" />
@@ -86,14 +87,8 @@ function ProFile(user) {
                             <span className="titleOfInfor">Phone Number</span>
                             <span className="detail">{user.phoneNumber}</span>
                         </div>
-                    </div>
-                    <button className="changePass" onClick={()=>{ user.setIsChange(true) }}>
-                        <span className="insideChangePass">Change password</span>
-                        <div id="changepass">
-                            <img src={changepasspng} alt="" />
-                        </div>
-                    </button>
-                </div>
+                    </div>                  
+                </div> */}
             </div>
         </div>
     )

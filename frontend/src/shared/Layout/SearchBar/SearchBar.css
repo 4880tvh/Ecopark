@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: center;
     background: white;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 .Bar1 .SearchBar {
@@ -19,7 +19,7 @@
     height: 60px;
     width: 1233px;
     left: 409px;
-    border-radius: 40px;
+    border-radius: 30px;
     background-color: #F5F5F5;
     margin-top: 13px;
     margin-bottom: 13px;
@@ -55,7 +55,7 @@
     justify-content: center;
     border-style: solid;
     text-decoration: none;
-    border-radius: 40px;
+    border-radius: 30px;
     width: 168px;
     height: 48px;
     margin-left: 43px;

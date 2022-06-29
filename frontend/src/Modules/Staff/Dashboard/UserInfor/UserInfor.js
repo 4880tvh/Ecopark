@@ -6,8 +6,8 @@ import logout from '../../../../shared/icons/logout.png'
 import changepasspng from '../../../../shared/icons/sync-alt.png'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import './UserInfor.css'
-import {useNavigate} from 'react-router-dom'
-import {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 function UserInfor(props) {
     const tag = props.tag
     let info = JSON.parse(localStorage.getItem("info"))
@@ -37,7 +37,7 @@ function UserInfor(props) {
 }
 
 function ProFile(user) {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     return (
         <div className="userInfor">
             <div id="Avartar">
@@ -45,61 +45,52 @@ function ProFile(user) {
             </div>
             <div className="line">
                 <div className="line1">
-                    <div className="name">
+                    <div className="name" style={{ margin: "0px 180px 0px 10px" }}>
                         <span className="fullName">{user.name}</span>
                         <span className="tag">{user.tag}</span>
                     </div>
-                    <button className="logOut" onClick={() => {
-                        user.setToken(null)
-                        navigate("/login")
-                        }}>
-                        <span className="insideLogOut">Logout</span>
-                        <span className="LogOutimg">
-                            <img src={logout} alt="" />
-                        </span>
-                    </button>
-                </div>
-                <div className="line2">
-                    <div className="idDivision">
-                        <div className="image">
+                    <div className="idDivision" style={{ margin: "0px 40px" }}>
+                        {/* <div className="image">
                             <img className='image1' src={Addresspng} alt="" />
-                        </div>
-                        <div className='USdetail'>
+                        </div> */}
+                        <div className='USdetail' style={{ margin: "0px 40px" }}>
                             <span className="titleOfInfor">Identity Code</span>
                             <span className="detail">{user.idCode}</span>
                         </div>
                     </div>
-                    <div className="emailDivision">
-                        <div className="image">
+                    <div className="emailDivision" style={{ margin: "0px 40px" }}>
+                        {/* <div className="image">
                             <img className='image1' src={Emailpng} alt="" />
-                        </div>
-                        <div className='USdetail'>
+                        </div> */}
+                        <div className='USdetail' style={{ margin: "0px 40px" }}>
                             <span className="titleOfInfor">Email</span>
                             <span className="detail">{user.email}</span>
                         </div>
                     </div>
-                    <div className="phoneDivision">
-                        <div className="image">
+                    <div className="phoneDivision" style={{ margin: "0px 40px", width: "400px" }}>
+                        {/* <div className="image">
                             <img className='image1' src={Phonepng} alt="" />
-                        </div>
-                        <div className='USdetail'>
+                        </div> */}
+                        <div className='USdetail' style={{ margin: "0px 40px" }}>
                             <span className="titleOfInfor">Phone Number</span>
                             <span className="detail">{user.phoneNumber}</span>
                         </div>
                     </div>
-                    <button className="changePass" onClick={()=>{
+                    <button className="changePass" onClick={() => {
                         user.setIsChange(true)
                     }}>
-                        <span className="insideChangePass">Change password</span>
-                        <div id="changepass">
-                            <img src={changepasspng} alt="" />
-                        </div>
+                        <span className="insideChangePass" style={{ margin: "0px 10px", width: "170px" }}>Change password</span>
+                    </button>
+                    <button className="logOut" onClick={() => {
+                        user.setToken(null)
+                        navigate("/login")
+                    }}>
+                        <span className="insideLogOut" style={{ margin: "0px 10px" }}>Logout</span>
                     </button>
                 </div>
             </div>
-            
+
         </div>
     )
 }
 export default UserInfor
-        

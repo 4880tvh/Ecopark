@@ -8,7 +8,7 @@ export default function DashboardOfStaff({ setToken }) {
     return (
         <div>
             <UserInfor
-                tag="Staff in Ecopark BikeRenting"
+                tag="Staff"
                 setToken={setToken}
                 setIsChange={setIsChange}
             >

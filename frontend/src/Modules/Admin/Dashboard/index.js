@@ -10,7 +10,7 @@ export default function AdminDashboard({ setToken }) {
   const [isChange, setIsChange] = useState(false)
   return (
     <div className="adminDashboard">
-      <UserInfor tag="Admin in Ecopark BikeRenting" setToken={setToken} setIsChange={setIsChange} ></UserInfor>
+      <UserInfor tag="Admin" setToken={setToken} setIsChange={setIsChange} ></UserInfor>
       {
         isChange && <ChangePassword callBack={() => { setIsChange(false) }} />
       }

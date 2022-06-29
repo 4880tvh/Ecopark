@@ -1,6 +1,6 @@
-import Logo from '../../images/eco1.png'
+import Logo from '../../images/login-logo.png'
 import { useNavigate } from 'react-router'
-import { Box, Button, Grid } from '@mui/material'
+import { Box, Button, Grid, Icon } from '@mui/material'
 import './SideBar.css'
 export default function Sidebar({ items }) {
     let navigate = useNavigate();
@@ -8,10 +8,10 @@ export default function Sidebar({ items }) {
         navigate(href)
     }
     return (
-        <Box sx={{ height: "1080px", width: "100%", backgroundColor:"#FFFFFF", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))", }} >
+        <Box sx={{ height: "95vh", width: "100%", background: "linear-gradient(195deg, #42424a, #191919)", filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))", borderRadius: "30px", margin: "35px 15px" }}>
             <Grid container direction="column" spacing={2}>
                 <Grid item  alignItems="center">
-                    <img src={Logo} alt="logo" style={{marginLeft:"28%", marginTop:"15%", marginBottom:"20%"}}/>
+                    <img src={Logo} alt="logo" style={{marginLeft:"28%", marginTop:"15%", marginBottom:"10%", width:"45%"}}/>
                 </Grid>
                 <Grid item container direction="column" spacing={2} >
                     {items.map((item, index) => (

@@ -66,7 +66,7 @@ export default function BikeCategories(){
             </Grid>
             <Grid sx={{
                 backgroundColor: "white",
-                height: "910px",
+                height: "790px",
                 width: "1510px",
                 marginLeft: "25px",
                 marginTop: "137px",
@@ -87,7 +87,7 @@ export default function BikeCategories(){
                         justifyContent: "flex-end"
                     }} item xs={6}>
 
-                        <div className="dropdown" style={{ marginRight: "80px", marginTop: "50px" }}>
+                        <div className="dropdown" style={{ marginRight: "38px", marginTop: "50px" }}>
                                 <div className="dropdown-select" href="#">
                                     <span>Sắp xếp theo</span>
                                 </div>

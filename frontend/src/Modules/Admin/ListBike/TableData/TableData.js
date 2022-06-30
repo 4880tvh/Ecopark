@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaCaretLeft, FaCaretRight, FaSlack } from 'react-icons/fa';
 import { Button } from '@mui/material'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const avatar = [
     'https://cdn-icons-png.flaticon.com/512/147/147144.png',
@@ -43,16 +44,16 @@ export default function TableData({ loading, updateList, refresh, search }) {
 
     // Set up page
     const setupPages = (length) => {
-        if (length / 10 > 2) setPages([1, 2, 3]);
-        if (length / 10 <= 2 && length / 10 > 1) setPages([1, 2]);
-        if (length / 10 <= 1) setPages([1]);
+        if (length / 4 > 2) setPages([1, 2, 3]);
+        if (length / 4 <= 2 && length / 4 > 1) setPages([1, 2]);
+        if (length / 4 <= 1) setPages([1]);
     }
 
     const handleSetPagesUp = (pages, lengths) => {
         const newpages = [];
         let isChange = false;
         pages.map(page => {
-            if (page + 3 < lengths / 10 + 1) {
+            if (page + 3 < lengths / 4 + 1) {
                 newpages.push(page + 3);
                 isChange = true;
             }
@@ -90,13 +91,13 @@ export default function TableData({ loading, updateList, refresh, search }) {
     let stringAfterFilter = posts.filter((post) => {
         return post.numberPlate.includes(search)
     })
-  
+
     useEffect(() => {
         setChecked([]);
         setCheckedAll(false);
         setupPages(stringAfterFilter.length);
         setCurrentPage(1);
-    },[search]);
+    }, [search]);
 
 
     const handleCheckAll = (flag) => {
@@ -149,7 +150,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                         <th style={{ paddingRight: '320px' }}>Model</th>
                         <th style={{ paddingRight: '150px' }}>Station</th>
                         <th style={{ paddingRight: '170px' }}>Cost</th>
-                        <th style={{ paddingRight: '50px', paddingLeft: '30px' }}>Status</th>
+                        <th style={{ paddingRight: '50px', paddingLeft: '20px' }}>Status</th>
                         <th style={{ paddingLeft: '130px' }}></th>
                     </tr>
                 </thead>
@@ -157,7 +158,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                 <tbody>
                     {
                         stringAfterFilter.map((post, index) => {
-                            if (index >= (currentPage - 1) * 10 && index <= (currentPage - 1) * 10 + 9)
+                            if (index >= (currentPage - 1) * 4 && index <= (currentPage - 1) * 4 + 3)
                                 return (<tr key={index}>
                                     <td style={{ paddingRight: '0px', width: '0px' }}><div className="contentcolorBar" style={{ color: "#8E8EA1", marginLeft: '-6px', }} ></div></td>
                                     <td>
@@ -179,10 +180,10 @@ export default function TableData({ loading, updateList, refresh, search }) {
                                     <td style={{ paddingRight: '30px' }} >{post.category.name}</td>
                                     <td style={{ paddingRight: '30px' }} >{post.station.name}</td>
                                     <td style={{ paddingRight: '30px' }} >{post.category.cost}</td>
-                                    { (post.status == "free") && <td><div className="status11"  >{post.status}</div></td>}
-                                    { (post.status == "waiting") && <td><div className="status11" style={{backgroundColor:"#DD4124"}}  >{post.status}</div></td>}
-                                    { (post.status == "hiring") && <td><div className="status11" style={{backgroundColor:"#5B5EA6"}}  >{post.status}</div></td>}
-                                    { (post.status == "breakdown") && <td><div className="status11" style={{backgroundColor:"#EFC050"}}  >{post.status}</div></td>}
+                                    {(post.status == "free") && <td><div className="status11"  >{post.status}</div></td>}
+                                    {(post.status == "waiting") && <td><div className="status11" style={{ backgroundColor: "#DD4124" }}  >{post.status}</div></td>}
+                                    {(post.status == "hiring") && <td><div className="status11" style={{ backgroundColor: "#5B5EA6" }}  >{post.status}</div></td>}
+                                    {(post.status == "breakdown") && <td><div className="status11" style={{ backgroundColor: "#EFC050" }}  >{post.status}</div></td>}
                                     <td style={{
                                         display: "flex",
                                         flexDirection: "column",
@@ -196,16 +197,16 @@ export default function TableData({ loading, updateList, refresh, search }) {
                                     }}>
                                         <button style={{
                                             cursor: "pointer",
-                                            height: 30,
-                                            width: 80,
+                                            height: 40,
+                                            width: 50,
                                             marginRight: 10,
                                             borderRadius: 5,
-                                            backgroundColor: "#7ac70c",
+                                            backgroundColor:"#e53b3b",
                                             color: "white",
                                         }} onClick={() => {
                                             deleteBike(post._id);
                                         }}>
-                                            Delete
+                                            <DeleteIcon />
                                         </button>
                                         {(post.activate === "false") &&
                                             <button style={{
@@ -237,7 +238,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                 <div className="contentcomment">Showing&nbsp;
                     <div className="contentBold">
                         {(currentPage - 1) > 0 ? currentPage - 1 : ""}
-                        {((currentPage - 1) * 10 == stringAfterFilter.length) ? 0 : 1}-{(((currentPage - 1) * 10 + 10 < (stringAfterFilter.length)) && (currentPage - 1) * 10 + 10) || stringAfterFilter.length}
+                        {((currentPage - 1) * 4 == stringAfterFilter.length) ? 0 : 1}-{(((currentPage - 1) * 4 + 4 < (stringAfterFilter.length)) && (currentPage - 1) * 4 + 4) || stringAfterFilter.length}
                     </div>
                     &nbsp;from
                     <div className="contentBold">&nbsp;{stringAfterFilter.length}&nbsp;</div>
@@ -248,16 +249,16 @@ export default function TableData({ loading, updateList, refresh, search }) {
                     <FaCaretLeft className="goicon" onClick={() => handleSetPagesDown(pages)} ></FaCaretLeft>
                     <ul className="contentnumberList">
                         {
-                        pages.map(page => {
-                            if (page == currentPage)
-                                return (
-                                    <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}
-                                        style={{ color: 'white', background: '#7ac70c', textDecoration: 'none' }}
-                                    >{page}</Button></li>
-                                ); else return (
-                                    <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}>{page}</Button></li>
-                                )
-                        })}
+                            pages.map(page => {
+                                if (page == currentPage)
+                                    return (
+                                        <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}
+                                            style={{ color: 'white', background: '#7ac70c', textDecoration: 'none' }}
+                                        >{page}</Button></li>
+                                    ); else return (
+                                        <li><Button id="contentnumber" onClick={() => setCurrentPage(page)}>{page}</Button></li>
+                                    )
+                            })}
                     </ul>
                     <FaCaretRight className="goicon" onClick={() => handleSetPagesUp(pages, stringAfterFilter.length)} ></FaCaretRight>
 

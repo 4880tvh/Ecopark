@@ -146,7 +146,7 @@ export default function UserTable({ loading, updateList, search }) {
 
             /></th>
             <th style={{ paddingRight: '200px' }}>Information</th>
-            <th style={{ paddingRight: '60px' }}>Indentify number</th>
+            <th style={{ paddingRight: '60px' }}>Identity number</th>
             <th style={{ paddingRight: '80px' }}>Phone number</th>
             <th style={{ paddingRight: '100px' }}>Balance</th>
             <th style={{ paddingRight: '80px' }}>Resident ID</th>
@@ -239,7 +239,7 @@ export default function UserTable({ loading, updateList, search }) {
         <div className="contentcomment">Showing&nbsp;
           <div className="contentBold">
             {(currentPage - 1) > 0 ? currentPage - 1 : ""}
-            {((currentPage - 1) * 10 == stringAfterFilter.length) ? 0 : 1}-{(((currentPage - 1) * 10 + 10 < (stringAfterFilter.length)) && (currentPage - 1) * 10 + 10) || stringAfterFilter.length}
+            {((currentPage - 1) * 4 == stringAfterFilter.length) ? 0 : 1}-{(((currentPage - 1) * 4 + 4 < (stringAfterFilter.length)) && (currentPage - 1) * 4 + 4) || stringAfterFilter.length}
           </div>
           &nbsp;from
           <div className="contentBold">&nbsp;{stringAfterFilter.length}&nbsp;</div>

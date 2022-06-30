@@ -121,7 +121,7 @@ function Content({search}) {
 
                         /></th>
                         <th style={{ paddingRight: '230px' }}>Information</th>
-                        <th style={{ paddingRight: '130px' }}>Indentify code</th>
+                        <th style={{ paddingRight: '130px' }}>Identity code</th>
                         <th style={{ paddingRight: '100px' }}>Phone number</th>
                         <th style={{ paddingRight: '110px' }}>Resident ID</th>
                         <th style={{ paddingRight: '80px', paddingLeft: '25px' }}>Status</th>

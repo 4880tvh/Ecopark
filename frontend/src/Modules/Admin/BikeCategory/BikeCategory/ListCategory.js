@@ -25,8 +25,8 @@ export default function ListCategory({ categories, setChosenData }) {
                         data={categories}
                         RenderComponent={CategoryItem}
                         title="Posts"
-                        pageLimit={5}
-                        dataLimit={5}
+                        pageLimit={4}
+                        dataLimit={4}
                         direction="column"
                         paginationStyle={{ paddingLeft: "20%", marginTop: "10px"  }}
                         setChosenData={setChosenData}

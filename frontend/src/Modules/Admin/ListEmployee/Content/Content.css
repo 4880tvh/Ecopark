@@ -22,7 +22,7 @@
 .contentcomment {
     position: absolute;
     display: flex;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -56,6 +56,7 @@
 }
 
 .contentbigTag1 {
+    height: 82.5vh;
     width: 1500px;
     position: absolute;
     border-radius: 30px;
@@ -81,7 +82,7 @@
     width: 168px;
     height: 48px;
     margin-left: 43px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 18px;
@@ -99,7 +100,7 @@
     position: relative;
     width: 162px;
     height: 48px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     border-style: solid;
     border-radius: 30px;
     font-family: Poppins;
@@ -161,13 +162,13 @@ h2 {
 
 
 .contentstatus {
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     border: 30;
     border-radius: 70px;
     width: 110px;
     color: #FFFFFF;
     height: 42px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -186,7 +187,7 @@ h2 {
 }
 
 .contenttable td {
-    font-family: Inter;
+    font-family: Arial;
     font-size: 16;
     top: 50%;
     left: 50%;
@@ -203,7 +204,7 @@ h2 {
 .contenttable th {
     text-align: left;
     padding-right: 50px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -247,7 +248,7 @@ tr:hover .hover-content{
 }
 .contentnameIn {
     position: static;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -274,7 +275,7 @@ tr:hover .hover-content{
 
 .contentcomment {
     position: absolute;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -284,7 +285,7 @@ tr:hover .hover-content{
 }
 
 .contenttext1 {
-    font-family: Inter;
+    font-family: Arial;
     font-size: 14;
     position: relative;
     top: 64%;
@@ -312,7 +313,7 @@ tr:hover .hover-content{
     width: 110px;
     color: #FFFFFF;
     height: 42px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -341,7 +342,7 @@ tr:hover .hover-content{
 .hover-content {
     text-align: start;
     border-radius: 15px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     padding-top: 20px;
     padding-bottom: 20px;
     /* height: 400px; */
@@ -353,14 +354,14 @@ tr:hover .hover-content{
 }
 
 .status11 {
-    background-color:#00A389;
+    background-color:#8ee000;
     padding: 20px 0px;
     border-radius: 30px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 17px;
     text-align: center;
 }

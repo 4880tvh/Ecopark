@@ -23,7 +23,7 @@ export default function Category({loading}){
     const [isLoading, setLoading] = useState(true)
     const [pages, setPages] = useState([]);
     async function getCategory(){
-        let url = `https://nmcnpm.herokuapp.com/api/v2/category`;
+        let url = `https://localhost:5000/api/v2/category`;
         let token = localStorage.getItem("token");
         axios.get(url,{headers:{"Authorization":`Bearer ${token}`}}).then(doc=> {setCategories(doc.data.data);console.log(doc.data.data);})
     }
@@ -34,13 +34,13 @@ export default function Category({loading}){
     },[loading])
     
     const setupPages = (length) => {
-        if (length / 6 > 2) setPages([1, 2, 3]);
-        if (length / 6 <= 2 && length / 6 > 1) setPages([1, 2]);
-        if (length / 6 <= 1) setPages([1]);
+        if (length / 4 > 2) setPages([1, 2, 3]);
+        if (length / 4 <= 2 && length / 4 > 1) setPages([1, 2]);
+        if (length / 4 <= 1) setPages([1]);
       }
     return(
         <div className="Dung_NA_Category">
-                <ListCategories NumberOfCategory="100"></ListCategories>
+                <ListCategories NumberOfCategory="4"></ListCategories>
                 <div className="Dung_NA_CategoryRight">
                     <OrderBy></OrderBy>
                     <DetailsOfCate
@@ -62,7 +62,7 @@ export default function Category({loading}){
             return(
                 <div className="Dung_NA_ListCategories">
                 <span className="Dung_NA_TTListCate">Categories</span>
-                    <p className="Dung_NA_TTListCatee">Showing 1-5 from <span> {NumberOfCategory} </span> data</p>
+                    <p className="Dung_NA_TTListCatee">Showing 1-4 from <span> {NumberOfCategory} </span> data</p>
                     {categories.map((category,index)=>{
                     return (
                         <OneOfCategories 
@@ -198,7 +198,7 @@ function ChangePageButton(props) {
 function OrderBy(){
     return(
         <div className="OrderBy">
-            <span className="Dung_NA_SapXepTheott">Sắp xếp theo:</span>
+            <span className="Dung_NA_SapXepTheott">Sort by:</span>
             <select className="Dung_NA_SapXepTheo">
                 <option>Doanh thu cao - thấp</option>
                 <option>Doanh thu thấp - cao</option>

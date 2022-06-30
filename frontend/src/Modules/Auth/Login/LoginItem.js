@@ -42,8 +42,8 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px" }}>
                 <label >Please select your role</label>
-                <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px", width: '150px', borderRadius: '5px', cursor: "pointer" }} onChange={handleChange}>
-                    <option value="receptionist">Receptionist</option>
+                <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px", width: '90px', borderRadius: '5px', cursor: "pointer" }} onChange={handleChange}>
+                    <option value="">-- Role --</option>
                     <option value="admin">Admin</option>
                     <option value="staff">Staff</option>
                 </select>

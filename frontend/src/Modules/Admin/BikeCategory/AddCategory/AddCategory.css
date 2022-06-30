@@ -16,7 +16,7 @@
 .Dung_NA_TitleOfAddCateScr{
     display: flex;
     flex-direction: row;
-    font-family: Inter;
+    font-family: Arial;
     font-size: 2vw;
     font-weight: bold;
     margin-left: 3%;
@@ -24,7 +24,7 @@
 }
 .Dung_NA_AddInforOfCate{
     display: flex;
-    font-family: Inter;
+    font-family: Arial;
     flex-direction: row;
     height: 8%;
     width: 90%;
@@ -51,7 +51,7 @@
 }
 #Dung_NA_AddDescriptionOfCateLabel{
     display: flex;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: 600;
     width: 15%;
     margin-left: 3%;

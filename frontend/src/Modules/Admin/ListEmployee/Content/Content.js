@@ -5,6 +5,9 @@ import { PropagateLoader } from 'react-spinners';
 import AddAndEditEmployee from '../AddAndEditEmployee/AddAndEditEmployee';
 import { Button } from '@mui/material'
 import axios from 'axios';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 const avatar = [
   'https://cdn-icons-png.flaticon.com/512/147/147144.png',
@@ -19,7 +22,7 @@ function Content({ loading, updateList, updateRole, search }) {
   const [checkedAll, setCheckedAll] = useState(false);
   const [pages, setPages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [option, setOption] = useState([true, false]);
+  const [option, setOption] = useState([false]);
 
   const handleSetPagesUp = (pages, lengths) => {
     const newpages = [];
@@ -119,9 +122,9 @@ function Content({ loading, updateList, updateRole, search }) {
   }, [option, loading, search])
 
   const setupPages = (length) => {
-    if (length / 10 > 2) setPages([1, 2, 3]);
-    if (length / 10 <= 2 && length / 10 > 1) setPages([1, 2]);
-    if (length / 10 <= 1) setPages([1]);
+    if (length / 4 > 2) setPages([1, 2, 3]);
+    if (length / 4 <= 2 && length / 4 > 1) setPages([1, 2]);
+    if (length / 4 <= 1) setPages([1]);
   }
   return (
     <div>
@@ -141,55 +144,7 @@ function Content({ loading, updateList, updateRole, search }) {
       <div className="contentbigTag1">
 
         <div className="contentFirstTag">
-          <h2 id="title">Receptionist History</h2>
-          {option.map((op, index) => {
-            if ((op == true) && (index === 0))
-              return <Button id="buttonReceptionist" variant="contained"
-                onClick={() => {
-                  setOption([true, false])
-                  updateRole([true, false])
-                  setCheckedAll(false)
-                  setChecked([])
-                  updateList([])
-                  console.log(currentPage);
-                }}>Receptionist</Button>
-            if ((op == false) && (index === 0))
-              return <Button id="buttonReceptionist" variant="contained"
-                style={{ backgroundColor: '#8E8EA1' }}
-                onClick={() => {
-                  setOption([true, false])
-                  updateRole([true, false])
-                  setCheckedAll(false)
-                  setChecked([])
-                  updateList([])
-                  setCurrentPage(1)
-                  console.log(currentPage);
-                }}>Receptionist</Button>
-            if ((op == true) && (index === 1))
-              return <Button id="Newmember" variant="contained"
-                onClick={() => {
-                  setOption([false, true])
-                  updateRole([false, true])
-                  setChecked([])
-                  setCheckedAll(false)
-                  updateList([])
-                }}
-              >Staff</Button>
-            if ((op == false) && (index === 1))
-              return <Button id="Newmember" variant="contained"
-                style={{ backgroundColor: '#8E8EA1' }}
-                onClick={() => {
-                  setOption([false, true])
-                  updateRole([false, true])
-                  setCheckedAll(false)
-                  setChecked([])
-                  updateList([])
-                  setCurrentPage(1)
-                }}
-              >Staff</Button>
-          }
-          )}
-
+          <h2 id="title">Staff</h2>
         </div>
 
         {
@@ -207,17 +162,16 @@ function Content({ loading, updateList, updateRole, search }) {
 
                   /></th>
                   <th style={{ paddingRight: '205px' }}>Information</th>
-                  <th style={{ paddingRight: '135px' }}>Indentify code</th>
-                  <th style={{ paddingRight: '125px' }}>Department</th>
-                  <th style={{ paddingRight: '125px' }}>Location</th>
+                  <th style={{ paddingRight: '185px' }}>Identity code</th>
+                  <th style={{ paddingRight: '250px' }}>Location</th>
                   <th style={{ paddingRight: '75px' }}>Phone number</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                {/* {
+                {
                   posts.map((post, index) => {
-                    if (index >= (currentPage - 1) * 10 && index <= (currentPage - 1) * 10 + 9)
+                    if (index >= (currentPage - 1) * 4 && index <= (currentPage - 1) * 4 + 3)
                       return (<tr>
                         <td style={{ paddingRight: '0px', width: '0px' }}><div className="contentcolorBar" style={{ color: "#8E8EA1", marginLeft: '-6px', }} ></div></td>
                         <td>
@@ -232,7 +186,7 @@ function Content({ loading, updateList, updateRole, search }) {
                         </td>
                         <td>
                           <div className="contentinfor" >
-                            <img className="contentavatarLi" src={avatar[Math.floor(Math.random() * 1)]} alt="avatarIcon" />
+                            {/* <img className="contentavatarLi" src={avatar[Math.floor(Math.random() * 1)]} alt="avatarIcon" /> */}
                             <div className="contentnameAndEmail">
                               <text className="contentnameIn" title={post.name}>{post.name}</text>
                               <text className="contentemail" title={post.email} >{post.email}</text>
@@ -240,15 +194,15 @@ function Content({ loading, updateList, updateRole, search }) {
                           </div>
                         </td>
                         <td style={{ paddingRight: '50px' }} title={post.identifyNumber}>{post.identifyNumber}</td>
-                        <td style={{ paddingRight: '50px' }} >{option[0] == true ? "Receptionist" : "Staff"}</td>
                         <td style={{ paddingRight: '50px' }} title={post.address}>{post.address}</td>
                         <td style={{ paddingRight: '50px' }} title={post.phoneNumber}>{post.phoneNumber}</td>
                         <td>
                           <div>
 
-                            <div style={{ marginBottom: '20px' }}>
+                            <div style={{ marginBottom: '10px' }}>
                               <button
                                 className="contentedit-button"
+                                style={{backgroundColor:"#e53b3b"}}
                                 onClick={() => {
                                   deleteMember(index)
                                   setCheckedAll(false)
@@ -265,18 +219,18 @@ function Content({ loading, updateList, updateRole, search }) {
                                 }
                                 }
                               >
-                                Delete
+                                <DeleteIcon />
                               </button>
                             </div>
 
                             <div>
                               <button
-                                className="contentedit-button" onClick={() => {
+                                className="contentedit-button" variant="warning" style={{backgroundColor:"#ffb020"}} onClick={() => {
                                   setIndex(index)
                                   setEditing(!isEditing)
                                 }}
                               >
-                                Edit
+                                <EditIcon />
                               </button>
                             </div>
 
@@ -284,7 +238,7 @@ function Content({ loading, updateList, updateRole, search }) {
                         </td>
                       </tr>)
                   }
-                  )} */}
+                  )}
               </tbody>
             </table>
         }

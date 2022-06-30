@@ -24,7 +24,7 @@
 .Dung_NA_TTListCate {
     display: flex;
     position: relative;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5vw;
@@ -35,7 +35,7 @@
 
 .Dung_NA_TTListCatee {
     position: relative;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 0.65vw;
@@ -88,14 +88,14 @@
 
 .Dung_NA_Model {
     display: flex;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: bold;
 
 }
 
 .Dung_NA_Amount {
     display: flex;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: bold;
 
 }
@@ -150,7 +150,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     /* Inside Auto Layout */
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     flex: none;
     font-size: 0.8vw;
     flex-grow: 0;
@@ -209,7 +209,7 @@
     display: flex;
     position: relative;
     align-self: center;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: bold;
     font-size: 1vw;
     margin-right: 5%;
@@ -264,7 +264,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 20%;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: bold;
     font-size: 0.9vw;
 }
@@ -274,7 +274,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 30%;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: bold;
     font-size: 0.9vw;
 }
@@ -282,7 +282,7 @@
 .Dung_NA_Description {
     position: relative;
     display: flex;
-    font-family: Inter;
+    font-family: Arial;
     font-weight: bold;
     font-size: 0.9vw;
     width: 60%;
@@ -318,7 +318,7 @@
     border-radius: 30px;
     width: 169px;
     height: 48px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     margin: 0 0px 0 17px;
     font-family: Poppins;
     color: #FFFFFF;
@@ -341,5 +341,5 @@
 }
 
 #DungNA_listdata:hover {
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
 }

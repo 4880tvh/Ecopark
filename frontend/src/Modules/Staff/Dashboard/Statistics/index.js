@@ -71,8 +71,9 @@ const RenderBarChart = () => {
         top: "0px"
       }}
       >
-        <h1 style={{ position: "relative", top: "-50px", fontFamily: "Inter" }}>Thống kê số lượng xe</h1>
-        <div style={{
+        <h1 style={{ position: "relative", top: "-50px", fontFamily: "Inter" }}>Dashboard</h1>
+        Tính năng đang phát triển
+        {/* <div style={{
           textAlign: "center",
           display: "flex",
           justifyContent: "space-around",
@@ -123,7 +124,7 @@ const RenderBarChart = () => {
             </BarChart>
             <span style={{ position: "relative", top: "50px", fontFamily: "Inter", fontSize: "1vw", fontWeight: "bold", left: "100px" }}>Theo trạng thái</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

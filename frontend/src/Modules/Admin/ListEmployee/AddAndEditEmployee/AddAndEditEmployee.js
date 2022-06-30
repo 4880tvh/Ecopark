@@ -15,7 +15,8 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
     password: (infor !== undefined) ? infor.password : '',
     email: (infor !== undefined) ? infor.email : ''
   })
-  const [role, updateRole] = useState((infor === undefined) ? 1 : (infor.role === "staff") ? 2 : 1)
+  // const [role, updateRole] = useState((infor === undefined) ? 1 : (infor.role === "staff") ? 2 : 1)
+  const [role, updateRole] = useState(2)
   
   // const [submit, submitState] = useState(false);
 
@@ -98,11 +99,11 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
     <div className="pops-up-menu-addemm-long">
       <div class="head-addem-long">
         <button type="button" className="button1-addemm-long" onClick={() => { callBack() }} />
-        <h1>{(isAdd) ? "Adding" : "Editing"} Employee</h1>
+        <h1>&nbsp;{(isAdd) ? "Adding" : "Editing"} Employee</h1>
       </div>
       <div className="content-addemm-long">
         {/* left menu  start*/}
-        <div id="left-addemm-long" >
+        {/* <div id="left-addemm-long" >
           <h2 class = "h2-addemm-long" style={{ position: "relative", }}>Department</h2>
           <div style={{
             backgroundColor: (role === 1) ? "#7ac70c" : "grey",
@@ -143,15 +144,15 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
             }}
 
           >Staff</div>
-          {/* <span className="switcher switcher-2">
+          <span className="switcher switcher-2">
             <input type="checkbox" id="switcher-2" />
             <label htmlFor="switcher-2" />
-          </span> */}
-        </div>
+          </span>
+        </div> */}
         {/* left menu  end*/}
         {/* right menu  start*/}
         <div className="right-menu-addemm-long">
-          <h2 class = "h2-addemm-long">Account</h2>
+          <h2 className= "h2-addemm-long" style={{ marginLeft: 600}}>Account</h2>
           <form name="employee">
             {/* <div className="left"> */}
             <div class="row-addemm-long">
@@ -175,7 +176,7 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
                 />
               </div>
               <div class="col-addemm-long">
-                <label class="lab-addemm-long" htmlFor="id-code-addemm-long">Indentify Code</label><br />
+                <label class="lab-addemm-long" htmlFor="id-code-addemm-long">Identity Code</label><br />
                 <InputWithValidate
                   className="left-addemm-long"
                   elementId="id-code-addemm-long"

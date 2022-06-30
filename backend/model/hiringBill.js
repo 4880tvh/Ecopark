@@ -42,5 +42,6 @@ const hiringBillSchema= new mongoose.Schema({
         default:false
     }
 })
+
 const HiringBill= mongoose.model('bill',hiringBillSchema);
 module.exports={HiringBill};

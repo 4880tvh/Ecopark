@@ -20,7 +20,7 @@ export default function ListStation({stations, setChosenData}){
 
     return(
         <Container className={classes.list}>
-            <h1 id="title" style={{padding: '0px'}}>List station</h1>
+            <h1 id="title" style={{padding: '0px'}}>List station</h1>\
              {stations ? (
                 <>
                     <ListData

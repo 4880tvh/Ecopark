@@ -41,14 +41,14 @@
   }
 
   .button1-addemm-long:hover {
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
   }
 
   .pops-up-menu-addemm-long>div>h1 {
     position: unset;
     margin: 0px 0px;
     padding: 0px 0px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -95,7 +95,7 @@
   .lab-addemm-long {
     margin-left: 2%;
     margin-bottom: 10%;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -125,7 +125,7 @@
 
   .right-menu-addemm-long h2 {
     width: 100%;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -225,7 +225,7 @@
   }
 
   .button1-addemm-long:hover {
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
   }
 
 
@@ -233,7 +233,7 @@
     position: unset;
     margin: 0px 0px;
     padding: 0px 0px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -269,7 +269,7 @@
   .lab-addemm-long {
     margin-left: 10%;
     margin-bottom: 10%;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -298,7 +298,7 @@
 
   .right-menu-addemm-long h2 {
     width: 100%;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;

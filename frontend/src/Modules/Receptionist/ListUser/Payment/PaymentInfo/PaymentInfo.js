@@ -24,7 +24,7 @@ export default function PaymentInfo({
       <div class = "content-showinfo-long">
           <div class = "row-showinfo-long">
               <div class ='col-showinfo-long'>
-                  <label >Indentify Number</label>
+                  <label >Identity Number</label>
                   <input disabled="true" value={infor.identifyNumber}></input>
               </div>
               <div class ='col-showinfo-long'>

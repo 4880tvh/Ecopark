@@ -31,7 +31,7 @@
     margin-left: 20px;
     background-color: #F5F5F5;
     width: 80%;
-    font-family: Inter;
+    font-family: Arial;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -59,7 +59,7 @@
     width: 168px;
     height: 48px;
     margin-left: 43px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 18px;

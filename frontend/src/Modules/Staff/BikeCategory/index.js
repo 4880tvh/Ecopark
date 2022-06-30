@@ -59,7 +59,7 @@ export default function BikeCategoriesOfStaff(){
             </Grid>
             <Grid sx={{
                 backgroundColor:"white",
-                height: "850px",
+                height: "790px",
                 width: "1510px",
                 marginLeft: "50px",
                 marginTop: "10px",

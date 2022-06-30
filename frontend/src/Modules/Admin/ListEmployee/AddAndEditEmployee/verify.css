@@ -37,7 +37,7 @@
   cursor: pointer;
   }
   .button1-verify:hover{
-  background-color: #7ac70c;
+  background: linear-gradient(195deg, #7ac70c, #8ee000);
   }
   
   
@@ -45,7 +45,7 @@
     position: unset;
     margin: 0px 0px;
     padding: 0px 0px;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -71,7 +71,7 @@
   .lab-verify{
     margin-left: 2%;
     margin-bottom: 10%;
-    font-family: Inter;
+    font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -94,7 +94,7 @@
   }
   .right-menu-verify h2{
   width: 100%;
-  font-family: Inter;
+  font-family: Arial;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -227,7 +227,7 @@ border-radius: 30px;
 cursor: pointer;
 }
 .button1-verify:hover{
-background-color: #7ac70c;
+background: linear-gradient(195deg, #7ac70c, #8ee000);
 }
 
 
@@ -235,7 +235,7 @@ background-color: #7ac70c;
   position: unset;
   margin: 0px 0px;
   padding: 0px 0px;
-  font-family: Inter;
+  font-family: Arial;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -254,7 +254,7 @@ background-color: #7ac70c;
 .lab-verify{
   margin-left: 10%;
   margin-bottom: 10%;
-  font-family: Inter;
+  font-family: Arial;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -277,7 +277,7 @@ color: #8E8EA1;
 }
 .right-menu-verify h2{
 width: 100%;
-font-family: Inter;
+font-family: Arial;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;

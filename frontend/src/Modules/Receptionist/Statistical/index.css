@@ -5,7 +5,7 @@
 
 .timesup {
     display: block;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -38,7 +38,7 @@ input {
     margin-left: 333px;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 18px;

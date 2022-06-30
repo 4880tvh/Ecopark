@@ -145,7 +145,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                 <tbody>
                     {
                         stringAfterFilter.map((post, index) => {
-                            if (index >= (currentPage - 1) * 10 && index <= (currentPage - 1) * 10 + 9)
+                            if (index >= (currentPage - 1) * 4 && index <= (currentPage - 1) * 4 + 3)
                                 return (<tr key={index}>
                                     <td style={{ paddingRight: '0px', width: '0px' }}><div className="contentcolorBar" style={{ color: "#8E8EA1", marginLeft: '-6px', }} ></div></td>
                                     <td>
@@ -200,7 +200,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                 <div className="contentcomment">Showing&nbsp;
                     <div className="contentBold">
                         {(currentPage - 1) > 0 ? currentPage - 1 : ""}
-                        {((currentPage - 1) * 10 == stringAfterFilter.length) ? 0 : 1}-{(((currentPage - 1) * 10 + 10 < (stringAfterFilter.length)) && (currentPage - 1) * 10 + 10) || stringAfterFilter.length}
+                        {((currentPage - 1) * 4 == stringAfterFilter.length) ? 0 : 1}-{(((currentPage - 1) * 4 + 4 < (stringAfterFilter.length)) && (currentPage - 1) * 4 + 4) || stringAfterFilter.length}
                     </div>
                     &nbsp;from
                     <div className="contentBold">&nbsp;{stringAfterFilter.length}&nbsp;</div>

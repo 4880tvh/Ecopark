@@ -5,8 +5,8 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
     return (
         <div className="login-form">
             <div>
-                <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>
-                    Login
+                <h1 style={{ fontFamily: "Arial", textAlign: "center" }}>
+                    Sign In
                 </h1>
             </div>
             <div style={{ marginTop: "10px" }}>

@@ -25,13 +25,14 @@
     justify-content: space-between;
     font-size: 1.4rem;
     cursor: pointer;
-    border: solid #7ac70c;
+    border: solid;
 }
 .dropdown-list {
     z-index: 2;
     border-radius: 20px;
-    background-color:#7ac70c; 
+    background-color:#FFFFFF; 
     position: absolute ;  
+    color: black;
     top: 110%;
     left: 0;
     right: 0;
@@ -42,14 +43,14 @@
 
 .dropdown-list-item:hover {
     background-color: #FFFFFF;
-    color: black;
+    color: #7ac70c;
     opacity: 0.6;
 }
 .dropdown-list-item {
     z-index: 3;
     padding: 1rem;
     font-size: 1.2rem;
-    color: #FFFFFF;
+    color: black;
     cursor: pointer;
 }
 

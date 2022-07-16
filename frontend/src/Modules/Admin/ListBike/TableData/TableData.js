@@ -121,15 +121,15 @@ export default function TableData({ loading, updateList, refresh, search }) {
                 <h2>List Bike</h2>
                 <div className="dropdown">
                     <div className="dropdown-select" href="#">
-                        <span>Sắp xếp theo</span>
+                        <span>Sort by</span>
                     </div>
                     <div className="dropdown-list">
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=free')}>Trạng thái: rảnh</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=waiting')}>Trạng thái: bận</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=breakdown')}>Trạng thái: sửa</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=hiring')}>Trạng thái: đã đặt</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceHighToLow')}>Từ giá thuê cao đến thấp</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceLowToHigh')}>Từ giá thuê thấp đến cao</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=free')}>Free</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=waiting')}>Waiting</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=breakdown')}>Broken</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=hiring')}>Hiring</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceHighToLow')}>Price: high to low</div>
+                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceLowToHigh')}>Price low to high</div>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                             onChange={() => handleCheckAll(checkedAll)}
 
                         /></th>
-                        <th style={{ paddingRight: '150px' }}>Biển số xe</th>
+                        <th style={{ paddingRight: '150px' }}>Bike id</th>
                         <th style={{ paddingRight: '320px' }}>Model</th>
                         <th style={{ paddingRight: '150px' }}>Station</th>
                         <th style={{ paddingRight: '170px' }}>Cost</th>
@@ -180,7 +180,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                                     <td style={{ paddingRight: '30px' }} >{post.category.name}</td>
                                     <td style={{ paddingRight: '30px' }} >{post.station.name}</td>
                                     <td style={{ paddingRight: '30px' }} >{post.category.cost}</td>
-                                    {(post.status == "free") && <td><div className="status11">{post.status}</div></td>}
+                                    {(post.status == "free") && <td><div className="status11"  >{post.status}</div></td>}
                                     {(post.status == "waiting") && <td><div className="status11" style={{ backgroundColor: "#DD4124" }}  >{post.status}</div></td>}
                                     {(post.status == "hiring") && <td><div className="status11" style={{ backgroundColor: "#5B5EA6" }}  >{post.status}</div></td>}
                                     {(post.status == "breakdown") && <td><div className="status11" style={{ backgroundColor: "#EFC050" }}  >{post.status}</div></td>}

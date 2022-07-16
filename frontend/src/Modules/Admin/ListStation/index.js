@@ -55,10 +55,6 @@ export default function ListStationComponent() {
                         ? <ListStationScreen stations={data} setEditing={setEditing} chosenStation={chosenStation} setChosenStation={setChosenStation} needLoading={needLoading} setNeedLoading={setNeedLoading} />
                         : (<div style={{ paddingLeft: 100 }}><PropagateLoader color="#7ac70c" /></div>))
                 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 67823bb359d28c2c5f1e74badb56831cc80bb775
             </Grid>
         </Box>
     )

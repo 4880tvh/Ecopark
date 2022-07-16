@@ -144,7 +144,7 @@ function Content({ loading, updateList, updateRole, search }) {
       <div className="contentbigTag1">
 
         <div className="contentFirstTag">
-          <h2 id="title">Staff</h2>
+          <h2 id="title">LIST STAFF</h2>
         </div>
 
         {
@@ -161,10 +161,10 @@ function Content({ loading, updateList, updateRole, search }) {
                     onChange={() => handleCheckAll(checkedAll)}
 
                   /></th>
-                  <th style={{ paddingRight: '205px' }}>Information</th>
-                  <th style={{ paddingRight: '185px' }}>Identity code</th>
-                  <th style={{ paddingRight: '250px' }}>Location</th>
-                  <th style={{ paddingRight: '75px' }}>Phone number</th>
+                  <th style={{ paddingRight: '315px' }}>Information</th>
+                  <th style={{ paddingRight: '133px' }}>Identity code</th>
+                  <th style={{ paddingRight: '133px' }}>Location</th>
+                  <th style={{ paddingRight: '120px' }}>Phone number</th>
                   <th></th>
                 </tr>
               </thead>
@@ -202,7 +202,7 @@ function Content({ loading, updateList, updateRole, search }) {
                             <div style={{ marginBottom: '10px' }}>
                               <button
                                 className="contentedit-button"
-                                style={{backgroundColor:"#e53b3b"}}
+                                style={{backgroundColor:"#CD5C5C"}}
                                 onClick={() => {
                                   deleteMember(index)
                                   setCheckedAll(false)
@@ -225,7 +225,7 @@ function Content({ loading, updateList, updateRole, search }) {
 
                             <div>
                               <button
-                                className="contentedit-button" variant="warning" style={{backgroundColor:"#ffb020"}} onClick={() => {
+                                className="contentedit-button" variant="warning" style={{backgroundColor:"#DAA520"}} onClick={() => {
                                   setIndex(index)
                                   setEditing(!isEditing)
                                 }}
@@ -247,7 +247,7 @@ function Content({ loading, updateList, updateRole, search }) {
 
           <div className="contentcomment">Showing&nbsp;
             <div className="contentBold">
-              {(currentPage - 1) > 0 ? currentPage - 1 : ""}
+              {(currentPage - 1) > 0 ? currentPage : "1"}
               {/* {((currentPage - 1) * 10 == posts.length) ? 0 : 1}-{(((currentPage - 1) * 10 + 10 < (posts.length)) && (currentPage - 1) * 10 + 10) || posts.length} */}
             </div>
             &nbsp;from
@@ -256,7 +256,7 @@ function Content({ loading, updateList, updateRole, search }) {
 
           <div className="contentnumberTab">
 
-            <FaCaretLeft className="goicon" onClick={() => handleSetPagesDown(pages)} ></FaCaretLeft>
+            <Button className="goicon" onClick={() => handleSetPagesDown(pages)} >Prev</Button>
             <ul className="contentnumberList">
               {pages.map(page => {
                 if (page == currentPage)
@@ -269,7 +269,7 @@ function Content({ loading, updateList, updateRole, search }) {
                   )
               })}
             </ul>
-            <FaCaretRight className="goicon" onClick={() => handleSetPagesUp(pages, posts.length)} ></FaCaretRight>
+            <Button className="goicon" onClick={() => handleSetPagesUp(pages, posts.length)} >Next</Button>
 
           </div>
 

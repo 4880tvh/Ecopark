@@ -37,7 +37,6 @@ export default function ListStationScreen({ stations, setEditing, setChosenStati
             paddingTop: "30px",
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"
         }}>
-            Tính năng đang phát triển
             <Grid container direction="row" >
                 <Grid container item xs={4}>
                     <ListStation stations={stations} setChosenData={setChosenStation} />

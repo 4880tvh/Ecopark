@@ -180,7 +180,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                                     <td style={{ paddingRight: '30px' }} >{post.category.name}</td>
                                     <td style={{ paddingRight: '30px' }} >{post.station.name}</td>
                                     <td style={{ paddingRight: '30px' }} >{post.category.cost}</td>
-                                    {(post.status == "free") && <td><div className="status11"  >{post.status}</div></td>}
+                                    {(post.status == "free") && <td><div className="status11">{post.status}</div></td>}
                                     {(post.status == "waiting") && <td><div className="status11" style={{ backgroundColor: "#DD4124" }}  >{post.status}</div></td>}
                                     {(post.status == "hiring") && <td><div className="status11" style={{ backgroundColor: "#5B5EA6" }}  >{post.status}</div></td>}
                                     {(post.status == "breakdown") && <td><div className="status11" style={{ backgroundColor: "#EFC050" }}  >{post.status}</div></td>}

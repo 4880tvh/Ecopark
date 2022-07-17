@@ -29,7 +29,6 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "space-evenly",
     alignItems: "center",
-    filter: "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
     height: "85vh"
   },
   header: {

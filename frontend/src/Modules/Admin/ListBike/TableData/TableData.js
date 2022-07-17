@@ -160,7 +160,7 @@ export default function TableData({ loading, updateList, refresh, search }) {
                         stringAfterFilter.map((post, index) => {
                             if (index >= (currentPage - 1) * 4 && index <= (currentPage - 1) * 4 + 3)
                                 return (<tr key={index}>
-                                    <td style={{ paddingRight: '0px', width: '0px' }}><div className="contentcolorBar" style={{ color: "#8E8EA1", marginLeft: '-6px', }} ></div></td>
+                                    <td style={{ paddingRight: '0px', width: '0px' }}><div className="contentcolorBar" style={{ color: "#F5F5F5", marginLeft: '-6px', }} ></div></td>
                                     <td>
                                         <input
                                             className="contentcheckbox"

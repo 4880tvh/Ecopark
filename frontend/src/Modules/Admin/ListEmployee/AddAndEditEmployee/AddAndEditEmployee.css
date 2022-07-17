@@ -44,7 +44,7 @@
     background: linear-gradient(195deg, #7ac70c, #8ee000);
   }
 
-  .pops-up-menu-addemm-long>div>h1 {
+  .pops-up-menu-addemm-long > div > h1 {
     position: unset;
     margin: 0px 0px;
     padding: 0px 0px;
@@ -53,7 +53,7 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 44px;
-    color: #22242C;
+    color: #22242c;
     width: 100%;
     height: 100%;
   }
@@ -100,7 +100,7 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
-    color: #8E8EA1;
+    color: #f5f5f5;
   }
 
   .right-addemm-long {
@@ -116,7 +116,7 @@
   .right-menu-addemm-long {
     width: 100%;
     height: 620px;
-    border-left: 1px solid #8E8EA1;
+    border-left: 1px solid #f5f5f5;
     overflow-y: scroll;
     display: flex;
     /* flex-wrap: wrap; */
@@ -130,7 +130,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    color: #22242C;
+    color: #22242c;
     padding-left: 5%;
     align-content: center;
     padding-top: 0%;
@@ -138,7 +138,7 @@
   }
 
   .right-menu-addemm-long input {
-    border: 1px solid #8E8EA1;
+    border: 1px solid #f5f5f5;
     box-sizing: border-box;
     border-radius: 30px;
     padding-left: 5%;
@@ -156,7 +156,6 @@
   .right-menu-addemm-long form {
     display: flex;
     flex-wrap: wrap;
-
   }
 
   #save-addemm-long {
@@ -165,7 +164,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -191,14 +190,13 @@
     position: fixed;
     width: 1497px;
     height: 670px;
-    left: calc(50% - 1497px/2);
-    top: calc(50% - 670px/2);
+    left: calc(50% - 1497px / 2);
+    top: calc(50% - 670px / 2);
     border-radius: 30px;
     border: solid;
     background-color: white;
     display: flex;
     flex-direction: column;
-   
   }
 
   .head-addem-long {
@@ -207,7 +205,6 @@
     padding-top: 2%;
     flex-direction: row;
     height: 10%;
-    
   }
 
   .button1-addemm-long {
@@ -228,8 +225,7 @@
     background: linear-gradient(195deg, #7ac70c, #8ee000);
   }
 
-
-  .pops-up-menu-addemm-long>div>h1 {
+  .pops-up-menu-addemm-long > div > h1 {
     position: unset;
     margin: 0px 0px;
     padding: 0px 0px;
@@ -238,7 +234,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
-    color: #22242C;
+    color: #22242c;
     width: 50%;
   }
 
@@ -274,7 +270,7 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
-    color: #8E8EA1;
+    color: #f5f5f5;
   }
 
   .right-addemm-long {
@@ -289,7 +285,7 @@
   .right-menu-addemm-long {
     width: 100%;
     height: 100%;
-    border-left: 1px solid #8E8EA1;
+    border-left: 1px solid #f5f5f5;
     overflow-y: scroll;
     display: flex;
     /* flex-wrap: wrap; */
@@ -303,7 +299,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    color: #22242C;
+    color: #22242c;
     padding-left: 5%;
     align-content: center;
     padding-top: 0%;
@@ -311,7 +307,7 @@
   }
 
   .right-menu-addemm-long input {
-    border: 1px solid #8E8EA1;
+    border: 1px solid #f5f5f5;
     box-sizing: border-box;
     border-radius: 30px;
     padding-left: 5%;
@@ -328,7 +324,6 @@
   .right-menu-addemm-long form {
     display: flex;
     flex-wrap: wrap;
-
   }
 
   #save-addemm-long {
@@ -337,7 +332,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -357,6 +352,6 @@
 
   #save-addemm-long:hover {
     background: rgb(226, 226, 226);
-    color: #22242C;
+    color: #22242c;
   }
 }

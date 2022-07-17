@@ -1,253 +1,250 @@
 .userInfor {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    width: 79%;
-    height: 8%;
-    background: #FFFFFF;
-    border-radius: 30px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin-left: 2%;
-    margin-top: 1%;
-    margin-right: 0%
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  width: 79%;
+  height: 8%;
+  background: #ffffff;
+  border-radius: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-left: 2%;
+  margin-top: 1%;
+  margin-right: 0%;
 }
 
 #Avartar {
-    display: flex;
-    position: relative;
-    height: 70%;
-    left: 1%;
-    top: 1%;
-    background: #F5F5F5;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    border-radius: 50%;
+  display: flex;
+  position: relative;
+  height: 70%;
+  left: 1%;
+  top: 1%;
+  background: #f5f5f5;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 50%;
 }
 
 #InsideAvt {
-    border-radius: 50%;
-    height: auto;
-    width: 100%;
+  border-radius: 50%;
+  height: auto;
+  width: 100%;
 }
 
 .line {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    height: 95%;
-    width: 82%;
-    left: 1%;
-    top: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  height: 95%;
+  width: 82%;
+  left: 1%;
+  top: 1%;
 }
 
 .line1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 98%;
-    height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 80%;
 }
 
 .name {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    position: relative;
-    width: 35%;
-    height: 100%;
-
+  position: relative;
+  width: 35%;
+  height: 100%;
 }
 
 .fullName {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 60%;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60%;
 
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.5vw;
-    color: #22242C;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #22242c;
 }
 
 .tag {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 20%;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 20%;
 
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1vw;
-    color: #8E8EA1;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  color: #f5f5f5;
 }
 
 .logOut {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    width: 10%;
-    height: 80%;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    background: linear-gradient(195deg, #7ac70c, #8ee000);
-    align-items: center;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 10%;
+  height: 80%;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  background: linear-gradient(195deg, #7ac70c, #8ee000);
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 .LogOutimg {
-    display: flex;
-    position: relative;
-    order: 2;
-    width: 20%;
-    height: 40%;
+  display: flex;
+  position: relative;
+  order: 2;
+  width: 20%;
+  height: 40%;
 }
 
 .insideLogOut {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1vw;
-    /* identical to box height */
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1vw;
+  /* identical to box height */
 
-    color: #ffffff;
+  color: #ffffff;
 
+  /* Inside Auto Layout */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 .line2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
-    width: 98%;
-    height: 27%;
+  width: 98%;
+  height: 27%;
 }
 
 .idDivision {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: relative;
-    width: 30%;
-    height: 78%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  width: 30%;
+  height: 78%;
 }
 
 .emailDivision {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: relative;
-    width: 30%;
-    height: 78%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  width: 30%;
+  height: 78%;
 }
 
 .phoneDivision {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: relative;
-    width: 30%;
-    height: 78%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  width: 30%;
+  height: 78%;
 }
 
 .USdetail {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
 }
 
 .titleOfInfor {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 50%;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8vw;
-    color: #8E8EA1;
-    order: 1;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8vw;
+  color: #f5f5f5;
+  order: 1;
 }
 
 .detail {
-    display: flex;
-    position: relative;
-    width: 50%;
-    height: 50%;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1vw;
-    color: #202020;
-    order: 2;
+  display: flex;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  color: #202020;
+  order: 2;
 }
 
 .changePass {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    width: 20%;
-    height: 80%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-    background: linear-gradient(195deg, #7ac70c, #8ee000);
-    align-items: center;
-    border-radius: 30px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 20%;
+  height: 80%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+  background: linear-gradient(195deg, #7ac70c, #8ee000);
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 .insideChangePass {
-    display: flex;
-    position: relative;
-    align-self: center;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1vw;
-    /* identical to box height */
-    color: #ffffff;
-    width: 100%;
+  display: flex;
+  position: relative;
+  align-self: center;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1vw;
+  /* identical to box height */
+  color: #ffffff;
+  width: 100%;
 
-    /* Inside Auto Layout */
+  /* Inside Auto Layout */
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin-left: 5%;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-left: 5%;
 }
 
 #changepass {
-    display: flex;
-    position: relative;
-    order: 2;
-    width: 20%;
-    height: 40%;
+  display: flex;
+  position: relative;
+  order: 2;
+  width: 20%;
+  height: 40%;
 }
 
 .image {
-    display: flex;
-    width: 20%;
-    height: 100%;
+  display: flex;
+  width: 20%;
+  height: 100%;
 }

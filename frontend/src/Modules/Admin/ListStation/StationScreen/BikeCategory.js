@@ -10,8 +10,7 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 
 const useStyles = makeStyles({
-  root: {
-    
+  root: {    
     borderRadius:"8px",
     filter: "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
   },

@@ -43,7 +43,6 @@ export default function ListStationComponent() {
                     background: "white",
                     width: "1500px",
                     height: "900px",
-                    borderRadius: "40px",
                 }}
                 spacing={2}>
                 {(searchInput.length >= 1 && dataFiltered !== [])

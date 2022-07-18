@@ -60,35 +60,6 @@ function ProFile(user) {
                     </button>
 
                 </div>
-                {/* <div className="line2">
-                    <div className="idDivision">
-                        <div className="image">
-                            <img src={Addresspng} alt="" />
-                        </div>
-                        <div id="USdetail">
-                            <span className="titleOfInfor">Identity Code</span>
-                            <span className="detail">{user.idCode}</span>
-                        </div>
-                    </div>
-                    <div className="emailDivision">
-                        <div className="image">
-                            <img src={Emailpng} alt="" />
-                        </div>
-                        <div id="USdetail">
-                            <span className="titleOfInfor">Email</span>
-                            <span className="detail">{user.email}</span>
-                        </div>
-                    </div>
-                    <div className="phoneDivision">
-                        <div className="image">
-                            <img src={Phonepng} alt="" />
-                        </div>
-                        <div id="USdetail">
-                            <span className="titleOfInfor">Phone Number</span>
-                            <span className="detail">{user.phoneNumber}</span>
-                        </div>
-                    </div>                  
-                </div> */}
             </div>
         </div>
     )

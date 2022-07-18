@@ -64,7 +64,6 @@ export default function BikeCategoriesOfStaff(){
                 marginLeft: "50px",
                 marginTop: "10px",
                 borderRadius: "40px",
-                filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.7))",
             }}>
                 <Grid container item direction="row" sx={{marginTop:"1%"}}>
                     <Grid item xs={6}>

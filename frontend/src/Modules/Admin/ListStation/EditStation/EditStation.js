@@ -37,6 +37,7 @@ export default function EditStation({ stationInfo, needLoading, setEditing, setN
     const [listLocation, setListLocation] = useState([])
     const [listManager, setListManager] = useState([])
     const [isLoading, setLoading] = useState(true)
+
     const classes = useStyles()
     const [station, setStation] = useState({
         name: stationInfo.stationName,
@@ -45,7 +46,7 @@ export default function EditStation({ stationInfo, needLoading, setEditing, setN
         locationID: stationInfo.locationID,
         locationIndex: -1,
         staffIndex: -1,
-    })
+    }) 
 
     async function editStation(data) {
       console.log(stationInfo)

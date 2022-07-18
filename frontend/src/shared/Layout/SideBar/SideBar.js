@@ -1,4 +1,4 @@
-import Logo from "../../images/login-logo.png";
+import Logo from "../../images/eco1.png";
 import {useNavigate} from "react-router";
 import {Box, Button, Grid, Icon} from "@mui/material";
 import "./SideBar.css";
@@ -12,8 +12,7 @@ export default function Sidebar({items}) {
       sx={{
         height: "95vh",
         width: "100%",
-        backgroundColor: "#235390",
-        backgroundImage: `url(https://d35aaqx5ub95lt.cloudfront.net/images/star-pattern.svg)`,
+        backgroundColor: "#e5e5e5",
         backgroundSize: "300%",
         borderRadius: "30px",
         margin: "35px 15px",
@@ -27,7 +26,7 @@ export default function Sidebar({items}) {
             style={{
               marginLeft: "28%",
               marginTop: "15%",
-              marginBottom: "10%",
+              marginBottom: "80%",
               width: "45%",
             }}
           />
@@ -39,7 +38,7 @@ export default function Sidebar({items}) {
                 // variant='contained'
                 onClick={() => handleClick(item.href)}
                 id="NewmemberSideBar"
-              >
+              >                
                 {item.title}
               </Button>
             </Grid>

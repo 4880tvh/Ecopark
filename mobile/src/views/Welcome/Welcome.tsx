@@ -54,7 +54,7 @@ const Welcome: FunctionComponent = () => {
                     <RegularText textStyles={{ marginBottom: 25 }}>
                         It never gets easier, you just go faster
                     </RegularText>
-                    <RegularButton textStyles={{ width: "70%" }}>Get Started</RegularButton>
+                    {/* <RegularButton textStyles={{ width: "70%" }}>Get Started</RegularButton> */}
                 </BottomSection>
             </WelcomeContainer>
         </>

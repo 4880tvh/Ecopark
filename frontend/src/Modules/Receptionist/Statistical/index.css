@@ -5,7 +5,7 @@
 
 .timesup {
     display: block;
-    font-family: Inter;
+    font-family: Arial;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -13,7 +13,7 @@
 
 .baothongke {
     position: absolute;
-    border-radius: 40px;
+    border-radius: 30px;
     width: 1520px;
     margin-left: 30px;
     margin-top: 20px;
@@ -32,13 +32,13 @@ input {
     justify-content: center;
     border-style: solid;
     text-decoration: none;
-    border-radius: 40px;
+    border-radius: 30px;
     width: 168px;
     height: 48px;
     margin-left: 333px;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 18px;

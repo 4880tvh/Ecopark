@@ -42,7 +42,7 @@ function Verify_info({ infor, callBack }) {
                             />
                         </div>
                         <div class="col-verify">
-                            <label class="lab-verify" htmlFor="id-code">Indentify Code</label><br />
+                            <label class="lab-verify" htmlFor="id-code">Identity Code</label><br />
                             <InputWithValidate
                                 disable={true}
                                 className="left-verify"

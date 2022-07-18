@@ -35,8 +35,8 @@ export default function ListStationScreen({ stations, setEditing, setChosenStati
             height: "900px",
             borderRadius: "40px",
             paddingTop: "30px",
-            filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"
         }}>
+            
             <Grid container direction="row" >
                 <Grid container item xs={4}>
                     <ListStation stations={stations} setChosenData={setChosenStation} />
@@ -61,7 +61,7 @@ export default function ListStationScreen({ stations, setEditing, setChosenStati
                         </Grid>
                     </Box>
                 </Grid>
-            </Grid>
+            </Grid> 
         </Box>
     )
 }

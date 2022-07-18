@@ -9,7 +9,7 @@ export default function CategoryDetails({data, needLoading, setNeedLoading}) {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-evenly",
-                height: "700px",
+                height: "600px",
                 width: "950px",
                 border: "3px solid #7ac70c",
                 marginLeft: "5%",

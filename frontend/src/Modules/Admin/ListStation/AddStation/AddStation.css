@@ -4,10 +4,10 @@
     justify-content: center;
     border-style: solid;
     text-decoration: none;
-    border-radius: 40px;
+    border-radius: 30px;
     width: 226px;
     height: 60px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 23px;
@@ -26,10 +26,10 @@
     justify-content: center;
     border-style: solid;
     text-decoration: none;
-    border-radius: 40px;
+    border-radius: 30px;
     width: 226px;
     height: 60px;
-    background-color: #7ac70c;
+    background: linear-gradient(195deg, #7ac70c, #8ee000);
     font-family: Poppins;
     color: #FFFFFF;
     font-size: 23px;

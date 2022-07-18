@@ -84,7 +84,7 @@ function AddMoney({ chosen, cancelAddMoney, fetch }) {
         {/* show info start */}
         <div className="row-pay-long">
           <div className='col-pay-long'>
-            <label >Indentify Number</label>
+            <label >Identity Number</label>
             <input disabled={true} value={infor.identifyNumber}></input>
           </div>
           <div className='col-pay-long'>

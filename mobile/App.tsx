@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font';
 import RootStack from './src/navigators/RootStack';
 import Home from './src/views/Main/Home';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import AuthStack from './src/navigators/AuthStack';
 
 
 export default function App() {
@@ -23,8 +24,9 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         {/* <Loading /> */}
         {/* <Welcome /> */}
-        <RootStack /> 
+        {/* <RootStack />  */}
         {/* <Home /> */}
+        <AuthStack />
       </SafeAreaView>
     </SafeAreaProvider>
   );

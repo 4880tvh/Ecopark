@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   container: {
     width: "79%",
     marginLeft: "2%",
-    marginTop: "320px",
+    marginTop: "115px",
     borderRadius: "40px",
     backgroundColor: 'white',
     position: "absolute",
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "space-evenly",
     alignItems: "center",
-    filter: "drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25))",
+    height: "85vh"
   },
   header: {
     height: "6%",
@@ -47,7 +47,7 @@ const useStyles = makeStyles({
     marginBottom: "3%"
   }
 })
-const COLORS = ['#00BB00', '#DD0000', '#FFFF00', '##000011'];
+const COLORS = ['#8EE000', '#e53b3b', '#ffb020', '#000011'];
 export default function RenderBarChart() {
   const classes = useStyles()
   const [data1, setData1] = useState([])
@@ -112,9 +112,10 @@ export default function RenderBarChart() {
     return (
       <Box container className={classes.container}>
         <Grid container className={classes.header} direction="row" justifyContent="space-around" alignItems="center">
-            <Typography variant="h4" sx ={{position:"absolute"}}>Thống kê số lượng xe</Typography>
+            <Typography variant="h4" sx ={{position:"absolute"}}>Dashboard</Typography>
         </Grid>
-        <Grid container className={classes.content} direction="row" justifyItems="center" alignItems="center">
+        Tính năng đang phát triển
+        {/* <Grid container className={classes.content} direction="row" justifyItems="center" alignItems="center">
           <Grid container item xs ={6} direction='column'>
             <Grid container sx = {{width: '100%', justifyContent: "center", paddingTop:"70px"}}>
               <PieChart width={400} height={400}>
@@ -125,7 +126,7 @@ export default function RenderBarChart() {
                     cx={200}
                     cy={200}
                     outerRadius={160}
-                    fill="#8884d8"
+                    fill="#8ee000"
                     label
                   >{
                 d1.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
@@ -181,7 +182,7 @@ export default function RenderBarChart() {
                     (listStation !== []) ? (listStation?.map((station, index) => <MenuItem value={index + 1}><em>{station.name}</em></MenuItem>)) : <></>
                 }
               </Select>
-        </Grid>
+        </Grid> */}
       </Box>
     );
   };

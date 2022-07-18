@@ -41,7 +41,7 @@ function SearchBar({ list, callBack, role, updateSearch}) {
           <input className="input" type='text' 
             value={textData} 
             onChange={handleChange}
-            placeholder="Search here..."></input>
+            placeholder="Search ..."></input>
         </div>
         <Button variant="contained" id="Delete" onClick={async () => {
           if (listDelete.length != 0) {

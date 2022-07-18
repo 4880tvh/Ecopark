@@ -68,7 +68,7 @@ export default function ForgotPassword({ callBack }) {
             <div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px" }}>
                 <label >Please select your role</label>
                 <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px",height:"31px", cursor:"pointer" }} onChange={(e)=>setRole(e.target.value)}>
-                    <option value="receptionist">Receptionist</option>
+                    <option value="receptionist">-- Role --</option>
                     <option value="admin">Admin</option>
                     <option value="staff">Staff</option>
                 </select>

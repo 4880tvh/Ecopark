@@ -8,22 +8,22 @@ export const AdminSidebarItem = [
     {
       href: '/admin/employee',
       icon: '',
-      title: 'List employee',
+      title: 'Staff',
     },
     {
       href: '/admin/station',
       icon: '',
-      title: 'List station',
+      title: 'Station',
     },
     {
       href: '/admin/bike-category',
       icon: '',
-      title: 'Bike category',
+      title: 'Category',
     },
     {
       href: '/admin/bike',
       icon: '',
-      title: 'List bike',
+      title: 'Bike',
     },
   ];
   

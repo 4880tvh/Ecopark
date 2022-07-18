@@ -60,7 +60,7 @@ export default function UserProfile(infor, callBack){
                     </div>
                     <div class="col-userprofile-long">
                         <label>Identify Number</label>
-                        <input disabled="true" value={infor.indentifyNumber}></input>
+                        <input disabled="true" value={infor.IdentityNumber}></input>
                     </div>
                 </div>
                 <div class="row-userprofile-long">

@@ -5,8 +5,8 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
     return (
         <div className="login-form">
             <div>
-                <h1 style={{ fontFamily:"Roboto", textAlign: "center" }}>
-                    Login
+                <h1 style={{ fontFamily: "Arial", textAlign: "center" }}>
+                    Sign In
                 </h1>
             </div>
             <div style={{ marginTop: "10px" }}>
@@ -16,7 +16,7 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                     label="Email"
                     name="email"
                     color="success"
-                    
+
                     type="email"
                     value={user.email}
                     margin="dense"
@@ -42,7 +42,8 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px" }}>
                 <label >Please select your role</label>
-                <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px", width: '100px', borderRadius: '5px', cursor:"pointer" }} onChange={handleChange}>
+                <select name="role" id="role" style={{ border: "1px solid black", display: "inline-block", padding: "5px", width: '90px', borderRadius: '5px', cursor: "pointer" }} onChange={handleChange}>
+                    <option value="">-- Role --</option>
                     <option value="admin">Admin</option>
                     <option value="staff">Staff</option>
                 </select>
@@ -52,7 +53,7 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                 height: 40,
                 justifyContent: "space-between",
                 marginTop: "10px",
-                
+
             }} className='div-login'>
                 <button
                     style={{
@@ -61,12 +62,12 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
                         fontFamily: "'Roboto', sans-serif",
                         fontWeight: "600",
                         fontsize: "16px",
-                        boxShadow:"0px 4px 4px #EFEFEF",
-                        borderRadius:"10px",
-                        border:"1px solid #7ac70c",
-                        color:"white",
-                        cursor:"pointer",
-                        
+                        boxShadow: "0px 4px 4px #EFEFEF",
+                        borderRadius: "10px",
+                        border: "1px solid #7ac70c",
+                        color: "white",
+                        cursor: "pointer",
+
                     }}
                     disabled={isLoading}
                     onClick={() => {
@@ -82,11 +83,11 @@ export default function LoginItem({ validate, user, handleChange, isLoading, han
 
                 <button
                     style={{
-                      backgroundColor:"white",
-                      cursor:"pointer",
-                      textAlign:"start",
-                      fontWeight:"bold",
-                      marginRight:"40px"
+                        backgroundColor: "white",
+                        cursor: "pointer",
+                        textAlign: "start",
+                        fontWeight: "bold",
+                        marginRight: "40px"
 
                     }}
                     onClick={() => {

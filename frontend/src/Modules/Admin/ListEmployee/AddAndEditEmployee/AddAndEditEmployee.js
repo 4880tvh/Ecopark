@@ -119,7 +119,6 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
             callBack();
           }}
         />
-        <h1>&nbsp;{isAdd ? "Adding" : "Editing"} Employee</h1>
       </div>
       <div className="content-addemm-long">
         {/* left menu  start*/}
@@ -172,8 +171,8 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
         {/* left menu  end*/}
         {/* right menu  start*/}
         <div className="right-menu-addemm-long">
-          <h2 className="h2-addemm-long" style={{marginLeft: 600}}>
-            Account
+          <h2 style={{display:"flex",justifyContent:"flex-start"}}>
+            STAFF ACCOUNT
           </h2>
           <form name="employee">
             {/* <div className="left"> */}
@@ -221,7 +220,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
               <div class="col-addemm-long">
                 <InputWithValidate
                   elementId="username-addemm-long"
-                  placeholder={"Name"}
+                  placeholder={"Email"}
                   callBack={(value) => updateInfo({...info, email: value})}
                   validate={validateEmail} // Luôn đúng
                   needValidateState={needValidate}
@@ -238,7 +237,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
               <div class="col-addemm-long">
                 <InputWithValidate
                   elementId="phoneNumber-addemm-long"
-                  placeholder={"Name"}
+                  placeholder={"Phone number"}
                   callBack={(value) =>
                     updateInfo({...info, phoneNumber: value})
                   }
@@ -261,7 +260,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
                   <InputWithValidate
                     className="left-addemm-long"
                     elementId="password-addemm-long"
-                    placeholder={"Name"}
+                    placeholder={"Password"}
                     password={true}
                     callBack={(value) => updateInfo({...info, password: value})}
                     validate={validatePassword} // Luôn đúng
@@ -280,7 +279,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
                   <InputWithValidate
                     password={true}
                     elementId="password-addemm-long"
-                    placeholder={"Name"}
+                    placeholder={"Confirm Password"}
                     callBack={(value) => setConfirm(value)}
                     validate={(password) => {
                       if (password !== info.password) {
@@ -308,7 +307,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
                 <InputWithValidate
                   className="left-address-addemm-long"
                   elementId="address-addemm-long"
-                  placeholder={"Name"}
+                  placeholder={"Address"}
                   callBack={(value) => updateInfo({...info, address: value})}
                   validate={validateString} // Luôn đúng
                   needValidateState={needValidate}

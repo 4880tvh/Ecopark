@@ -123,7 +123,7 @@ export default function BikeCategories() {
                 style={{marginRight: "38px", marginTop: "50px"}}
               >
                 <div className="dropdown-select" href="#">
-                  <span>Sắp xếp theo</span>
+                  <span>Lọc theo</span>
                 </div>
                 <div className="dropdown-list">
                   <div

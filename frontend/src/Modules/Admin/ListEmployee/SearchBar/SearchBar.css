@@ -56,11 +56,11 @@
   justify-content: center;
   border-style: solid;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 10px;
   width: 168px;
   height: 48px;
   margin-left: 43px;
-  background: linear-gradient(195deg, #7ac70c, #8ee000);
+  background: 'red';
   font-family: Poppins;
   color: #ffffff;
   font-size: 18px;
@@ -75,7 +75,7 @@
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: 30px;
+  border-radius: 10px;
   width: 169px;
   height: 48px;
   background: linear-gradient(195deg, #7ac70c, #8ee000);

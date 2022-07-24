@@ -13,8 +13,9 @@
     /* height: 624px;   */
     /* left: calc(50% - 1497px/2 );
     top: calc(50% - 749px/2 ); */
-    border-radius: 30px;
+    border-radius: 0px;
     border: solid;
+    border-color: #7ac70c;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -66,9 +67,7 @@
   }
 
   .h2-addemm-long {
-    padding-left: 0%;
-    margin: 0px;
-    padding: 0px;
+    padding-left: -100px;
   }
 
   .left-addemm-long {
@@ -171,7 +170,7 @@
 
     background: #7ac70c;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+    border-radius: 10px;
     justify-content: center;
     margin: 2% 2%;
   }
@@ -189,8 +188,9 @@
     height: 670px;
     left: calc(50% - 1497px / 2);
     top: calc(50% - 670px / 2);
-    border-radius: 30px;
+    border-radius: 0px;
     border: solid;
+    border-color: #7ac70c;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -338,7 +338,7 @@
     height: 60px;
     background: #7ac70c;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+    border-radius: 10px;
     justify-content: center;
     margin-left: 34%;
     margin-top: 4%;
@@ -346,7 +346,7 @@
   }
 
   #save-addemm-long:hover {
-    background: rgb(226, 226, 226);
-    color: #22242c;
+    background: #1976d2;
+    color: #ffffff;
   }
 }

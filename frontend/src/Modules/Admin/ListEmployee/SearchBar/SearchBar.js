@@ -58,6 +58,7 @@ function SearchBar({list, callBack, role, updateSearch}) {
         </div>
         <Button
           variant="contained"
+          color="error"
           id="Delete"
           onClick={async () => {
             if (listDelete.length != 0) {
@@ -99,7 +100,7 @@ function SearchBar({list, callBack, role, updateSearch}) {
             setEditing(true);
           }}
         >
-          New member +
+          New Staff
         </Button>
       </div>
     </div>

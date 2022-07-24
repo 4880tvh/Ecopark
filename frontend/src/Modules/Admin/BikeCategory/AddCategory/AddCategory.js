@@ -60,17 +60,13 @@ function AddCategory({ setAdding, setNeedLoading, needLoading }) {
             <h6 className='Dung_NA_TitleOfAddCateScr' >Thêm</h6>
 
             <div className='Dung_NA_AddInforOfCate'>
-                <span style={{
-                    display: "flex",
-                    alignSelf: "center",
-                    width: "10%"
-                }}>Tên loại xe</span>
+                
                 <TextField sx={{
                     width: "20%",
                     marginLeft: "3%",
                     borderRadius: "30px"
                 }}
-
+                    label="Tên loại xe"
                     name="name"
                     fullWidth
                     value={category.name}
@@ -81,16 +77,12 @@ function AddCategory({ setAdding, setNeedLoading, needLoading }) {
 
             </div>
             <div className='Dung_NA_AddInforOfCate'>
-                <span style={{
-                    display: "flex",
-                    width: "10%"
-                }}>Giá thuê</span>
                 <TextField sx={{
                     width: "20%",
 
                     marginLeft: "3.5%"
                 }}
-                    label=""
+                    label="Giá thuê một giờ"
                     name="cost"
                     fullWidth
                     value={category.cost}
@@ -103,14 +95,12 @@ function AddCategory({ setAdding, setNeedLoading, needLoading }) {
 
                     onChange={handleChange}
                 />
-                <span style={{
-                    marginLeft: "2%"
-                }}>đ/giờ</span>
             </div>
             <div className='Dung_NA_AddInforOfCate'>
                 <span style={{
                     display: "flex",
-                    width: "10%"
+                    width: "10%",
+                    marginLeft:"3%",
                 }}>Ảnh mô tả</span>
                 <label htmlFor="contained-button-file" style={{ marginLeft: "3%" }}>
                     {/* <Input accept="image/png, image/jpeg" id="contained-button-file" multiple type="file" onChange={handleChangeFile} /> */}
@@ -127,16 +117,13 @@ function AddCategory({ setAdding, setNeedLoading, needLoading }) {
                 marginTop: "4%",
                 marginLeft: "3%",
             }}>
-                <span style={{
-                    display: "flex",
-                    width: "10%"
-                }}>Mô tả</span>
+                
                 <TextField sx={{
                     width: "80%",
                     marginTop: "-1%",
                     marginLeft: "3%",
                 }}
-                    label=""
+                    label="Mô tả chi tiết sản phẩm"
                     name="description"
                     fullWidth
                     value={category.description}
@@ -160,10 +147,11 @@ function AddCategory({ setAdding, setNeedLoading, needLoading }) {
                     textAlign: "center",
                     paddingTop: "10px",
                     paddingBottom: "20px",
-                    paddingLeft: "20px",
-                    borderRadius: "5px"
+                    borderRadius: "5px",
+                    justifyContent: "center",
+                    fontSize:"16px"
 
-                }} disabled={isLoading} variant="contained" onClick={() => handleClick()}> {(isLoading) ? <PropagateLoader color="white" size={10} /> : "Add new"} </button>
+                }} disabled={isLoading} variant="contained" onClick={() => handleClick()}> {(isLoading) ? <PropagateLoader color="white" size={10} /> : "ADD"} </button>
                 <Button id='Dung_NA_XButton' sx={{
                     backgroundColor: "red",
                     width: "100px",

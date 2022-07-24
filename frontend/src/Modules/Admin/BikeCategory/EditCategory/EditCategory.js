@@ -28,19 +28,15 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
 
     return (
         <div className='Dung_NA_AddCategory'>
-            <h6 className='Dung_NA_TitleOfAddCateScr' >Edit</h6>
+            <h6 className='Dung_NA_TitleOfAddCateScr' >Chỉnh sửa thông tin xe đạp</h6>
             <div className='Dung_NA_AddInforOfCate'>
-                <span style={{
-                    display: "flex",
-                    alignSelf: "center",
-                    width: "10%"
-                }}>Model</span>
+                
                 <TextField sx={{
                     width: "20%",
                     marginLeft: "3%",
                     borderRadius: "30px"
                 }}
-
+                    label="Model"
                     name="name"
                     fullWidth
                     value={category.name}
@@ -50,15 +46,11 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
                 />
             </div>
             <div className='Dung_NA_AddInforOfCate'>
-                <span style={{
-                    display: "flex",
-                    width: "10%"
-                }}>Giá thuê</span>
                 <TextField sx={{
                     width: "20%",
                     marginLeft: "3%"
                 }}
-                    label=""
+                    label="Giá thuê một giờ"
                     name="cost"
                     fullWidth
                     type="number"
@@ -70,20 +62,13 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
                     variant="outlined"
                     onChange={handleChange}
                 />
-                <span style={{
-                    marginLeft: "2%"
-                }}>đ/giờ</span>
             </div>
             <div className='Dung_NA_AddInforOfCate'>
-                <span style={{
-                    display: "flex",
-                    width: "10%"
-                }}>Link ảnh</span>
                 <TextField sx={{
                     width: "80%",
                     marginLeft: "3%"
                 }}
-                    label=""
+                    label="Link ảnh "
                     name="image"
                     fullWidth
                     value={category.image}
@@ -97,21 +82,17 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
                 fontFamily: "Inter",
                 flexDirection: "row",
                 height: "8%",
-                width: "100%",
+                width: "90%",
                 fontWeight: "600",
                 marginTop: "4%",
                 marginLeft: "3%",
             }}>
-                <span style={{
-                    display: "flex",
-                    width: "10%"
-                }}>Mô tả</span>
                 <TextField sx={{
-                    width: "80%",
+                    width: "90%",
                     marginTop: "-1%",
                     marginLeft: "3%",
                 }}
-                    label=""
+                    label="Mô tả chi tiết sản phẩm"
                     name="description"
                     fullWidth
                     value={category.description}
@@ -122,23 +103,25 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
                     rows={4}
                 />
             </div>
+            <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around"}}>
             <Button sx={{
                 display: "flex",
                 width: "20%",
                 alignSelf: "center",
-                marginTop: "10%",
+                marginTop: "15%",
+                backgroundColor: "#7ac70c"
                 }} 
                 variant="contained"
-                color="secondary" 
                 onClick={handleSubmit}
-                >Save</Button>
+                >SAVE</Button>
             <Button sx={{
                 display: "flex",
                 width: "20%",
+                marginTop: "15%",
                 alignSelf: "center",
-                marginTop: "2%",
                 backgroundColor: "red"
-            }} variant="contained" onClick={() => { setEdit(false) }}>Cancle</Button>
+            }} variant="contained" onClick={() => { setEdit(false) }}>CANCEL</Button>
+        </div>
         </div>
     )
 }

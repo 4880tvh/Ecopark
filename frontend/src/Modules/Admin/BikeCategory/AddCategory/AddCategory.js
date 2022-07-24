@@ -61,7 +61,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
   };
   return (
     <div className="Dung_NA_AddCategory">
-      <h6 className="Dung_NA_TitleOfAddCateScr">Thêm</h6>
+      <h6 className="Dung_NA_TitleOfAddCateScr">THÊM XE</h6>
 
       <div className="Dung_NA_AddInforOfCate">
         <TextField
@@ -131,21 +131,13 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
           marginLeft: "3%",
         }}
       >
-        <span
-          style={{
-            display: "flex",
-            width: "10%",
-          }}
-        >
-          Mô tả
-        </span>
         <TextField
           sx={{
             width: "80%",
             marginTop: "-1%",
             marginLeft: "3%",
           }}
-          label=""
+          label="Mô tả chi tiết sản phẩm "
           name="description"
           fullWidth
           value={category.description}
@@ -156,7 +148,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
           rows={4}
         />
       </div>
-      <div style={{display: "grid", justifyContent: "center", gap: "5px"}}>
+      <div style={{display: "flex",flexDirection:"row", justifyContent: "space-around", alignItems: 'center'}}>
         <button
           id="Dung_NA_AddCateButton"
           style={{
@@ -171,8 +163,10 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
             textAlign: "center",
             paddingTop: "10px",
             paddingBottom: "20px",
-            paddingLeft: "20px",
+            justifyContent:"center",
             borderRadius: "5px",
+            fontSize:"15px",
+            marginBottom: "70px"
           }}
           disabled={isLoading}
           variant="contained"
@@ -182,7 +176,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
           {isLoading ? (
             <CircleLoader color="white" size={10} />
           ) : (
-            "Add new"
+            "ADD"
           )}{" "}
         </button>
         <Button

@@ -1,12 +1,12 @@
 import React from "react";
-import { View } from "react-native";
+import {View} from "react-native";
 import styled from "styled-components/native";
 
 //colors
-import { colors } from "../colors";
+import {colors} from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
-import { ScreenWidth } from "../shared";
+import {ScreenWidth} from "../shared";
 import image from "../../assets/bgs/background_transparent.png";
 
 const CardBackground = styled.ImageBackground`
@@ -61,18 +61,18 @@ const CardItem = (props: CardItemProps) => {
       >
         <TouchableView>
           <CardRow>
-            <RegularText textStyles={{ color: colors.white }}>
+            <RegularText textStyles={{color: colors.white}}>
               ******{props.accountNo.slice(6, 10)}
             </RegularText>
           </CardRow>
           <CardRow>
-            <View style={{ flex: 3 }}>
+            <View style={{flex: 3}}>
               <SmallText
-                textStyles={{ marginBottom: 5, color: colors.graylight }}
+                textStyles={{marginBottom: 5, color: colors.graylight}}
               >
                 Total balance
               </SmallText>
-              <RegularText textStyles={{ fontSize: 19 }}>
+              <RegularText textStyles={{fontSize: 19}}>
                 {props.balance} VND
               </RegularText>
             </View>

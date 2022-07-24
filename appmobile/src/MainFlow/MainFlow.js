@@ -47,8 +47,8 @@ export default function MainFlow() {
     useNavigationBuilder(TabRouter, {
       children: [
         <Tab.Screen name="Booking" component={BookingTab} />,
-        <Tab.Screen name="History" component={HistoryTab} />,
-        <Tab.Screen name="Profile" component={ProfileTab} />,
+        // <Tab.Screen name="History" component={HistoryTab} />,
+        // <Tab.Screen name="Profile" component={ProfileTab} />,
       ],
       initialRouteName: 'Booking',
     });

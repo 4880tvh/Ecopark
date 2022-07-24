@@ -36,11 +36,34 @@ function BookingTab({ navigation }) {
   const [userInfo, setuserInfo] = useState({});
   const [IsLoading, setIsLoading] = useState(true);
   const [isBooking, setIsBooking] = useState(false);
+
+  const res = {
+    status: 'success',
+    msg: 'login successfully',
+    token:
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
+    data: {
+      _id: '62d3ae880286c775f8364bdb',
+      identifyNumber: '023819310',
+      password: '$2b$12$SCox0AYC1izDO1g0m7fU7ulQCYoS/UtFoBBi2bhZ8tM5AdMJhAObe',
+      email: 'hoangnv@gmail.com',
+      phoneNumber: '0981262965',
+      name: 'Nguyen Hoang',
+      balance: 0,
+      residentID: '031230911',
+      activate: 'false',
+      role: 'user',
+      __v: 0,
+    },
+    check: false,
+  };
   useEffect(() => {
     async function checkStorageToken() {
       setIsLoading(true);
       const url = 'https://nmcnpm.herokuapp.com/api/v1/user/login';
-      const token = await AsyncStorage.getItem('token');
+      // const token = await AsyncStorage.getItem('token');
+      const token =
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
       await axios
         .post(
           url,
@@ -50,17 +73,35 @@ function BookingTab({ navigation }) {
           }
         )
         .then((response) => {
-          const data = response.data.data;
-          const isBooking = JSON.stringify(response.data.check);
-          const token = response.data.token;
+          // const data = response.data.data;
+          // const isBooking = JSON.stringify(response.data.check);
+          // const token = response.data.token;
+
+          const data = {
+            _id: '62d3ae880286c775f8364bdb',
+            identifyNumber: '023819310',
+            password:
+              '$2b$12$SCox0AYC1izDO1g0m7fU7ulQCYoS/UtFoBBi2bhZ8tM5AdMJhAObe',
+            email: 'hoangnv@gmail.com',
+            phoneNumber: '0981262965',
+            name: 'Nguyen Hoang',
+            balance: 100000,
+            residentID: '031230911',
+            activate: 'false',
+            role: 'user',
+            __v: 0,
+          };
+
           AsyncStorage.setItem('token', token);
           AsyncStorage.setItem('info', JSON.stringify(data));
           AsyncStorage.setItem('isBooking', JSON.stringify(isBooking));
-          setIsBooking(response.data.check);
+          // setIsBooking(response.data.check);
+          setIsBooking(false);
           setuserInfo(data);
           setIsLoading(false);
         });
     }
+
     checkStorageToken();
     const willFocusSubscription = navigation.addListener('focus', () => {
       checkStorageToken();
@@ -107,7 +148,7 @@ function BookingTab({ navigation }) {
         />
       )}
 
-      <View style={styles.titleContainer}>
+      {/* <View style={styles.titleContainer}>
         <Text style={styles.title}>Top Bike</Text>
       </View>
       <ShortBikeCard
@@ -124,7 +165,7 @@ function BookingTab({ navigation }) {
         backgroundColor={'rgb(237, 177, 119)'}
         bikeInfo={bikeInfo}
         onPress={() => {}}
-      />
+      /> */}
     </ScrollView>
   );
 }

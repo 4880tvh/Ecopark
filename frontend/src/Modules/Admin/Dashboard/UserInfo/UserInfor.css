@@ -1,11 +1,8 @@
 .userInfor {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  position: absolute;
-  width: 79%;
-  height: 26%;
-  border-radius: 30px;
   margin-left: 20%;
   margin-top: 1%;
   z-index: 1;
@@ -13,7 +10,7 @@
 #Avartar {
   display: flex;
   position: relative;
-  height: 80%;
+  height: 50px;
   left: 1%;
   top: 1%;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);

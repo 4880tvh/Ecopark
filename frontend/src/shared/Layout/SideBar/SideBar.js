@@ -58,7 +58,7 @@ export default function Sidebar({items}) {
           <Grid key={7} item width="100%" alignItems="center">
             <Button
               // variant='contained'
-              // onClick={() => handleClick(item.href)}
+              onClick={() => navigate('/')}
               id="NewmemberSideBar"
             >
               Logout

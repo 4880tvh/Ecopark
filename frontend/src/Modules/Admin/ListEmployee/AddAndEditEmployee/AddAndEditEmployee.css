@@ -138,11 +138,7 @@
   }
 
   .right-menu-addemm-long input {
-    border: 1px solid black;
     box-sizing: border-box;
-    border-radius: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
@@ -151,6 +147,7 @@
 
   .col-addemm-long {
     width: 100%;
+    margin: 10px;
   }
 
   .right-menu-addemm-long form {
@@ -307,18 +304,16 @@
   }
 
   .right-menu-addemm-long input {
-    border: 1px solid black;
     box-sizing: border-box;
-    border-radius: 10px;
     padding-left: 5%;
     padding-right: 5%;
     width: 75%;
-    margin-left: 12%;
     height: 65px;
   }
 
   .col-addemm-long {
     width: 50%;
+    margin: 10px;
   }
 
   .right-menu-addemm-long form {

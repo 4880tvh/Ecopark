@@ -1,40 +1,48 @@
-import React, { useState } from 'react';
-import './AddAndEditEmployee.css';
-import InputWithValidate from '../../../../shared/Layout/InputWithValidate';
-import { validateEmail, validateIdCode, validatePassword, validatePhone } from '../../../../shared/utils/Validate'
-import axios from 'axios';
-import { PropagateLoader } from 'react-spinners';
-function AddAndEditEmployee({ callBack, infor, isAdd }) {
+import React, {useState} from "react";
+import "./AddAndEditEmployee.css";
+import InputWithValidate from "../../../../shared/Layout/InputWithValidate";
+import {
+  validateEmail,
+  validateIdCode,
+  validatePassword,
+  validatePhone,
+} from "../../../../shared/utils/Validate";
+import axios from "axios";
+import {PropagateLoader} from "react-spinners";
+function AddAndEditEmployee({callBack, infor, isAdd}) {
   const [info, updateInfo] = useState({
-    name: (infor !== undefined) ? infor.name : '',
-    identifyNumber: (infor !== undefined) ? infor.identifyNumber : '',
-    userName: (infor !== undefined) ? infor.userName : '',
-    address: (infor !== undefined) ? infor.address : '',
-    birth: (infor !== undefined) ? infor.birth : '',
-    phoneNumber: (infor !== undefined) ? infor.phoneNumber : '',
-    password: (infor !== undefined) ? infor.password : '',
-    email: (infor !== undefined) ? infor.email : ''
-  })
+    name: infor !== undefined ? infor.name : "",
+    identifyNumber: infor !== undefined ? infor.identifyNumber : "",
+    userName: infor !== undefined ? infor.userName : "",
+    address: infor !== undefined ? infor.address : "",
+    birth: infor !== undefined ? infor.birth : "",
+    phoneNumber: infor !== undefined ? infor.phoneNumber : "",
+    password: infor !== undefined ? infor.password : "",
+    email: infor !== undefined ? infor.email : "",
+  });
   // const [role, updateRole] = useState((infor === undefined) ? 1 : (infor.role === "staff") ? 2 : 1)
-  const [role, updateRole] = useState(2)
-  
+  const [role, updateRole] = useState(2);
+
   // const [submit, submitState] = useState(false);
 
   // const submitted = () => {
   //   // submitState(true);
   //   alert(info)
   // }
-  const [loading, setLoading] = useState(false)
-  const [needValidate, setValidate] = useState(1)
-  const [confirmPassword, setConfirm] = useState("")
+  const [loading, setLoading] = useState(false);
+  const [needValidate, setValidate] = useState(1);
+  const [confirmPassword, setConfirm] = useState("");
 
   async function editMember() {
-    setLoading(true)
-    console.log(infor._id)
-    console.log("Begin============")
-    const url = 'https://nmcnpm.herokuapp.com/api/v1/accounts/edit?type=' + ((role === 1) ? "receptionist/" : "staff/") + infor._id
-    console.log(url)
-    const token = localStorage.getItem("token")
+    setLoading(true);
+    console.log(infor._id);
+    console.log("Begin============");
+    const url =
+      "https://nmcnpm.herokuapp.com/api/v1/accounts/edit?type=" +
+      (role === 1 ? "receptionist/" : "staff/") +
+      infor._id;
+    console.log(url);
+    const token = localStorage.getItem("token");
     const data = {
       identifyNumber: info.identifyNumber,
       userName: info.userName,
@@ -43,30 +51,34 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
       phoneNumber: info.phoneNumber,
       address: info.address,
       name: info.name,
-    }
-    await axios.post(url, data, {
-      headers: { "Authorization": `Bearer ${token}` },
-    })
-      .then(res => {
-        console.log(res.data)
+    };
+    await axios
+      .post(url, data, {
+        headers: {Authorization: `Bearer ${token}`},
+      })
+      .then((res) => {
+        console.log(res.data);
         if (res.data.status === "success") {
-          window.confirm("Editing successfull")
-          callBack()
+          window.confirm("Editing successfull");
+          callBack();
         } else {
-          window.confirm("Somethings wrong in process, please try again")
+          window.confirm("Somethings wrong in process, please try again");
         }
-      }).catch(function (error) {
+      })
+      .catch(function (error) {
         console.log(error);
-        console.log("END=============")
+        console.log("END=============");
       });
-    setLoading(false)
+    setLoading(false);
   }
   async function addNewMember() {
-    setLoading(true)
-    console.log("Begin============")
-    const url = 'https://nmcnpm.herokuapp.com/api/v1/accounts/add?type=' + ((role === 1) ? "receptionist" : "staff")
-    console.log(url)
-    const token = localStorage.getItem("token")
+    setLoading(true);
+    console.log("Begin============");
+    const url =
+      "https://nmcnpm.herokuapp.com/api/v1/accounts/add?type=" +
+      (role === 1 ? "receptionist" : "staff");
+    console.log(url);
+    const token = localStorage.getItem("token");
     const data = {
       identifyNumber: info.identifyNumber,
       userName: info.userName,
@@ -75,31 +87,39 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
       phoneNumber: info.phoneNumber,
       address: info.address,
       name: info.name,
-    }
-    console.log(data)
-    await axios.post(url, data, {
-      headers: { "Authorization": `Bearer ${token}` },
-    })
-      .then(res => {
-        console.log(res.data)
+    };
+    console.log(data);
+    await axios
+      .post(url, data, {
+        headers: {Authorization: `Bearer ${token}`},
+      })
+      .then((res) => {
+        console.log(res.data);
         if (res.data.status === "success") {
-          window.confirm("Adding successfull")
-          callBack()
+          window.confirm("Adding successfull");
+          callBack();
         } else {
-          window.confirm(res.data.msg)
+          window.confirm(res.data.msg);
         }
-      }).catch(function (error) {
+      })
+      .catch(function (error) {
         console.log(error);
-        console.log("END=============")
+        console.log("END=============");
       });
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
     <div className="pops-up-menu-addemm-long">
       <div class="head-addem-long">
-        <button type="button" className="button1-addemm-long" onClick={() => { callBack() }} />
-        <h1>&nbsp;{(isAdd) ? "Adding" : "Editing"} Employee</h1>
+        <button
+          type="button"
+          className="button1-addemm-long"
+          onClick={() => {
+            callBack();
+          }}
+        />
+        <h1>&nbsp;{isAdd ? "Adding" : "Editing"} Employee</h1>
       </div>
       <div className="content-addemm-long">
         {/* left menu  start*/}
@@ -152,18 +172,19 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
         {/* left menu  end*/}
         {/* right menu  start*/}
         <div className="right-menu-addemm-long">
-          <h2 className= "h2-addemm-long" style={{ marginLeft: 600}}>Account</h2>
+          <h2 className="h2-addemm-long" style={{marginLeft: 600}}>
+            Account
+          </h2>
           <form name="employee">
             {/* <div className="left"> */}
             <div class="row-addemm-long">
               <div class="col-addemm-long">
-                <label class="lab-addemm-long" htmlFor="nam-addemm-longe">Name</label><br />
                 <InputWithValidate
-                
                   className="left-addemm-long"
                   elementId="name-addemm-long"
-                  callBack={value => updateInfo({ ...info, name: value })}
-                  validate={validateString} // Luôn đúng 
+                  placeholder={"Name"}
+                  callBack={(value) => updateInfo({...info, name: value})}
+                  validate={validateString} // Luôn đúng
                   needValidateState={needValidate}
                   message=""
                   valueState={info.name}
@@ -176,11 +197,13 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
                 />
               </div>
               <div class="col-addemm-long">
-                <label class="lab-addemm-long" htmlFor="id-code-addemm-long">Identity Code</label><br />
                 <InputWithValidate
                   className="left-addemm-long"
                   elementId="id-code-addemm-long"
-                  callBack={value => updateInfo({ ...info, identifyNumber: value })}
+                  placeholder={"Identity Code"}
+                  callBack={(value) =>
+                    updateInfo({...info, identifyNumber: value})
+                  }
                   validate={validateIdCode}
                   needValidateState={needValidate}
                   message=""
@@ -196,11 +219,11 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
             </div>
             <div className="row-addemm-long">
               <div class="col-addemm-long">
-                <label class="lab-addemm-long" htmlFor="userName-addemm-long">Email</label><br />
                 <InputWithValidate
                   elementId="username-addemm-long"
-                  callBack={value => updateInfo({ ...info, email: value })}
-                  validate={validateEmail} // Luôn đúng 
+                  placeholder={"Name"}
+                  callBack={(value) => updateInfo({...info, email: value})}
+                  validate={validateEmail} // Luôn đúng
                   needValidateState={needValidate}
                   message=""
                   valueState={info.email}
@@ -213,12 +236,13 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
                 />
               </div>
               <div class="col-addemm-long">
-                <label class="lab-addemm-long" htmlFor="phoneNumber-addemm-long">Phone number</label><br />
                 <InputWithValidate
-
                   elementId="phoneNumber-addemm-long"
-                  callBack={value => updateInfo({ ...info, phoneNumber: value })}
-                  validate={validatePhone} // Luôn đúng 
+                  placeholder={"Name"}
+                  callBack={(value) =>
+                    updateInfo({...info, phoneNumber: value})
+                  }
+                  validate={validatePhone} // Luôn đúng
                   needValidateState={needValidate}
                   message=""
                   valueState={info.phoneNumber}
@@ -231,16 +255,16 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
                 />
               </div>
             </div>
-            {
-              (isAdd) && <div class="row-addemm-long">
+            {isAdd && (
+              <div class="row-addemm-long">
                 <div class="col-addemm-long">
-                  <label class="lab-addemm-long" htmlFor="password-addemm-long">Password</label><br />
                   <InputWithValidate
                     className="left-addemm-long"
                     elementId="password-addemm-long"
+                    placeholder={"Name"}
                     password={true}
-                    callBack={value => updateInfo({ ...info, password: value })}
-                    validate={validatePassword} // Luôn đúng 
+                    callBack={(value) => updateInfo({...info, password: value})}
+                    validate={validatePassword} // Luôn đúng
                     needValidateState={needValidate}
                     message=""
                     valueState={info.password}
@@ -253,18 +277,18 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
                   />
                 </div>
                 <div class="col-addemm-long">
-                  <label class="lab-addemm-long" htmlFor="password-addemm-long">Confirm Password</label><br />
                   <InputWithValidate
                     password={true}
                     elementId="password-addemm-long"
-                    callBack={value => setConfirm(value)}
+                    placeholder={"Name"}
+                    callBack={(value) => setConfirm(value)}
                     validate={(password) => {
                       if (password !== info.password) {
-                        return "Password not match"
+                        return "Password not match";
                       } else {
-                        return ""
+                        return "";
                       }
-                    }} // Luôn đúng 
+                    }} // Luôn đúng
                     needValidateState={needValidate}
                     message=""
                     valueState={info.password}
@@ -275,19 +299,18 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
                       marginBottom: 15,
                     }}
                   />
-
                 </div>
               </div>
-            }
+            )}
 
             <div className="row-addemm-long">
               <div class="col-addemm-long">
-                <label class="lab-addemm-long" htmlFor="address-addemm-long">Address</label><br />
                 <InputWithValidate
                   className="left-address-addemm-long"
                   elementId="address-addemm-long"
-                  callBack={value => updateInfo({ ...info, address: value })}
-                  validate={validateString} // Luôn đúng 
+                  placeholder={"Name"}
+                  callBack={(value) => updateInfo({...info, address: value})}
+                  validate={validateString} // Luôn đúng
                   needValidateState={needValidate}
                   message=""
                   valueState={info.address}
@@ -298,39 +321,43 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
               </div>
             </div>
             <div class="row-addemm-long">
-              <button type="button-addemm-long" id="save-addemm-long" onClick={(e) => {
-                e.preventDefault();
-                setValidate(needValidate + 1)
-                const checkEmail = (validateEmail(info.email) === "")
-                const checkIdCode = (validateIdCode(info.identifyNumber) === "")
-                const checkPhone = (validatePhone(info.phoneNumber) === "")
-                console.log(checkEmail)
-                console.log(checkIdCode)
-                console.log(checkPhone)
-                if (checkEmail && checkIdCode && checkPhone) {
-                  if (isAdd) {
-                    console.log(info.password)
-                    console.log(confirmPassword)
-                    if (info.password === confirmPassword) {
-                      console.log("Add a new member")
-                      addNewMember()
+              <button
+                type="button-addemm-long"
+                id="save-addemm-long"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setValidate(needValidate + 1);
+                  const checkEmail = validateEmail(info.email) === "";
+                  const checkIdCode =
+                    validateIdCode(info.identifyNumber) === "";
+                  const checkPhone = validatePhone(info.phoneNumber) === "";
+                  console.log(checkEmail);
+                  console.log(checkIdCode);
+                  console.log(checkPhone);
+                  if (checkEmail && checkIdCode && checkPhone) {
+                    if (isAdd) {
+                      console.log(info.password);
+                      console.log(confirmPassword);
+                      if (info.password === confirmPassword) {
+                        console.log("Add a new member");
+                        addNewMember();
+                      }
+                    } else {
+                      editMember();
+                      console.log("Edit a member");
                     }
                   } else {
-                    editMember()
-                    console.log("Edit a member")
+                    console.log("Noooooooooooooo");
                   }
-                } else {
-
-                  console.log("Noooooooooooooo")
-                }
-
-              }
-              }>
-
-                {
-                  (loading) ?
-                    <PropagateLoader color="white" /> : (isAdd) ? "Add new member" : "Edit this member"
-                }
+                }}
+              >
+                {loading ? (
+                  <PropagateLoader color="white" />
+                ) : isAdd ? (
+                  "Add new member"
+                ) : (
+                  "Edit this member"
+                )}
               </button>
             </div>
             {/* </div> */}
@@ -342,6 +369,8 @@ function AddAndEditEmployee({ callBack, infor, isAdd }) {
   );
 }
 function validateString(value) {
-  if (value === "") { return "This field is required" } else return ""
+  if (value === "") {
+    return "This field is required";
+  } else return "";
 }
 export default AddAndEditEmployee;

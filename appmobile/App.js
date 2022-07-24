@@ -38,7 +38,7 @@ const App = () => {
     <NavigationContainer theme={MyTheme}>
       <StatusBar hidden={true} />
       <Stack.Navigator
-        initialRouteName="Login"
+        initialRouteName="MainFlow"
         screenOptions={{
           headerShown: false,
         }}

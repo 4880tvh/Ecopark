@@ -4,7 +4,7 @@ import {TextField, Input} from "@mui/material";
 import React, {useState} from "react";
 import {addNewCategory} from "../../Store/ListCategoryStore";
 import axios from "axios";
-import {PropagateLoader} from "react-spinners";
+import {CircleLoader, PropagateLoader} from "react-spinners";
 
 function AddCategory({setAdding, setNeedLoading, needLoading}) {
   const [isLoading, setIsLoading] = useState(false);
@@ -180,7 +180,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
         >
           {" "}
           {isLoading ? (
-            <PropagateLoader color="white" size={10} />
+            <CircleLoader color="white" size={10} />
           ) : (
             "Add new"
           )}{" "}

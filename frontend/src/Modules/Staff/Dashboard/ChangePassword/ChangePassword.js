@@ -136,7 +136,7 @@ export default function ChangePassword({callBack}) {
               >
                 {" "}
                 {isLoading ? (
-                  <PropagateLoader color="white" size={10} />
+                  <CircleLoader color="white" size={10} />
                 ) : (
                   "Save"
                 )}{" "}

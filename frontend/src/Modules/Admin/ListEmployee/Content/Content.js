@@ -1,7 +1,7 @@
 import "./Content.css";
 import React, {useEffect, useState} from "react";
 import {FaCaretLeft, FaCaretRight} from "react-icons/fa";
-import {PropagateLoader} from "react-spinners";
+import {CircleLoader, PropagateLoader} from "react-spinners";
 import AddAndEditEmployee from "../AddAndEditEmployee/AddAndEditEmployee";
 import {Button} from "@mui/material";
 import axios from "axios";
@@ -160,7 +160,7 @@ function Content({loading, updateList, updateRole, search}) {
 
         {isLoading ? (
           <div style={{paddingLeft: 745}}>
-            <PropagateLoader color="#7ac70c" />
+            <CircleLoader color="#7ac70c" />
           </div>
         ) : (
           <table className="contenttable">

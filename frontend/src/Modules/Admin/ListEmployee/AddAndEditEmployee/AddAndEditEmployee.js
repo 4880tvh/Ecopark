@@ -8,7 +8,7 @@ import {
   validatePhone,
 } from "../../../../shared/utils/Validate";
 import axios from "axios";
-import {PropagateLoader} from "react-spinners";
+import {CircleLoader, PropagateLoader} from "react-spinners";
 function AddAndEditEmployee({callBack, infor, isAdd}) {
   const [info, updateInfo] = useState({
     name: infor !== undefined ? infor.name : "",
@@ -352,7 +352,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
                 }}
               >
                 {loading ? (
-                  <PropagateLoader color="white" />
+                  <CircleLoader color="white" />
                 ) : isAdd ? (
                   "Add new member"
                 ) : (

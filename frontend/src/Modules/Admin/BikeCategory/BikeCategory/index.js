@@ -9,7 +9,7 @@ import SearchBike from "../SearchBar/SearchBar";
 import CategoryDetails from "./CategoryDetails";
 import ListCategory from "./ListCategory";
 import "./BikeCategory.css";
-import {PropagateLoader} from "react-spinners";
+import {CircleLoader, PropagateLoader} from "react-spinners";
 
 export default function BikeCategories() {
   const [categories, setCategories] = useState([]);
@@ -186,7 +186,7 @@ export default function BikeCategories() {
                 />
               ) : (
                 <div style={{paddingLeft: 100}}>
-                  <PropagateLoader color="#7ac70c" />
+                  <CircleLoader color="#7ac70c" />
                 </div>
               )}
             </Grid>

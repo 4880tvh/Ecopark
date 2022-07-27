@@ -4,10 +4,8 @@
 }
 
 .dropdown {
-    margin-top: 59px;
-    margin-left: 1300px;
-    width: 20rem;
-    position: absolute;
+    display: flex;
+    position: relative;
 }
 .dropdown:hover .dropdown-list {
     opacity: 1;

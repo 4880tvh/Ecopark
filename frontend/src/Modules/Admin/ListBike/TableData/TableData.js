@@ -120,17 +120,20 @@ export default function TableData({ loading, updateList, refresh, search }) {
             <div className="contentFirstTag">
                 <h2>List Bike</h2>
                 <div className="dropdown">
-                    <div className="dropdown-select" href="#">
-                        <span>Sort by</span>
+                    <div>
+                        <div className="dropdown-select" href="#">
+                            <span>Sort by</span>
+                        </div>
+                        <div className="dropdown-list">
+                            <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=free')}>Free</div>
+                            <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=waiting')}>Waiting</div>
+                            <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=breakdown')}>Broken</div>
+                            <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=hiring')}>Hiring</div>
+                            <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceHighToLow')}>Price: high to low</div>
+                            <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceLowToHigh')}>Price low to high</div>
+                        </div>
                     </div>
-                    <div className="dropdown-list">
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=free')}>Free</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=waiting')}>Waiting</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=breakdown')}>Broken</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=hiring')}>Hiring</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceHighToLow')}>Price: high to low</div>
-                        <div className="dropdown-list-item" onClick={() => setUrl('https://nmcnpm.herokuapp.com/api/v2/bikes?sortBy=priceLowToHigh')}>Price low to high</div>
-                    </div>
+                        
                 </div>
             </div>
 

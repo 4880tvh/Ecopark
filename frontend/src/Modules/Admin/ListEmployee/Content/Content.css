@@ -65,7 +65,8 @@
 .contentFirstTag {
   display: flex;
   align-items: center;
-  width: 1500px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #buttonReceptionist {
@@ -348,7 +349,7 @@ tr:hover .hover-content {
 }
 
 .status11 {
-  background-color: #8ee000;
+  background-color: #7ac70c;
   padding: 15px 0px;
   border-radius: 5px;
   font-family: Arial;

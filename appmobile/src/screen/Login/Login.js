@@ -155,7 +155,7 @@ const loginScreenStyle = StyleSheet.create({
     color: 'white',
   },
   button: {
-    backgroundColor: '#8DC63F',
+    backgroundColor: '#06B4FA',
     height: getHeight(54),
     width: getWidth(343),
     borderRadius: 10,
@@ -171,7 +171,7 @@ const loginScreenStyle = StyleSheet.create({
     fontFamily: 'Quicksand-Bold',
     fontSize: getHeight(16),
     textAlign: 'center',
-    color: '#8DC63F',
+    color: '#06B4FA',
   },
   footerText: {
     fontStyle: 'normal',

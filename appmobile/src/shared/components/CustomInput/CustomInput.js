@@ -96,7 +96,7 @@ const DefaultStyle = StyleSheet.create({
     fontSize: getHeight(16),
     fontStyle: 'normal',
     fontWeight: 'normal',
-    color: '#8DC63F',
+    color: '#06B4FA',
   },
   inputStyle: {
     flex: 1,
@@ -117,7 +117,7 @@ const DefaultStyle = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#8DC63F',
+    borderColor: '#06B4FA',
     backgroundColor: 'white',
     paddingRight: 24,
     paddingLeft: 24,

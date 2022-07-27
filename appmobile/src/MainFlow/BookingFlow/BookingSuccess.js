@@ -55,10 +55,10 @@ function BookingSuccess({ navigation }) {
       <CustomButton
         additionStyles={{
           marginBottom: 10,
-          borderRadius: 50,
+          borderRadius: 10,
           height: 60,
           width: '95%',
-          backgroundColor: '#8DC63F',
+          backgroundColor: '#06B4FA',
           position: 'absolute',
           bottom: 20,
         }}

@@ -125,7 +125,7 @@ const Register = ({ navigation }) => {
             </Text>,
           ]}
           additionStyles={{
-            backgroundColor: '#8DC63F',
+            backgroundColor: '#06B4FA',
             height: 54,
             borderRadius: 10,
             marginTop: getHeight(17),
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontFamily: 'Quicksand-Bold',
     textAlign: 'center',
-    color: '#8DC63F',
+    color: '#06B4FA',
     marginTop: 5,
     fontSize: 13,
   },

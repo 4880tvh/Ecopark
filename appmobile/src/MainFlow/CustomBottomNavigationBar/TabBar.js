@@ -27,7 +27,7 @@ function TabBar({ state, descriptors, navigation }) {
               key={route.key}
               style={[
                 StyleSheet.absoluteFill,
-                { display: i === state.index ? 'flex' : 'none' },
+                { display: i === state.index ? 'flex' : 'flex' },
               ]}
             >
               {descriptors[route.key].render()}
@@ -43,7 +43,7 @@ function TabBar({ state, descriptors, navigation }) {
           alignContent: 'center',
           alignItems: 'center',
           //   backgroundColor: 'rgba(127,191,39,0.18)',
-          backgroundColor: '#F5F5F5',
+          backgroundColor: '#FFFFFF',
           paddingHorizontal: 20,
           paddingVertical: 20,
           borderTopLeftRadius: 0,

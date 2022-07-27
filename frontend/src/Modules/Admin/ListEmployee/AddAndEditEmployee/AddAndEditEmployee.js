@@ -171,7 +171,7 @@ function AddAndEditEmployee({callBack, infor, isAdd}) {
         {/* left menu  end*/}
         {/* right menu  start*/}
         <div className="right-menu-addemm-long">
-          <h2 style={{display:"flex",justifyContent:"flex-start"}}>
+          <h2 style={{display: "flex", justifyContent: "flex-start"}}>
             STAFF ACCOUNT
           </h2>
           <form name="employee">

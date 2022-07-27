@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground, Image } from 'react-native';
 import {
   getHeight,
   getWidth,
@@ -12,38 +12,50 @@ const MoneyStatus = ({ money, margin }) => {
     // return '100000 VND';
   }
   return (
-    <View
+    <ImageBackground
       style={{
         margin: margin,
         paddingVertical: 20,
         paddingHorizontal: 15,
         flexDirection: 'column',
-        backgroundColor: '#E2F5F0',
+        backgroundColor: 'transparent',
         width: getWidth(351),
-        borderRadius: 20,
+        height: getHeight(180),
       }}
+      imageStyle={{ borderRadius: 10 }}
+      source={{
+        uri: 'https://wallpaperaccess.com/full/1429818.jpg',
+      }}
+      resizeMode="cover"
     >
-      <Text
-        style={{
-          fontFamily: 'Quicksand-Medium',
-          fontWeight: 'normal',
-          fontSize: 24,
-          color: 'black',
-        }}
-      >
-        Money Remaining
-      </Text>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text
+          style={{
+            fontFamily: 'Quicksand-Medium',
+            fontWeight: 'normal',
+            fontSize: 24,
+            color: '#fff',
+          }}
+        >
+          Wallet
+        </Text>
+        <Image
+          style={{ width: 70, height: 45 }}
+          source={require('../../../shared/img/ecopark-icon.png')}
+        />
+      </View>
       <Text
         style={{
           fontFamily: 'Quicksand-Bold',
-          marginTop: 8,
+          marginTop: 80,
+          marginLeft: 210,
           fontSize: 24,
-          color: 'black',
+          color: '#fff',
         }}
       >
         {currencyFormat(money)}
       </Text>
-    </View>
+    </ImageBackground>
   );
 };
 

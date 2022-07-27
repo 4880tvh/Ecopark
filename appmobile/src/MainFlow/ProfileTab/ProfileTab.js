@@ -27,7 +27,7 @@ function ProfileTab({ navigation }) {
       <View
         style={{
           width: '100%',
-          borderRadius: 20,
+          borderRadius: 10,
           backgroundColor: '#E0F8BF',
           borderRadius: 15,
         }}

@@ -18,6 +18,9 @@ import Register from './src/screen/Register/Register';
 import ResetPassword from './src/screen/ResetPassword/ResetPassword';
 import ForgetPassword from './src/screen/ForgetPassword/ForgetPassword';
 import MainFlow from './src/MainFlow/MainFlow';
+import PickStation from './src/MainFlow/BookingFlow/PickStation';
+import PickBike from './src/MainFlow/BookingFlow/PickBike';
+import ConfirmBooking from './src/MainFlow/BookingFlow/ConfirmBooking';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,6 +52,9 @@ const App = () => {
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
         <Stack.Screen name="MainFlow" component={MainFlow} />
+        <Stack.Screen name="PickStation" component={PickStation} />
+        <Stack.Screen name="PickBike" component={PickBike} />
+        <Stack.Screen name="ConfirmBooking" component={ConfirmBooking} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -94,7 +94,7 @@ const Dialog = ({ text, status, navigation }) => {
         style={{
           padding: 10,
           backgroundColor: 'white',
-          borderRadius: 20,
+          borderRadius: 10,
           display: 'flex',
           alignContent: 'center',
           alignItems: 'center',
@@ -137,7 +137,7 @@ const Dialog = ({ text, status, navigation }) => {
             </Text>,
           ]}
           additionStyles={{
-            backgroundColor: '#8DC63F',
+            backgroundColor: '#06B4FA',
           }}
           onPress={() => {
             navigation.goBack();

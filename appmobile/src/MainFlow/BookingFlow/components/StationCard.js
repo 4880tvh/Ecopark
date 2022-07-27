@@ -24,7 +24,6 @@ const StationCard = ({ stationInfo, onPress, selectedId }) => {
 
   const stationName = stationInfo.name;
   const location = stationInfo.location;
-  const staffName = stationInfo.staff.name;
   const stationPhoneNumber = stationInfo.phoneNumber;
   function getDistance(location) {
     const defaultLocation = {
@@ -57,7 +56,7 @@ const StationCard = ({ stationInfo, onPress, selectedId }) => {
     <TouchableOpacity
       style={{
         ...styles.stationCard,
-        backgroundColor: selected ? '#C6F18C' : 'white',
+        backgroundColor: selected ? '#06B4FA' : 'white',
       }}
       activeOpacity={0.33}
       onPress={() => {
@@ -74,9 +73,6 @@ const StationCard = ({ stationInfo, onPress, selectedId }) => {
           }}
         >
           <Text style={styles.titleText}>{stationName}</Text>
-          <Text style={styles.subTitleText}>
-            ({Math.ceil(getDistance(location) / 3)} minutes walks)
-          </Text>
         </View>
         <View style={styles.tag}>
           <Text style={styles.tagText}>OPEN</Text>
@@ -90,26 +86,7 @@ const StationCard = ({ stationInfo, onPress, selectedId }) => {
             flexDirection: 'row',
             alignItems: 'center',
           }}
-        >
-          <Image
-            source={require('../../../shared/img/staff-icon.png')}
-            style={{
-              height: 25,
-              width: 25,
-              resizeMode: 'contain',
-            }}
-          />
-          <Text
-            style={{
-              marginLeft: 10,
-              fontSize: 18,
-              fontWeight: '500',
-              color: 'black',
-            }}
-          >
-            {staffName}
-          </Text>
-        </View>
+        ></View>
         <View
           style={{
             display: 'flex',
@@ -117,26 +94,7 @@ const StationCard = ({ stationInfo, onPress, selectedId }) => {
             paddingRight: 20,
             alignItems: 'center',
           }}
-        >
-          <Image
-            source={require('../../../shared/img/phone-icon.png')}
-            style={{
-              height: 25,
-              width: 25,
-              resizeMode: 'contain',
-            }}
-          />
-          <Text
-            style={{
-              marginLeft: 10,
-              fontSize: 18,
-              fontWeight: '500',
-              color: 'black',
-            }}
-          >
-            {stationPhoneNumber}
-          </Text>
-        </View>
+        ></View>
       </View>
     </TouchableOpacity>
   );
@@ -148,7 +106,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: getWidth(351),
     height: getHeight(114),
-    borderRadius: 20,
+    borderRadius: 10,
     paddingLeft: 20,
     paddingTop: 10,
     paddingBottom: 10,

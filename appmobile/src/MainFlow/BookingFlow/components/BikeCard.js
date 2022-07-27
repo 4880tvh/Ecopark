@@ -30,7 +30,7 @@ const BikeCard = ({ bikeInfo, backClick, pickClick }) => {
       </Text>
       <Text
         style={{
-          color: '#8DC63F',
+          color: '#06B4FA',
           fontFamily: 'Quicksand-Bold',
           fontSize: 28,
         }}
@@ -61,7 +61,7 @@ const BikeCard = ({ bikeInfo, backClick, pickClick }) => {
               fontSize: 20,
             }}
           >
-            Pick this bike
+            Select bike
           </Text>
         </TouchableOpacity>
       </View>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingHorizontal: 12,
     width: getHeight(366),
-    borderRadius: 20,
+    borderRadius: 10,
     backgroundColor: 'white',
   },
   bikeImage: {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Quicksand-Bold',
   },
   price: {
-    color: '#8DC63F',
+    color: '#06B4FA',
     fontFamily: 'Quicksand-Bold',
     fontSize: 28,
   },
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     borderColor: '#e0dede',
     marginBottom: 10,
     borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 10,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -124,10 +124,10 @@ const styles = StyleSheet.create({
   pickButton: {
     marginLeft: 10,
     marginBottom: 15,
-    backgroundColor: '#8DC63F',
+    backgroundColor: '#06B4FA',
     height: 60,
     width: 280,
-    borderRadius: 50,
+    borderRadius: 10,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

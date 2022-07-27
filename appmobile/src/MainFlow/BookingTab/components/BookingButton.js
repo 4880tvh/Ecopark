@@ -12,36 +12,20 @@ const BookingButton = ({ marginTop, onPress }) => {
       style={{
         marginTop: marginTop,
         flexDirection: 'column',
-        backgroundColor: '#E2F5F0',
+        backgroundColor: '#FFF',
         width: getWidth(351),
         height: getHeight(150),
-        borderRadius: 20,
+        borderRadius: 10,
         paddingHorizontal: 21,
         paddingVertical: 25,
       }}
     >
-      <Text
-        style={{
-          fontSize: 18,
-          fontFamily: 'Quicksand-Bold',
-        }}
-      >
-        You need a bike?
-      </Text>
-      <Text
-        style={{
-          marginTop: 8,
-          fontSize: 14,
-        }}
-      >
-        Let’s help you to get a bike
-      </Text>
       <TouchableOpacity
         style={{
           marginTop: 8,
           height: getHeight(54),
           width: getWidth(302),
-          backgroundColor: '#8DC63F',
+          backgroundColor: '#06B4FA',
           borderRadius: 10,
           display: 'flex',
           alignItems: 'center',

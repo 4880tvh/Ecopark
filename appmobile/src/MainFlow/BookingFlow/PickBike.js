@@ -46,7 +46,7 @@ function PickBike({ navigation, route }) {
           justifyContent: 'center',
         }}
       >
-        <ActivityIndicator color={'#8DC63F'} size={50} />
+        <ActivityIndicator color={'#06B4FA'} size={50} />
       </View>
     );
   }
@@ -93,7 +93,7 @@ function PickBike({ navigation, route }) {
             color: 'black',
           }}
         >
-          Pick your bike
+          Select bike
         </Text>
       </View>
       <SafeAreaView style={{ flex: 1, width: '100%', paddingBottom: 10 }}>
@@ -133,10 +133,10 @@ function PickBike({ navigation, route }) {
       <CustomButton
         additionStyles={{
           marginBottom: 10,
-          borderRadius: 50,
+          borderRadius: 10,
           height: 60,
           width: '95%',
-          backgroundColor: '#8DC63F',
+          backgroundColor: '#06B4FA',
         }}
         onPress={() => {
           if (selected !== '')
@@ -159,7 +159,7 @@ function PickBike({ navigation, route }) {
               color: 'white',
             }}
           >
-            Pick this bike
+            Select bike
           </Text>,
         ]}
       ></CustomButton>

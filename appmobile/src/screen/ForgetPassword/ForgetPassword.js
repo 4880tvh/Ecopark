@@ -52,7 +52,7 @@ const ForgetPassword = ({ navigation }) => {
             </Text>,
           ]}
           additionStyles={{
-            backgroundColor: '#8DC63F',
+            backgroundColor: '#06B4FA',
             height: 54,
             borderRadius: 10,
             marginTop: getHeight(50),

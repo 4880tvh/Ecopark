@@ -43,7 +43,7 @@ function PickStation({ navigation }) {
           justifyContent: 'center',
         }}
       >
-        <ActivityIndicator color={'#8DC63F'} size={50} />
+        <ActivityIndicator color={'#06B4FA'} size={50} />
       </View>
     );
   }
@@ -90,7 +90,7 @@ function PickStation({ navigation }) {
             color: 'black',
           }}
         >
-          Pick your station
+          Select station
         </Text>
       </View>
       <SafeAreaView style={{ flex: 1, width: '100%', paddingBottom: 10 }}>
@@ -118,10 +118,10 @@ function PickStation({ navigation }) {
       <CustomButton
         additionStyles={{
           marginBottom: 10,
-          borderRadius: 50,
+          borderRadius: 10,
           height: 60,
           width: '95%',
-          backgroundColor: '#8DC63F',
+          backgroundColor: '#06B4FA',
         }}
         onPress={() => {
           if (SelectedID !== '')
@@ -139,7 +139,7 @@ function PickStation({ navigation }) {
               color: 'white',
             }}
           >
-            Pick this station
+            Select station
           </Text>,
         ]}
       ></CustomButton>

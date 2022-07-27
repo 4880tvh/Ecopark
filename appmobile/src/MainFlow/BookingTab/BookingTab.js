@@ -85,7 +85,7 @@ function BookingTab({ navigation }) {
             email: 'hoangnv@gmail.com',
             phoneNumber: '0981262965',
             name: 'Nguyen Hoang',
-            balance: 100000,
+            balance: 200000,
             residentID: '031230911',
             activate: 'false',
             role: 'user',
@@ -116,9 +116,9 @@ function BookingTab({ navigation }) {
           height: 295,
         }}
       >
-        <Text style={styles.welcomeTitle}>Welcome Back, {userInfo.name}</Text>
+        <Text style={styles.welcomeTitle}>Hi, {userInfo.name}</Text>
         <Text style={styles.welcomeSubtitle}>
-          Let's help you to pick your vehicle
+          Discover and enjoy the full life of Ecopark
         </Text>
         <Image
           source={require('../../shared/img/main-image.png')}
@@ -141,7 +141,7 @@ function BookingTab({ navigation }) {
         />
       ) : (
         <BookingButton
-          marginTop={20}
+          marginTop={370}
           onPress={() => {
             navigation.navigate('PickStation');
           }}
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   welcomeSubtitle: {
     fontFamily: 'Quicksand-Medium',
-    fontSize: 18,
+    fontSize: 16,
     color: 'white',
     position: 'absolute',
     top: 120,

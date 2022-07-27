@@ -12,10 +12,10 @@ const GetBikeButton = ({ marginTop, onPress }) => {
       style={{
         marginTop: marginTop,
         flexDirection: 'column',
-        backgroundColor: '#8DC63F',
+        backgroundColor: '#06B4FA',
         width: getWidth(351),
         height: getHeight(150),
-        borderRadius: 20,
+        borderRadius: 10,
         paddingHorizontal: 21,
         paddingVertical: 25,
       }}
@@ -36,7 +36,7 @@ const GetBikeButton = ({ marginTop, onPress }) => {
           color: 'white',
         }}
       >
-        Let’s help you to pick your bike
+        Let’s help you to select bike
       </Text>
       <TouchableOpacity
         style={{
@@ -44,7 +44,7 @@ const GetBikeButton = ({ marginTop, onPress }) => {
           height: getHeight(54),
           width: getWidth(302),
           backgroundColor: '#FDFD7F',
-          borderRadius: 50,
+          borderRadius: 10,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -56,7 +56,7 @@ const GetBikeButton = ({ marginTop, onPress }) => {
           style={{
             fontFamily: 'Quicksand-Bold',
             fontSize: 24,
-            color: '#8DC63F',
+            color: '#06B4FA',
           }}
         >
           Get it now

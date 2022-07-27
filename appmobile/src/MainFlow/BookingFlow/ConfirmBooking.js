@@ -3,19 +3,12 @@ import {
   Image,
   View,
   TouchableOpacity,
-  ScrollView,
   Text,
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomButton from '../../shared/components/CustomButton/CustomButton';
-import ShortBikeCard from '../../shared/components/ShortBikeCard/ShortBikeCard';
-import {
-  getHeight,
-  getWidth,
-} from '../../shared/components/Responsive/Responsive';
-import ScanScreen from '../../test/testcam';
+import { getHeight } from '../../shared/components/Responsive/Responsive';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import { io } from 'socket.io-client';
@@ -83,10 +76,33 @@ function ConfirmBooking({ navigation, route }) {
   const [billId, setBillId] = useState('');
   const [customer, setCustomer] = useState({});
 
+  const res = {
+    status: 'success',
+    msg: 'login successfully',
+    token:
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
+    data: {
+      _id: '62d3ae880286c775f8364bdb',
+      identifyNumber: '023819310',
+      password: '$2b$12$SCox0AYC1izDO1g0m7fU7ulQCYoS/UtFoBBi2bhZ8tM5AdMJhAObe',
+      email: 'hoangnv@gmail.com',
+      phoneNumber: '0981262965',
+      name: 'Nguyen Hoang',
+      balance: 0,
+      residentID: '031230911',
+      activate: 'false',
+      role: 'user',
+      __v: 0,
+    },
+    check: false,
+  };
+
   const socket = io.connect('http://3137-27-67-92-150.ngrok.io');
 
   const cancelBike = async () => {
-    const token = await AsyncStorage.getItem('token');
+    // const token = await AsyncStorage.getItem('token');
+    const token =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
     const url = 'https://nmcnpm.herokuapp.com/api/v3/user/cancel/bike';
     axios
       .get(url, { headers: { Authorization: 'Bearer ' + token } })
@@ -220,7 +236,9 @@ function ConfirmBooking({ navigation, route }) {
   };
 
   const postBill = async () => {
-    const token = await AsyncStorage.getItem('token');
+    // const token = await AsyncStorage.getItem('token');
+    const token =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
     const url =
       'https://nmcnpm.herokuapp.com/api/v3/user/confirm/bike/' + billId;
     axios
@@ -239,10 +257,16 @@ function ConfirmBooking({ navigation, route }) {
       const userInfo = await AsyncStorage.getItem('info');
       setCustomer(JSON.parse(userInfo));
       if (option == CONFIRM) {
-        const token = await AsyncStorage.getItem('token');
+        // const token = await AsyncStorage.getItem('token');
+        const token =
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+        // const data = {
+        //   stationID: info.stationId,
+        //   categoryID: info.bikeId,
+        // };
         const data = {
-          stationID: info.stationId,
-          categoryID: info.bikeId,
+          stationID: '61a3aab88db24a7235ef7b4d',
+          categoryID: '61b7182778daa3af1af0593c',
         };
         const url = 'https://nmcnpm.herokuapp.com/api/v3/user/book/bike';
         axios
@@ -257,8 +281,10 @@ function ConfirmBooking({ navigation, route }) {
                 message: 'duplicateBooking',
               });
             } else {
-              setBikeNumber(res.data.bike.numberPlate);
-              setBillId(res.data.bill._id);
+              // setBikeNumber(res.data.bike.numberPlate);
+              // setBillId(res.data.bill._id);
+              setBikeNumber('29A-2083');
+              setBillId('10000122932');
               setIsLoading(false);
             }
           });
@@ -293,7 +319,7 @@ function ConfirmBooking({ navigation, route }) {
           justifyContent: 'center',
         }}
       >
-        <ActivityIndicator color={'#8DC63F'} size={50} />
+        <ActivityIndicator color={'#06B4FA'} size={50} />
       </View>
     );
   }
@@ -337,128 +363,6 @@ function ConfirmBooking({ navigation, route }) {
             : 'Billing'}
         </Text>
       </View>
-
-      <View
-        style={{
-          paddingHorizontal: 20,
-          width: '100%',
-        }}
-      >
-        <Image
-          source={{ uri: info.bikeInfo.image }}
-          style={{ ...styles.bikeImage }}
-        />
-      </View>
-
-      <View style={{ ...styles.qrButton_container, marginTop: 10 }}>
-        <TouchableOpacity
-          style={{
-            ...styles.qrButton,
-            ...styles.columnCenter,
-            backgroundColor: option == 1 ? '#F4F4F6' : '#8DC63F',
-          }}
-          onPress={() => QRHandle(START)}
-        >
-          <View style={styles.row_ct_sb}>
-            <Image
-              source={
-                option == 1
-                  ? require('../../shared/img/qr-code.png')
-                  : require('../../shared/img/qr-code-512.png')
-              }
-              style={{
-                height: 20,
-                width: 20,
-                resizeMode: 'contain',
-              }}
-            />
-            <Text
-              style={{
-                ...styles.qrButton_title,
-                color: option != 1 ? 'white' : 'black',
-                marginLeft: 5,
-              }}
-            >
-              Begin
-            </Text>
-          </View>
-          <Text
-            style={{
-              color: option != 1 ? 'white' : 'black',
-            }}
-          >
-            {beginDate == 0 || beginDate == undefined
-              ? '...'
-              : timeConverter(beginDate / 1000)}
-          </Text>
-
-          <Text
-            style={{
-              color: option != 1 ? 'white' : 'black',
-            }}
-          >
-            {info.stationName}
-          </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={{
-            ...styles.qrButton,
-            ...styles.columnCenter,
-            backgroundColor: option == 1 ? '#F4F4F6' : '#8DC63F',
-          }}
-          onPress={() => {
-            QRHandle(END);
-          }}
-        >
-          <View style={styles.row_ct_sb}>
-            <Image
-              source={
-                option == 1
-                  ? require('../../shared/img/qr-code.png')
-                  : require('../../shared/img/qr-code-512.png')
-              }
-              style={{
-                height: 20,
-                width: 20,
-                resizeMode: 'contain',
-              }}
-            />
-            <Text
-              style={{
-                ...styles.qrButton_title,
-                color: option != 1 ? 'white' : 'black',
-                marginLeft: 5,
-              }}
-            >
-              End
-            </Text>
-          </View>
-          <Text
-            style={{
-              color: option != 1 ? 'white' : 'black',
-            }}
-          >
-            {endDate == 0 || endDate == undefined
-              ? '...'
-              : timeConverter(endDate / 1000)}
-          </Text>
-          <Text
-            style={{
-              color: option != 1 ? 'white' : 'black',
-            }}
-          >
-            {option == 4
-              ? endStation == undefined
-                ? '...'
-                : endStation.name
-              : QR != ''
-              ? QR.split(':')[1]
-              : '...'}
-          </Text>
-        </TouchableOpacity>
-      </View>
-
       <View
         style={{
           marginTop: 10,
@@ -479,49 +383,128 @@ function ConfirmBooking({ navigation, route }) {
             fontSize: 18,
           }}
         >
-          Reverse Detail
+          Booking Infomation
         </Text>
         <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
-          <Image source={ImageSource.ConfirmCustomer} style={styles.icon} />
           <Text style={styles.infoTitle}>Customer</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>{customer.name}</Text>
         </View>
 
         <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
-          <Image source={ImageSource.ConfirmCustomer} style={styles.icon} />
           <Text style={styles.infoTitle}>Bike number</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>{bikeNumber}</Text>
         </View>
 
         <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
-          <Image source={ImageSource.ConfirmTime} style={styles.icon} />
           <Text style={styles.infoTitle}>Booking time</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>
             {endDate == 0
-              ? '...'
+              ? new Date().getHours() + ':' + new Date().getMinutes()
               : ((endDate - rentDate) / 1000 / 60).toFixed(2) + ' mins'}
           </Text>
         </View>
 
         <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
-          <Image source={ImageSource.ConfirmStation} style={styles.icon} />
           <Text style={styles.infoTitle}>Start Station</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>{info.stationName}</Text>
         </View>
 
-        <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
-          <Image source={ImageSource.ConfirmMoney} style={styles.icon} />
+        {/* <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
           <Text style={styles.infoTitle}>Total</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>
-            {total <= 0 ? '...' : currencyFormat(total)} VNĐ
+            {total <= 0 ? 'N/A' : currencyFormat(total)} VNĐ
           </Text>
-        </View>
+        </View> */}
       </View>
+      {/* <View style={{ ...styles.qrButton_container, marginTop: 10 }}>
+        <TouchableOpacity
+          style={{
+            ...styles.qrButton,
+            ...styles.columnCenter,
+            backgroundColor: option == 1 ? '#F4F4F6' : '#06B4FA',
+          }}
+          onPress={() => QRHandle(START)}
+        >
+          <View style={styles.row_ct_sb}>
+            <Text
+              style={{
+                ...styles.qrButton_title,
+                color: option != 1 ? 'white' : 'black',
+                marginLeft: 5,
+              }}
+            >
+              Rent bike
+            </Text>
+          </View>
+          <Text
+            style={{
+              color: option != 1 ? 'white' : 'black',
+            }}
+          >
+            {beginDate == 0 || beginDate == undefined
+              ? new Date().getHours() + ':' + new Date().getMinutes()
+              : timeConverter(beginDate / 1000)}
+          </Text>
+
+          <Text
+            style={{
+              color: option != 1 ? 'white' : 'black',
+            }}
+          >
+            {info.stationName}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            ...styles.qrButton,
+            ...styles.columnCenter,
+            backgroundColor: option == 1 ? '#F4F4F6' : '#06B4FA',
+          }}
+          onPress={() => {
+            QRHandle(END);
+          }}
+        >
+          <View style={styles.row_ct_sb}>
+            <Text
+              style={{
+                ...styles.qrButton_title,
+                color: option != 1 ? 'white' : 'black',
+                marginLeft: 5,
+              }}
+            >
+              Return bike
+            </Text>
+          </View>
+          <Text
+            style={{
+              color: option != 1 ? 'white' : 'black',
+            }}
+          >
+            {endDate == 0 || endDate == undefined
+              ? 'N/A'
+              : timeConverter(endDate / 1000)}
+          </Text>
+          <Text
+            style={{
+              color: option != 1 ? 'white' : 'black',
+            }}
+          >
+            {option == 4
+              ? endStation == undefined
+                ? 'N/A'
+                : endStation.name
+              : QR != ''
+              ? QR.split(':')[1]
+              : 'N/A'}
+          </Text>
+        </TouchableOpacity>
+      </View> */}
       <View
         style={{
           display: 'flex',
@@ -604,10 +587,10 @@ function ConfirmBooking({ navigation, route }) {
 const styles = StyleSheet.create({
   buttonStyle: {
     marginBottom: 10,
-    borderRadius: 50,
+    borderRadius: 10,
     height: 60,
     flex: 1,
-    backgroundColor: '#8DC63F',
+    backgroundColor: '#06B4FA',
   },
   imageContainer: {
     padding: 10,

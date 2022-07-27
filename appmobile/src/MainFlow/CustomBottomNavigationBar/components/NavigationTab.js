@@ -9,7 +9,7 @@ const NavigationTab = ({ info, isFocused, onPress }) => {
   const styles = StyleSheet.create({
     onStyle: {
       padding: 10,
-      backgroundColor: '#8DC63F',
+      backgroundColor: '#06B4FA',
       borderRadius: 10,
       alignSelf: 'flex-start',
     },
@@ -43,16 +43,12 @@ const NavigationTab = ({ info, isFocused, onPress }) => {
   });
   return (
     <TouchableOpacity
-      style={tabState ? styles.onStyle : styles.offStyle}
+      style={tabState ? styles.offStyle : styles.offStyle}
       activeOpacity={0.4}
       onPress={onPress}
     >
       <View style={styles.onContentStyle}>
-        <Image
-          source={tabState ? info.onIcon : info.offIcon}
-          style={tabState ? styles.iconStyle : styles.offIconStyle}
-        />
-        {tabState ? <Text style={styles.onText}>{info.title}</Text> : <View />}
+        {tabState ? <View /> : <View />}
       </View>
     </TouchableOpacity>
   );

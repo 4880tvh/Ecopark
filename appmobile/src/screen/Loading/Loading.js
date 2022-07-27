@@ -20,7 +20,7 @@ const LoadingScreenStyles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#8DC63F',
+    backgroundColor: '#06B4FA',
   },
   ecoIcon: {
     width: 200,

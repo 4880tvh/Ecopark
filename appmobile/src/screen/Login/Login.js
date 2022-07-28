@@ -57,7 +57,7 @@ const LoginScreen = ({ navigation }) => {
             const token = response.data.token;
             AsyncStorage.setItem('token', token);
             AsyncStorage.setItem('info', JSON.stringify(data));
-            AsyncStorage.setItem('isBooking', isBooking);
+            AsyncStorage.setItem('isBooking', JSON.stringify(isBooking));
             navigation.goBack();
             navigation.replace('MainFlow', 'Landing');
           }

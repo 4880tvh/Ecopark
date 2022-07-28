@@ -80,7 +80,7 @@ function ConfirmBooking({ navigation, route }) {
     status: 'success',
     msg: 'login successfully',
     token:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
     data: {
       _id: '62d3ae880286c775f8364bdb',
       identifyNumber: '023819310',
@@ -102,7 +102,7 @@ function ConfirmBooking({ navigation, route }) {
   const cancelBike = async () => {
     // const token = await AsyncStorage.getItem('token');
     const token =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
     const url = 'https://nmcnpm.herokuapp.com/api/v3/user/cancel/bike';
     axios
       .get(url, { headers: { Authorization: 'Bearer ' + token } })
@@ -190,6 +190,7 @@ function ConfirmBooking({ navigation, route }) {
       navigation.goBack();
       navigation.goBack();
       navigation.goBack();
+      navigation.navigate('BookingSuccess');
       postBill();
     } else if (option == END) {
       if (QR != '') {
@@ -238,9 +239,8 @@ function ConfirmBooking({ navigation, route }) {
   const postBill = async () => {
     // const token = await AsyncStorage.getItem('token');
     const token =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
-    const url =
-      'https://nmcnpm.herokuapp.com/api/v3/user/confirm/bike/' + billId;
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+    const url = 'http://localhost:5000/api/v3/user/confirm/bike/' + billId;
     axios
       .get(url, { headers: { Authorization: 'Bearer ' + token } })
       .then((res) => {
@@ -259,7 +259,7 @@ function ConfirmBooking({ navigation, route }) {
       if (option == CONFIRM) {
         // const token = await AsyncStorage.getItem('token');
         const token =
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
         // const data = {
         //   stationID: info.stationId,
         //   categoryID: info.bikeId,
@@ -350,7 +350,7 @@ function ConfirmBooking({ navigation, route }) {
         </TouchableOpacity>
         <Text
           style={{
-            marginLeft: 10,
+            marginLeft: 0,
             fontFamily: 'Quicksand-Bold',
             fontSize: 22,
             color: 'black',
@@ -380,24 +380,25 @@ function ConfirmBooking({ navigation, route }) {
             ...styles.infoContent,
             color: 'black',
             fontFamily: 'Quicksand-Bold',
-            fontSize: 18,
+            fontSize: 20,
+            alignSelf: 'center',
           }}
         >
-          Booking Infomation
+          Booking Information
         </Text>
-        <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
+        <View style={{ ...styles.row_ct_sb, marginTop: 14 }}>
           <Text style={styles.infoTitle}>Customer</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>{customer.name}</Text>
         </View>
 
-        <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
+        <View style={{ ...styles.row_ct_sb, marginTop: 14 }}>
           <Text style={styles.infoTitle}>Bike number</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>{bikeNumber}</Text>
         </View>
 
-        <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
+        <View style={{ ...styles.row_ct_sb, marginTop: 14 }}>
           <Text style={styles.infoTitle}>Booking time</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>
@@ -407,7 +408,7 @@ function ConfirmBooking({ navigation, route }) {
           </Text>
         </View>
 
-        <View style={{ ...styles.row_ct_sb, marginTop: 10 }}>
+        <View style={{ ...styles.row_ct_sb, marginTop: 14 }}>
           <Text style={styles.infoTitle}>Start Station</Text>
           <View style={{ flex: 1 }} />
           <Text style={styles.infoContent}>{info.stationName}</Text>
@@ -603,7 +604,7 @@ const styles = StyleSheet.create({
   },
   infoContent: {
     fontFamily: 'Quicksand-Medium',
-    fontSize: 16,
+    fontSize: 18,
     color: '#595C65',
   },
   infoTitle: {

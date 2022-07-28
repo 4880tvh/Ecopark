@@ -7,22 +7,17 @@ import {
   StatusBar,
   AsyncStorage,
 } from 'react-native';
-import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import CustomButton from '../../shared/components/CustomButton/CustomButton';
-import CustomInput from '../../shared/components/CustomInput/CustomInput';
-import {
-  getHeight,
-  getWidth,
-} from '../../shared/components/Responsive/Responsive';
+import { getWidth } from '../../shared/components/Responsive/Responsive';
 
 const NonactiveAccountScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingView>
       <StatusBar hidden={true} />
       <View style={styles.form}>
-        <Text style={styles.titleText}>Account not activated</Text>
+        <Text style={styles.titleText}>Register Successfully</Text>
         <Text style={styles.contentText}>
-          Please go to the nearest reception for assistance
+          Please go to the nearest station for assistance
         </Text>
         <CustomButton
           additionStyles={{
@@ -35,11 +30,11 @@ const NonactiveAccountScreen = ({ navigation }) => {
           }}
           children={[
             <Text key="signOut-text" style={styles.buttonText}>
-              Sign Out
+              Go back
             </Text>,
           ]}
           onPress={() => {
-            navigation.push('Landing');
+            navigation.push('Login');
           }}
         />
       </View>

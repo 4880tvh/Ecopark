@@ -17,64 +17,66 @@ const ScanScreen = ({ navigation, route }) => {
   const { callBack } = route.params;
   const [info, setInfo] = useState('');
   return (
-    <QRCodeScanner
-      showMarker={true}
-      onRead={(e) => {
-        setInfo(e.data);
-      }}
-      flashMode={RNCamera.Constants.FlashMode.torch}
-      topContent={
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignContent: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            width: '100%',
-          }}
-        >
-          <Text
+    <>
+      <QRCodeScanner
+        showMarker={true}
+        onRead={(e) => {
+          setInfo(e.data);
+        }}
+        flashMode={RNCamera.Constants.FlashMode.torch}
+        topContent={
+          <View
             style={{
-              fontFamily: 'Quicksand-Bold',
-              fontSize: 20,
+              display: 'flex',
+              flexDirection: 'column',
+              alignContent: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100%',
+              width: '100%',
             }}
           >
-            Scan your end station to finish the trip
-          </Text>
-        </View>
-      }
-      bottomContent={
-        <CustomButton
-          onPress={() => {
-            callBack(info);
-            navigation.goBack();
-          }}
-          additionStyles={{
-            marginBottom: 10,
-            borderRadius: 10,
-            height: 60,
-            width: '95%',
-            backgroundColor: '#06B4FA',
-            position: 'absolute',
-            bottom: 20,
-          }}
-          children={[
             <Text
-              key="1"
               style={{
                 fontFamily: 'Quicksand-Bold',
-                fontSize: 18,
-                color: 'white',
+                fontSize: 20,
               }}
             >
-              {info == '' ? 'Scanning' : info.split(':')[1]}
-            </Text>,
-          ]}
-        />
-      }
-    />
+              Scan your end station to finish the trip
+            </Text>
+          </View>
+        }
+        bottomContent={
+          <CustomButton
+            onPress={() => {
+              callBack(info);
+              navigation.goBack();
+            }}
+            additionStyles={{
+              marginBottom: 10,
+              borderRadius: 10,
+              height: 60,
+              width: '95%',
+              backgroundColor: '#06B4FA',
+              position: 'absolute',
+              bottom: 20,
+            }}
+            children={[
+              <Text
+                key="1"
+                style={{
+                  fontFamily: 'Quicksand-Bold',
+                  fontSize: 18,
+                  color: 'white',
+                }}
+              >
+                {info == '' ? 'Scanning' : info.split(':')[1]}
+              </Text>,
+            ]}
+          />
+        }
+      />
+    </>
   );
 };
 

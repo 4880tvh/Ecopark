@@ -41,7 +41,7 @@ function BookingTab({ navigation }) {
     status: 'success',
     msg: 'login successfully',
     token:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
     data: {
       _id: '62d3ae880286c775f8364bdb',
       identifyNumber: '023819310',
@@ -63,7 +63,7 @@ function BookingTab({ navigation }) {
       const url = 'https://nmcnpm.herokuapp.com/api/v1/user/login';
       // const token = await AsyncStorage.getItem('token');
       const token =
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
       await axios
         .post(
           url,
@@ -116,9 +116,9 @@ function BookingTab({ navigation }) {
           height: 295,
         }}
       >
-        <Text style={styles.welcomeTitle}>Hi, {userInfo.name}</Text>
+        <Text style={styles.welcomeTitle}>Xin chào, {userInfo.name}</Text>
         <Text style={styles.welcomeSubtitle}>
-          Discover and enjoy the full life of Ecopark
+          Khám phá và tận hưởng cuộc sống tiện nghi tại Ecopark
         </Text>
         <Image
           source={require('../../shared/img/main-image.png')}
@@ -183,16 +183,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: 'white',
     position: 'absolute',
-    top: 90,
+    top: 70,
     left: 15,
     zIndex: 1,
   },
   welcomeSubtitle: {
     fontFamily: 'Quicksand-Medium',
-    fontSize: 16,
+    fontSize: 14,
     color: 'white',
     position: 'absolute',
-    top: 120,
+    top: 100,
     left: 15,
     zIndex: 1,
   },

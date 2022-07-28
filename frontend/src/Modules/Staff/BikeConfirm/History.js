@@ -2,7 +2,7 @@ import {Icon} from "@mui/material";
 import {makeStyles} from "@mui/styles";
 import {useEffect} from "react";
 import {rentReturnBike} from "../Store/ListCategoryStore";
-
+import { Box, Button, Grid, Typography } from '@mui/material'
 const useStyles = makeStyles({
   root: {
     width: "93%",
@@ -94,6 +94,7 @@ const useStyles = makeStyles({
   },
 });
 
+
 export default function History() {
   const classes = useStyles();
 
@@ -184,8 +185,13 @@ export default function History() {
                 <p>Bill : 50000</p>
               </div>
             </div>
+            <div>
+            <Button onClick={() => alert('Xác nhận thuê xe')}>ACCEPT</Button>
+            </div>
+            <div>
+            <Button onClick={() => alert('Từ chối thuê xe')}>DECLINE</Button>
+            </div>
           </div>
-
         </div>
       </div>
 
@@ -272,6 +278,12 @@ export default function History() {
                 </Icon> */}
                 <p>Bill : 50000</p>
               </div>
+            </div>
+            <div>
+            <Button onClick={() => alert('Xác nhận thuê xe')}>ACCEPT</Button>
+            </div>
+            <div>
+            <Button onClick={() => alert('Từ chối thuê xe')}>DECLINE</Button>
             </div>
           </div>
         </div>

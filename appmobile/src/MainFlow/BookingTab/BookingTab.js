@@ -61,9 +61,9 @@ function BookingTab({ navigation }) {
     async function checkStorageToken() {
       setIsLoading(true);
       const url = 'https://nmcnpm.herokuapp.com/api/v1/user/login';
-      // const token = await AsyncStorage.getItem('token');
-      const token =
-        'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+      const token = await AsyncStorage.getItem('token');
+      // const token =
+      //   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
       await axios
         .post(
           url,
@@ -73,30 +73,30 @@ function BookingTab({ navigation }) {
           }
         )
         .then((response) => {
-          // const data = response.data.data;
-          // const isBooking = JSON.stringify(response.data.check);
-          // const token = response.data.token;
+          const data = response.data.data;
+          const isBooking = JSON.stringify(response.data.check);
+          const token = response.data.token;
 
-          const data = {
-            _id: '62d3ae880286c775f8364bdb',
-            identifyNumber: '023819310',
-            password:
-              '$2b$12$SCox0AYC1izDO1g0m7fU7ulQCYoS/UtFoBBi2bhZ8tM5AdMJhAObe',
-            email: 'hoangnv@gmail.com',
-            phoneNumber: '0981262965',
-            name: 'Nguyen Hoang',
-            balance: 200000,
-            residentID: '031230911',
-            activate: 'false',
-            role: 'user',
-            __v: 0,
-          };
+          // const data = {
+          //   _id: '62d3ae880286c775f8364bdb',
+          //   identifyNumber: '023819310',
+          //   password:
+          //     '$2b$12$SCox0AYC1izDO1g0m7fU7ulQCYoS/UtFoBBi2bhZ8tM5AdMJhAObe',
+          //   email: 'hoangnv@gmail.com',
+          //   phoneNumber: '0981262965',
+          //   name: 'Nguyen Hoang',
+          //   balance: 200000,
+          //   residentID: '031230911',
+          //   activate: 'false',
+          //   role: 'user',
+          //   __v: 0,
+          // };
 
           AsyncStorage.setItem('token', token);
           AsyncStorage.setItem('info', JSON.stringify(data));
           AsyncStorage.setItem('isBooking', JSON.stringify(isBooking));
-          // setIsBooking(response.data.check);
-          setIsBooking(false);
+          setIsBooking(response.data.check);
+          // setIsBooking(false);
           setuserInfo(data);
           setIsLoading(false);
         });
@@ -116,7 +116,7 @@ function BookingTab({ navigation }) {
           height: 295,
         }}
       >
-        <Text style={styles.welcomeTitle}>Xin chào, {userInfo.name}</Text>
+        <Text style={styles.welcomeTitle}>Xin chào, Nguyen Hoang</Text>
         <Text style={styles.welcomeSubtitle}>
           Khám phá và tận hưởng cuộc sống tiện nghi tại Ecopark
         </Text>

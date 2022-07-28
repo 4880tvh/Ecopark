@@ -39,9 +39,9 @@ export default function Category({ loading }) {
         if (length / 4 <= 1) setPages([1]);
     }
     return (
-        <div className="Dung_NA_Category">
+        <div className="504_Category">
             <ListCategories NumberOfCategory="4"></ListCategories>
-            <div className="Dung_NA_CategoryRight">
+            <div className="504_CategoryRight">
                 <OrderBy></OrderBy>
                 <DetailsOfCate
                     Image={Example.Image}
@@ -60,9 +60,9 @@ export default function Category({ loading }) {
     function ListCategories(props) {
         const NumberOfCategory = props.NumberOfCategory
         return (
-            <div className="Dung_NA_ListCategories">
-                <span className="Dung_NA_TTListCate">Categories</span>
-                <p className="Dung_NA_TTListCatee">Showing 1-4 from <span> {NumberOfCategory} </span> data</p>
+            <div className="504_ListCategories">
+                <span className="504_TTListCate">Categories</span>
+                <p className="504_TTListCatee">Showing 1-4 from <span> {NumberOfCategory} </span> data</p>
                 {categories.map((category, index) => {
                     return (
                         <OneOfCategories
@@ -86,17 +86,17 @@ export default function Category({ loading }) {
         const Image = props.Image
         const id = props.id;
         return (
-            <div className="Dung_NA_OneOfCategories" onClick={() => {
+            <div className="504_OneOfCategories" onClick={() => {
                 console.log(id)
                 getDetailData(id);
 
                 // DetailsOfCate(detailCategory)
             }}>
-                <div className="Dung_NA_ImgCateBike">
-                    <img className="Dung_NA_ImgCateBikee" src={Image} alt="" />
+                <div className="504_ImgCateBike">
+                    <img className="504_ImgCateBikee" src={Image} alt="" />
                 </div>
-                <div className="Dung_NA_ModelAndAmount">
-                    <p className="Dung_NA_Model"> Model: <span> {Model}</span></p>
+                <div className="504_ModelAndAmount">
+                    <p className="504_Model"> Model: <span> {Model}</span></p>
                 </div>
             </div>
         )
@@ -123,9 +123,9 @@ export default function Category({ loading }) {
             setScreen(list)
         }
         return (
-            <div className="Dung_NA_PaginationOfCate">
-                <button className="Dung_NA_backPageOfCate">
-                    <img id="Dung_NA_backPageiOfCate" src={backpage} alt="" />
+            <div className="504_PaginationOfCate">
+                <button className="504_backPageOfCate">
+                    <img id="504_backPageiOfCate" src={backpage} alt="" />
                 </button>
                 <ChangePageButton
                     pageNumber="1"
@@ -145,8 +145,8 @@ export default function Category({ loading }) {
                     onPress={() => { changeScreen1(2) }}
                 >
                 </ChangePageButton>
-                <button className="Dung_NA_nextPageOfCate">
-                    <img id="Dung_NA_nextPageiOfCate" src={nextpage} alt="" />
+                <button className="504_nextPageOfCate">
+                    <img id="504_nextPageiOfCate" src={nextpage} alt="" />
                 </button>
             </div>
         )
@@ -157,20 +157,20 @@ export default function Category({ loading }) {
         const price = props.price
         const description = props.description
         return (
-            <div className="Dung_NA_DetailsOfCate">
-                <div className="Dung_NA_ImgOfThisCate">
-                    <img className="Dung_NA_ImgOfThisCatee" src={image} alt="" />
+            <div className="504_DetailsOfCate">
+                <div className="504_ImgOfThisCate">
+                    <img className="504_ImgOfThisCatee" src={image} alt="" />
                 </div>
-                <div className="Dung_NA_CateInfor">
-                    <div className="Dung_NA_ModelAndPriceOfDetail">
+                <div className="504_CateInfor">
+                    <div className="504_ModelAndPriceOfDetail">
                         <span>Model: {model}</span>
                         <span>Giá cho thuê: {price}</span>
                     </div>
-                    <div className="Dung_NA_AmountAndDebutTimeOfDetail">
+                    <div className="504_AmountAndDebutTimeOfDetail">
                         <span>Số Lượng: </span>
                     </div>
                 </div>
-                <div className="Dung_NA_Description">
+                <div className="504_Description">
                     <div>Mô tả: <p>{description}</p></div>
                 </div>
             </div>
@@ -187,19 +187,19 @@ export default function Category({ loading }) {
             setIsSlted(props.isSlted)
         }, [props])
         return (
-            <button className={(isSlted) ? "Dung_NA_onPageOfCate" : "Dung_NA_outPageOfCate"} onClick={() => {
+            <button className={(isSlted) ? "504_onPageOfCate" : "504_outPageOfCate"} onClick={() => {
                 props.onPress()
                 changeSelected()
             }}>
-                <span className={(isSlted) ? "Dung_NA_nbrOfOnPageOfCate" : "Dung_NA_nbrOfOutPageOfCate"}>{pageNumber}</span>
+                <span className={(isSlted) ? "504_nbrOfOnPageOfCate" : "504_nbrOfOutPageOfCate"}>{pageNumber}</span>
             </button>
         )
     }
     function OrderBy() {
         return (
             <div className="OrderBy">
-                <span className="Dung_NA_SapXepTheott">Sort by:</span>
-                <select className="Dung_NA_SapXepTheo">
+                <span className="504_SapXepTheott">Sort by:</span>
+                <select className="504_SapXepTheo">
                     <option>Doanh thu cao - thấp</option>
                     <option>Doanh thu thấp - cao</option>
                     <option>Giá cao - thấp</option>
@@ -211,9 +211,9 @@ export default function Category({ loading }) {
 
     function ButtunFunctionOfAdmin() {
         return (
-            <div className="Dung_NA_ButtunFunctionOfAdmin">
-                <Button variant="contained" className="Dung_NA_ButtunFunctionOfAdminEdit">Sửa</Button>
-                <Button variant="contained" className="Dung_NA_ButtunFunctionOfAdminDelete">Xóa</Button>
+            <div className="504_ButtunFunctionOfAdmin">
+                <Button variant="contained" className="504_ButtunFunctionOfAdminEdit">Sửa</Button>
+                <Button variant="contained" className="504_ButtunFunctionOfAdminDelete">Xóa</Button>
             </div>
         )
     }

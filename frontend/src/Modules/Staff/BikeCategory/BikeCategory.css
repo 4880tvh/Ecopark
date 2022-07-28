@@ -1,4 +1,4 @@
-.Dung_NA_Category {
+.504_Category {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@
   border-radius: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.Dung_NA_ListCategories {
+.504_ListCategories {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   height: 100%;
   margin: 0%;
 }
-.Dung_NA_TTListCate {
+.504_TTListCate {
   display: flex;
   position: relative;
   font-family: Arial;
@@ -30,7 +30,7 @@
   margin-top: 5%;
   margin-left: 10%;
 }
-.Dung_NA_TTListCatee {
+.504_TTListCatee {
   position: relative;
   font-family: Arial;
   font-style: normal;
@@ -43,7 +43,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.Dung_NA_OneOfCategories {
+.504_OneOfCategories {
   display: flex;
   flex-direction: row;
   border-radius: 10px;
@@ -54,22 +54,22 @@
   border: 1px solid rgb(102, 102, 240);
   cursor: pointer;
 }
-.Dung_NA_OneOfCategories:hover {
+.504_OneOfCategories:hover {
   background-color: rgb(102, 102, 240);
   color: white;
 }
-.Dung_NA_ImgCateBike {
+.504_ImgCateBike {
   display: flex;
   position: relative;
   width: 20%;
   align-self: center;
   margin-left: 10%;
 }
-.Dung_NA_ImgCateBikee {
+.504_ImgCateBikee {
   width: 100%;
   height: auto;
 }
-.Dung_NA_ModelAndAmount {
+.504_ModelAndAmount {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -77,17 +77,17 @@
   margin-left: 10%;
   font-size: 12px;
 }
-.Dung_NA_Model {
+.504_Model {
   display: flex;
   font-family: Arial;
   font-weight: bold;
 }
-.Dung_NA_Amount {
+.504_Amount {
   display: flex;
   font-family: Arial;
   font-weight: bold;
 }
-.Dung_NA_PaginationOfCate {
+.504_PaginationOfCate {
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -95,7 +95,7 @@
   justify-content: space-evenly;
   align-self: center;
 }
-.Dung_NA_backPageOfCate {
+.504_backPageOfCate {
   display: flex;
   background-color: #ffffff;
   position: relative;
@@ -104,10 +104,10 @@
   cursor: pointer;
   align-self: center;
 }
-#Dung_NA_backPageiOfCate {
+#504_backPageiOfCate {
   height: 80%;
 }
-.Dung_NA_nextPageOfCate {
+.504_nextPageOfCate {
   display: flex;
   background-color: #ffffff;
   position: relative;
@@ -116,10 +116,10 @@
   cursor: pointer;
   align-self: center;
 }
-#Dung_NA_nextPageiOfCate {
+#504_nextPageiOfCate {
   height: 80%;
 }
-.Dung_NA_onPageOfCate {
+.504_onPageOfCate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +139,7 @@
   box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
   border-radius: 50%;
 }
-.Dung_NA_outPageOfCate {
+.504_outPageOfCate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,13 +159,13 @@
   box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
   border-radius: 50%;
 }
-.Dung_NA_nbrOfOnPageOfCate {
+.504_nbrOfOnPageOfCate {
   color: #ffffff;
 }
-.Dung_NA_nbrOfOutPageOfCate {
+.504_nbrOfOutPageOfCate {
   color: black;
 }
-.Dung_NA_CategoryRight {
+.504_CategoryRight {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -181,7 +181,7 @@
   width: 100%;
   height: 8%;
 }
-.Dung_NA_SapXepTheott {
+.504_SapXepTheott {
   display: flex;
   position: relative;
   align-self: center;
@@ -190,7 +190,7 @@
   font-size: 1vw;
   margin-right: 5%;
 }
-.Dung_NA_SapXepTheo {
+.504_SapXepTheo {
   position: relative;
   display: flex;
   height: 40%;
@@ -200,7 +200,7 @@
   margin-right: 5%;
   border-radius: 5px;
 }
-.Dung_NA_DetailsOfCate {
+.504_DetailsOfCate {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -211,24 +211,24 @@
   margin-left: 5%;
   border-radius: 30px;
 }
-.Dung_NA_ImgOfThisCate {
+.504_ImgOfThisCate {
   display: flex;
   align-self: center;
   position: relative;
   height: 40%;
 }
-.Dung_NA_ImgOfThisCatee {
+.504_ImgOfThisCatee {
   height: 100%;
   width: auto;
 }
-.Dung_NA_CateInfor {
+.504_CateInfor {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
 }
-.Dung_NA_ModelAndPriceOfDetail {
+.504_ModelAndPriceOfDetail {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -237,7 +237,7 @@
   font-weight: bold;
   font-size: 0.9vw;
 }
-.Dung_NA_AmountAndDebutTimeOfDetail {
+.504_AmountAndDebutTimeOfDetail {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -246,7 +246,7 @@
   font-weight: bold;
   font-size: 0.9vw;
 }
-.Dung_NA_Description {
+.504_Description {
   position: relative;
   display: flex;
   font-family: Arial;
@@ -256,20 +256,20 @@
   align-self: center;
 }
 
-.Dung_NA_ButtunFunctionOfAdmin {
+.504_ButtunFunctionOfAdmin {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 7%;
 }
-.Dung_NA_ButtunFunctionOfAdminEdit {
+.504_ButtunFunctionOfAdminEdit {
   display: flex;
   position: relative;
   height: 60%;
   width: 15%;
 }
-.Dung_NA_ButtunFunctionOfAdminDelete {
+.504_ButtunFunctionOfAdminDelete {
   display: flex;
   position: relative;
   height: 60%;

@@ -108,7 +108,7 @@ export default function History() {
           />
         </div>
         <div className={classes.billDetails}>
-          <p>Renter: Tran Kim Hung</p>
+           {/* <p>Renter: Tran Kim Hung</p> */}
           <div>
             <div
               className={[
@@ -116,7 +116,7 @@ export default function History() {
                 classes.rentBikeCategory,
               ].join(" ")}
             >
-              <p>Bike Category</p>
+              {/* <p>Bike Category</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -125,7 +125,8 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                
+                <p>Renter : Nguyễn Việt Hoàng</p>
               </div>
             </div>
 
@@ -135,7 +136,7 @@ export default function History() {
                 classes.startingStationRegister,
               ].join(" ")}
             >
-              <p>Starting Station</p>
+              {/* <p>Starting Station</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -144,7 +145,7 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Category : Xe đạp địa hình</p>
               </div>
             </div>
 
@@ -153,7 +154,7 @@ export default function History() {
                 " "
               )}
             >
-              <p>LicensePlate</p>
+              {/* <p>LicensePlate</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -162,7 +163,7 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Time : 2h</p>
               </div>
             </div>
 
@@ -171,7 +172,7 @@ export default function History() {
                 " "
               )}
             >
-              <p>Time return the bike</p>
+              {/* <p>Time return the bike</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -180,10 +181,11 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Bill : 50000</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -196,7 +198,7 @@ export default function History() {
           />
         </div>
         <div className={classes.billDetails}>
-          <p>Renter: Tran Kim Hung</p>
+          {/* <p>Renter: Tran Kim Hung</p> */}
           <div>
             <div
               className={[
@@ -204,7 +206,7 @@ export default function History() {
                 classes.rentBikeCategory,
               ].join(" ")}
             >
-              <p>Bike Category</p>
+              {/* <p>Bike Category</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -213,7 +215,7 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Renter : Nguyễn Văn A</p>
               </div>
             </div>
 
@@ -223,7 +225,7 @@ export default function History() {
                 classes.startingStationRegister,
               ].join(" ")}
             >
-              <p>Time register the bike</p>
+              {/* <p>Time register the bike</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -232,7 +234,7 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Category : Xe đạp địa hình</p>
               </div>
             </div>
 
@@ -241,7 +243,7 @@ export default function History() {
                 " "
               )}
             >
-              <p>LicensePlate</p>
+              {/* <p>LicensePlate</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -250,7 +252,7 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Time : 2h</p>
               </div>
             </div>
 
@@ -259,7 +261,7 @@ export default function History() {
                 " "
               )}
             >
-              <p>Time rent the bike</p>
+              {/* <p>Time rent the bike</p> */}
               <div>
                 {/* <Icon
                   color="primary"
@@ -268,7 +270,7 @@ export default function History() {
                 >
                   directions_bike
                 </Icon> */}
-                <p>FX3 DISC</p>
+                <p>Bill : 50000</p>
               </div>
             </div>
           </div>

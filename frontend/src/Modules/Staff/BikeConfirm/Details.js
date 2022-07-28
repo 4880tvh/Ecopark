@@ -70,15 +70,14 @@ export default function Details() {
             <div className={classes.details}>
                 <h5 style={{paddingTop:"10px", paddingBottom:"5px"}}>{station?.name}</h5>
                 <p></p>
-                <p>This is address</p>
                 <div className={classes.bikeDetails}>
-                    <Icon className={classes.icon}>
+                    {/* <Icon className={classes.icon}>
                         directions_bike_circle
-                    </Icon>
-                    <div>
-                        <p>The number of bicycle going in today</p>
+                    </Icon> */}
+                    {/* <div>
+                        <p>The number of bicycle</p>
                         <p>20bikes</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className={[classes.details, classes.managerDetail].join(' ')}>
@@ -94,12 +93,12 @@ export default function Details() {
                 </div>
                 <p>Staff In Ecopark Bike Renting</p>
                 <div className={classes.bikeDetails}>
-                    <Icon className={classes.icon}>
+                    {/* <Icon className={classes.icon}>
                         directions_bike_circle
-                    </Icon>
+                    </Icon> */}
                     <div>
-                        <p>The number of bicycle going out today</p>
-                        <p>20bikes</p>
+                        {/* <p>The number of bicycle going out today</p>
+                        <p>20bikes</p> */}
                     </div>
                 </div>
             </div>

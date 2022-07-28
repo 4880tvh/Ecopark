@@ -17,12 +17,15 @@ export default function BikeCategoriesOfStaff() {
   const [url, setUrl] = useState(
     "https://nmcnpm.herokuapp.com/api/v2/staff/manage/category"
   );
+  const [checkNull, setCheckNull] = useState('')
   async function getCategory() {
     let token = localStorage.getItem("token");
     axios
       .get(url, {headers: {Authorization: `Bearer ${token}`}})
       .then((doc) => {
         console.log(doc.data.data);
+        console.log(doc.data.msg);
+        // setCheckNull(doc.data.msg);
         setCategories(doc.data.data);
         //     if(doc.data.data>0){
         //     getCategoryByID(doc.data.data[0]?._id)
@@ -134,7 +137,7 @@ export default function BikeCategoriesOfStaff() {
                 marginTop: "3%",
               }}
             >
-              {categories.length > 0 ? (
+              {categories ? (
                 <ListCategory
                   categories={categories}
                   setChosenData={setChosenCategory}

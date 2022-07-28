@@ -118,13 +118,13 @@ export default function History() {
             >
               <p>Bike Category</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px", color: "#008000"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -137,13 +137,13 @@ export default function History() {
             >
               <p>Starting Station</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -155,13 +155,13 @@ export default function History() {
             >
               <p>LicensePlate</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px", color: "#FF0000"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -173,13 +173,13 @@ export default function History() {
             >
               <p>Time return the bike</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px", color: "#000000"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -206,13 +206,13 @@ export default function History() {
             >
               <p>Bike Category</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px", color: "#008000"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -225,13 +225,13 @@ export default function History() {
             >
               <p>Time register the bike</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -243,13 +243,13 @@ export default function History() {
             >
               <p>LicensePlate</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px", color: "#FF0000"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>
@@ -261,13 +261,13 @@ export default function History() {
             >
               <p>Time rent the bike</p>
               <div>
-                <Icon
+                {/* <Icon
                   color="primary"
                   fontSize="small"
                   sx={{marginRight: "2px", color: "#000000"}}
                 >
                   directions_bike
-                </Icon>
+                </Icon> */}
                 <p>FX3 DISC</p>
               </div>
             </div>

@@ -60,10 +60,10 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
     setCategory({...category});
   };
   return (
-    <div className="504_AddCategory">
-      <h6 className="504_TitleOfAddCateScr">THÊM XE</h6>
+    <div className="Dung_NA_AddCategory">
+      <h6 className="Dung_NA_TitleOfAddCateScr">THÊM XE</h6>
 
-      <div className="504_AddInforOfCate">
+      <div className="Dung_NA_AddInforOfCate">
         <TextField
           label={"Tên loại xe"}
           sx={{
@@ -79,7 +79,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
           onChange={handleChange}
         />
       </div>
-      <div className="504_AddInforOfCate">
+      <div className="Dung_NA_AddInforOfCate">
         <TextField
           sx={{
             width: "20%",
@@ -98,7 +98,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
           onChange={handleChange}
         />
       </div>
-      <div className="504_AddInforOfCate">
+      <div className="Dung_NA_AddInforOfCate">
         <span
           style={{
             display: "flex",
@@ -150,7 +150,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
       </div>
       <div style={{display: "flex",flexDirection:"row", justifyContent: "space-around", alignItems: 'center'}}>
         <button
-          id="504_AddCateButton"
+          id="Dung_NA_AddCateButton"
           style={{
             backgroundColor: "#7ac70c",
             fontFamily: "'Roboto', sans-serif",
@@ -180,7 +180,7 @@ function AddCategory({setAdding, setNeedLoading, needLoading}) {
           )}{" "}
         </button>
         <Button
-          id="504_XButton"
+          id="Dung_NA_XButton"
           sx={{
             backgroundColor: "red",
             width: "100px",

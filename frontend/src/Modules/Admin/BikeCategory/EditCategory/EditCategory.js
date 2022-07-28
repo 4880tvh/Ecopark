@@ -27,9 +27,9 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
     }
 
     return (
-        <div className='504_AddCategory'>
-            <h6 className='504_TitleOfAddCateScr' >Chỉnh sửa thông tin xe đạp</h6>
-            <div className='504_AddInforOfCate'>
+        <div className='Dung_NA_AddCategory'>
+            <h6 className='Dung_NA_TitleOfAddCateScr' >Chỉnh sửa thông tin xe đạp</h6>
+            <div className='Dung_NA_AddInforOfCate'>
                 
                 <TextField sx={{
                     width: "20%",
@@ -45,7 +45,7 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
                     onChange={handleChange}
                 />
             </div>
-            <div className='504_AddInforOfCate'>
+            <div className='Dung_NA_AddInforOfCate'>
                 <TextField sx={{
                     width: "20%",
                     marginLeft: "3%"
@@ -63,7 +63,7 @@ export default function EditCategory({ setEdit, setNeedLoading, needLoading, cur
                     onChange={handleChange}
                 />
             </div>
-            <div className='504_AddInforOfCate'>
+            <div className='Dung_NA_AddInforOfCate'>
                 <TextField sx={{
                     width: "80%",
                     marginLeft: "3%"

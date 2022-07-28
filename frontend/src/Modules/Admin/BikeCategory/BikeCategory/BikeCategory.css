@@ -1,4 +1,4 @@
-.504_Category {
+.Dung_NA_Category {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@
   border-radius: 30px;
 }
 
-.504_ListCategories {
+.Dung_NA_ListCategories {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   margin: 0%;
 }
 
-.504_TTListCate {
+.Dung_NA_TTListCate {
   display: flex;
   position: relative;
   font-family: Arial;
@@ -32,7 +32,7 @@
   margin-left: 10%;
 }
 
-.504_TTListCatee {
+.Dung_NA_TTListCatee {
   position: relative;
   font-family: Arial;
   font-style: normal;
@@ -46,7 +46,7 @@
   margin-bottom: 5%;
 }
 
-.504_OneOfCategories {
+.Dung_NA_OneOfCategories {
   display: flex;
   flex-direction: row;
   border-radius: 10px;
@@ -58,12 +58,12 @@
   cursor: pointer;
 }
 
-.504_OneOfCategories:hover {
+.Dung_NA_OneOfCategories:hover {
   background-color: rgb(102, 102, 240);
   color: white;
 }
 
-.504_ImgCateBike {
+.Dung_NA_ImgCateBike {
   display: flex;
   position: relative;
   width: 20%;
@@ -71,12 +71,12 @@
   margin-left: 10%;
 }
 
-.504_ImgCateBikee {
+.Dung_NA_ImgCateBikee {
   width: 100%;
   height: auto;
 }
 
-.504_ModelAndAmount {
+.Dung_NA_ModelAndAmount {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -85,19 +85,19 @@
   font-size: 12px;
 }
 
-.504_Model {
+.Dung_NA_Model {
   display: flex;
   font-family: Arial;
   font-weight: bold;
 }
 
-.504_Amount {
+.Dung_NA_Amount {
   display: flex;
   font-family: Arial;
   font-weight: bold;
 }
 
-.504_PaginationOfCate {
+.Dung_NA_PaginationOfCate {
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -106,7 +106,7 @@
   align-self: center;
 }
 
-.504_backPageOfCate {
+.Dung_NA_backPageOfCate {
   display: flex;
   background-color: #ffffff;
   position: relative;
@@ -116,11 +116,11 @@
   align-self: center;
 }
 
-#504_backPageiOfCate {
+#Dung_NA_backPageiOfCate {
   height: 80%;
 }
 
-.504_nextPageOfCate {
+.Dung_NA_nextPageOfCate {
   display: flex;
   background-color: #ffffff;
   position: relative;
@@ -130,11 +130,11 @@
   align-self: center;
 }
 
-#504_nextPageiOfCate {
+#Dung_NA_nextPageiOfCate {
   height: 80%;
 }
 
-.504_onPageOfCate {
+.Dung_NA_onPageOfCate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +153,7 @@
   border-radius: 50%;
 }
 
-.504_outPageOfCate {
+.Dung_NA_outPageOfCate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,15 +172,15 @@
   border-radius: 50%;
 }
 
-.504_nbrOfOnPageOfCate {
+.Dung_NA_nbrOfOnPageOfCate {
   color: #ffffff;
 }
 
-.504_nbrOfOutPageOfCate {
+.Dung_NA_nbrOfOutPageOfCate {
   color: black;
 }
 
-.504_CategoryRight {
+.Dung_NA_CategoryRight {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -198,7 +198,7 @@
   height: 8%;
 }
 
-.504_SapXepTheott {
+.Dung_NA_SapXepTheott {
   display: flex;
   position: relative;
   align-self: center;
@@ -208,7 +208,7 @@
   margin-right: 5%;
 }
 
-.504_SapXepTheo {
+.Dung_NA_SapXepTheo {
   position: relative;
   display: flex;
   height: 40%;
@@ -219,7 +219,7 @@
   border-radius: 5px;
 }
 
-.504_DetailsOfCate {
+.Dung_NA_DetailsOfCate {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -231,19 +231,19 @@
   border-radius: 30px;
 }
 
-.504_ImgOfThisCate {
+.Dung_NA_ImgOfThisCate {
   display: flex;
   align-self: center;
   position: relative;
   height: 40%;
 }
 
-.504_ImgOfThisCatee {
+.Dung_NA_ImgOfThisCatee {
   height: 100%;
   width: auto;
 }
 
-.504_CateInfor {
+.Dung_NA_CateInfor {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -251,7 +251,7 @@
   width: 100%;
 }
 
-.504_ModelAndPriceOfDetail {
+.Dung_NA_ModelAndPriceOfDetail {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -261,7 +261,7 @@
   font-size: 0.9vw;
 }
 
-.504_AmountAndDebutTimeOfDetail {
+.Dung_NA_AmountAndDebutTimeOfDetail {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -271,7 +271,7 @@
   font-size: 0.9vw;
 }
 
-.504_Description {
+.Dung_NA_Description {
   position: relative;
   display: flex;
   font-family: Arial;
@@ -281,7 +281,7 @@
   align-self: center;
 }
 
-.504_ButtunFunctionOfAdmin {
+.Dung_NA_ButtunFunctionOfAdmin {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -289,14 +289,14 @@
   height: 7%;
 }
 
-.504_ButtunFunctionOfAdminEdit {
+.Dung_NA_ButtunFunctionOfAdminEdit {
   display: flex;
   position: relative;
   height: 60%;
   width: 15%;
 }
 
-.504_ButtunFunctionOfAdminDelete {
+.Dung_NA_ButtunFunctionOfAdminDelete {
   display: flex;
   position: relative;
   height: 60%;

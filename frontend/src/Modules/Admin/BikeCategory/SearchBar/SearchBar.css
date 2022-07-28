@@ -1,4 +1,4 @@
-.504_SearchBike{
+.Dung_NA_SearchBike{
     
     display: flex;
     flex-direction: row;
@@ -11,7 +11,7 @@
     margin-top: 1%;
     border-radius: 30px;
 }
-.504_Bao{
+.Dung_NA_Bao{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -21,18 +21,18 @@
     background-color: #F5F5F5;
     align-self: center;
 }
-.504_Searchic{
+.Dung_NA_Searchic{
     position: relative;
     display: flex;
     margin-left: 3%;
     height: 50%;
     align-self: center;
 }
-.504_Searchimg{
+.Dung_NA_Searchimg{
     height: 100%;
     width: auto;
 }
-.504_input{
+.Dung_NA_input{
     border: none;
     margin-left: 2%;
     background-color: #F5F5F5;
@@ -45,7 +45,7 @@
     text-align: left;
     outline: none;
 }
-.504_NewCate{
+.Dung_NA_NewCate{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,6 +65,6 @@
     letter-spacing: 0em;
     cursor: pointer;
 }
-.504_NewCate:hover{
+.Dung_NA_NewCate:hover{
     background-color: #3939e0;
 }

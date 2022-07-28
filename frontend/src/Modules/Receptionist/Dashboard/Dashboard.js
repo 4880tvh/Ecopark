@@ -14,7 +14,7 @@ export default function DashboardOfReceptionist({ setToken }) {
                 setToken={setToken}
                 setIsChange={setIsChange}
             >
-            </UserInfo> */}
+            </UserInfo>
       <div style={{top: "32%", position: "absolute", width: "80%"}}>
         <BillingHistory></BillingHistory>
       </div>

@@ -1,4 +1,4 @@
-.Dung_NA_AddCategory {
+.Tung_VH_AddCategory {
   z-index: 2;
   position: fixed;
   width: 50%;
@@ -14,7 +14,7 @@
   margin-left: 10%;
   margin-top: 5%;
 }
-.Dung_NA_TitleOfAddCateScr {
+.Tung_VH_TitleOfAddCateScr {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,7 +24,7 @@
   margin-left: 3%;
   margin-top: 5%;
 }
-.Dung_NA_AddInforOfCate {
+.Tung_VH_AddInforOfCate {
   display: flex;
   font-family: Arial;
   flex-direction: row;
@@ -35,43 +35,43 @@
   margin-top: 4%;
   margin-left: 3%;
 }
-.Dung_NA_LabelOfAddCate {
+.Tung_VH_LabelOfAddCate {
   display: flex;
   width: 15%;
   margin-left: 3%;
 }
-.Dung_NA_InputOfAddCate {
+.Tung_VH_InputOfAddCate {
   display: flex;
   height: 100%;
   border: 0.5px solid black;
   border-radius: 10px;
 }
-.Dung_NA_AddDescriptionOfCate {
+.Tung_VH_AddDescriptionOfCate {
   display: flex;
   width: 100%;
   height: 30%;
 }
-#Dung_NA_AddDescriptionOfCateLabel {
+#Tung_VH_AddDescriptionOfCateLabel {
   display: flex;
   font-family: Arial;
   font-weight: 600;
   width: 15%;
   margin-left: 3%;
 }
-#Dung_NA_AddDescriptionOfCateInput {
+#Tung_VH_AddDescriptionOfCateInput {
   display: flex;
   height: 100%;
   border: 0.5px solid black;
   border-radius: 10px;
   width: 80%;
 }
-#Dung_NA_AddCateButton {
+#Tung_VH_AddCateButton {
   display: flex;
   width: 20%;
   align-self: center;
   margin-top: 10%;
 }
-#Dung_NA_XButton {
+#Tung_VH_XButton {
   display: flex;
   align-self: center;
   margin-top: 3%;

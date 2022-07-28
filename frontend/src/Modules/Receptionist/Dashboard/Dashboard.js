@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import BillingHistory from "./BillingHistory/BillingHistory";
 import ChangePassword from "./ChangePassword/ChangePassword";
 import PendingAccount from "./PendingAccount/PendingAccount";
@@ -14,15 +14,13 @@ export default function DashboardOfReceptionist({ setToken }) {
                 setToken={setToken}
                 setIsChange={setIsChange}
             >
-            </UserInfo>
-            <div style={{ top: '32%', position: 'absolute', width: '80%' }}>
-                <BillingHistory ></BillingHistory>
-            </div>
-            {
+            </UserInfo> */}
+      <div style={{top: "32%", position: "absolute", width: "80%"}}>
+        <BillingHistory></BillingHistory>
+      </div>
+      {/* {
                 (setChange) && <ChangePassword callBack={() => { setIsChange(false) }} />
-            }
-
-        </div>
-    )
+            } */}
+    </div>
+  );
 }
-

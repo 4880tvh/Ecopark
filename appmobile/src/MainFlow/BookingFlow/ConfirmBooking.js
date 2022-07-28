@@ -80,7 +80,7 @@ function ConfirmBooking({ navigation, route }) {
     status: 'success',
     msg: 'login successfully',
     token:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0',
     data: {
       _id: '62d3ae880286c775f8364bdb',
       identifyNumber: '023819310',
@@ -100,9 +100,9 @@ function ConfirmBooking({ navigation, route }) {
   const socket = io.connect('http://3137-27-67-92-150.ngrok.io');
 
   const cancelBike = async () => {
-    // const token = await AsyncStorage.getItem('token');
-    const token =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+    const token = await AsyncStorage.getItem('token');
+    // const token =
+    //   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
     const url = 'https://nmcnpm.herokuapp.com/api/v3/user/cancel/bike';
     axios
       .get(url, { headers: { Authorization: 'Bearer ' + token } })
@@ -237,9 +237,9 @@ function ConfirmBooking({ navigation, route }) {
   };
 
   const postBill = async () => {
-    // const token = await AsyncStorage.getItem('token');
-    const token =
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+    const token = await AsyncStorage.getItem('token');
+    // const token =
+    //   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
     const url = 'http://localhost:5000/api/v3/user/confirm/bike/' + billId;
     axios
       .get(url, { headers: { Authorization: 'Bearer ' + token } })
@@ -257,9 +257,9 @@ function ConfirmBooking({ navigation, route }) {
       const userInfo = await AsyncStorage.getItem('info');
       setCustomer(JSON.parse(userInfo));
       if (option == CONFIRM) {
-        // const token = await AsyncStorage.getItem('token');
-        const token =
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
+        const token = await AsyncStorage.getItem('token');
+        // const token =
+        //   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MmQzYWU4ODAyODZjNzc1ZjgzNjRiZGIiLCJpYXQiOjE2NTgxMjQ3NTIsImV4cCI6MTY1ODE2MDc1Mn0.3cyjauoUMPIH5sy1ukb3vL5BJth3gdDcW27esCmLWW0';
         // const data = {
         //   stationID: info.stationId,
         //   categoryID: info.bikeId,

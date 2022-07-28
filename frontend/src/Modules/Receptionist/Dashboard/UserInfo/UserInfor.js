@@ -50,7 +50,7 @@ function ProFile(props) {
     return (
         <div className="userInfor" style={{marginLeft:"2%"}}>
             <div id="Avartar">
-                <img id="InsideAvt" src={avatar} alt="" />
+                {/* <img id="InsideAvt" src={avatar} alt="" /> */}
             </div>
             <div className="line">
                 <div className="line1">
@@ -58,7 +58,7 @@ function ProFile(props) {
                         <span className="fullName">{name}</span>
                         <span className="tag">{tag}</span>
                     </div>
-                    <button className="logOut" onClick={() => {
+                    {/* <button className="logOut" onClick={() => {
                         props.setToken(null)
                         navigate("/login")
                         }}
@@ -67,7 +67,7 @@ function ProFile(props) {
                         <span className="LogOutimg">
                             <img src={logout} alt="" />
                         </span>
-                    </button>
+                    </button> */}
                 </div>
                 <div className="line2">
                     <div className="idDivision">
@@ -97,14 +97,14 @@ function ProFile(props) {
                             <div className="detail">{phoneNumber}</div>
                         </div>
                     </div>
-                    <button className="changePass" onClick={()=>{
+                    {/* <button className="changePass" onClick={()=>{
                         props.setIsChange(true)
                     }}>
                         <span className="insideChangePass">Change password</span>
                         <div id="changepass">
                             <img src={changepasspng} alt="" />
                         </div>
-                    </button>
+                    </button> */}
                 </div>
             </div>
        

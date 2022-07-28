@@ -10,7 +10,7 @@ export default function DashboardOfReceptionist({ setToken }) {
     return (
         <div>
             <UserInfo
-                tag="Receptionist in Ecopark BikeRenting"
+                // tag="Receptionist in Ecopark BikeRenting"
                 setToken={setToken}
                 setIsChange={setIsChange}
             >

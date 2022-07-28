@@ -41,7 +41,7 @@ const BookingButton = ({ marginTop, onPress }) => {
             color: 'white',
           }}
         >
-          Book now
+          Book a bike
         </Text>
       </TouchableOpacity>
     </View>

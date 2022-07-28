@@ -87,7 +87,7 @@ function PickBike({ navigation, route }) {
         </TouchableOpacity>
         <Text
           style={{
-            marginLeft: 85,
+            marginLeft: 0,
             fontFamily: 'Quicksand-Bold',
             fontSize: 22,
             color: 'black',

@@ -40,16 +40,18 @@ function BookingSuccess({ navigation }) {
             fontSize: 24,
           }}
         >
-          Congratulatios!
+          Đặt xe thành công!
         </Text>
         <Text
           style={{
+            marginTop: 10,
             width: 300,
             fontFamily: 'Quicksand-Bold',
             fontSize: 18,
+            textAlign: 'center',
           }}
         >
-          Hurrah!! we just deliverred your #15425050 booking successfully.
+          Chúc bạn có một trải nghiệm tuyệt vời tại Ecopark!
         </Text>
       </View>
       <CustomButton

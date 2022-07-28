@@ -84,7 +84,7 @@ function PickStation({ navigation }) {
         </TouchableOpacity>
         <Text
           style={{
-            marginLeft: 70,
+            marginLeft: 0,
             fontFamily: 'Quicksand-Bold',
             fontSize: 22,
             color: 'black',

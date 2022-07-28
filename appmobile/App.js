@@ -9,10 +9,11 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import React from 'react';
+import * as React from 'react';
 import { StatusBar, StyleSheet } from 'react-native';
 
 import Loading from './src/screen/Loading/Loading';
+import Waiting from './src/screen/Waiting/Waiting';
 import Login from './src/screen/Login/Login';
 import Register from './src/screen/Register/Register';
 import ResetPassword from './src/screen/ResetPassword/ResetPassword';
@@ -21,6 +22,8 @@ import MainFlow from './src/MainFlow/MainFlow';
 import PickStation from './src/MainFlow/BookingFlow/PickStation';
 import PickBike from './src/MainFlow/BookingFlow/PickBike';
 import ConfirmBooking from './src/MainFlow/BookingFlow/ConfirmBooking';
+import NonactiveAccountScreen from './src/screen/NonactiveAccount/NonactiveAccount';
+import BookingSuccess from './src/MainFlow/BookingFlow/BookingSuccess';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +58,16 @@ const App = () => {
         <Stack.Screen name="PickStation" component={PickStation} />
         <Stack.Screen name="PickBike" component={PickBike} />
         <Stack.Screen name="ConfirmBooking" component={ConfirmBooking} />
+        <Stack.Screen name="BookingSuccess" component={BookingSuccess} />
+        <Stack.Screen
+          name="NonactiveAccount"
+          component={NonactiveAccountScreen}
+        />
+        <Stack.Screen
+          name="Waiting"
+          component={Waiting}
+          options={{ presentation: 'transparentModal' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
